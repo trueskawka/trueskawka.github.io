@@ -1,0 +1,380 @@
+.drawing-container {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 580px;
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+
+.boxy {
+  height: 100px;
+  width: 100px;
+  display: inline-block;
+  
+  background: black;
+}
+
+.boxy-gradient-bottom {
+  background-image: linear-gradient(black, white);
+}
+
+.boxy-gradient-top {
+  background-image: linear-gradient(to top, black, white);
+}
+
+.boxy-gradient-right {
+  background-image: linear-gradient(to right, black, white);
+}
+
+.boxy-gradient-left {
+  background-image: linear-gradient(to left, black, white);
+}
+
+#gradient-container {
+  position: relative;
+  margin: 0 auto;
+  height: 380px;
+  width: 400px;
+}
+
+#gradient-box {
+  height: 260px;
+  width: 360px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+#js-gradient { 
+  position: relative;
+  top: 30px;
+  left: 30px;
+  height: 200px;
+  width: 300px;
+}
+
+#angle-form {
+  text-align: center;
+}
+
+#angle {
+  width: 360px;
+}
+
+#gradient-container2 {
+  position: relative;
+  margin: 0 auto;
+  width: 360px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.gradient { 
+  display: inline-block;
+  height: 200px;
+  width: 300px;
+  border: 1px solid lightgray;
+}
+
+#angle2 {
+  width: 360px;
+}
+
+.container-haskell {
+  margin: 20px 0 30px 0;
+}
+
+.haskell-lower-right {
+  width: 156px;
+  height: 144px;
+  
+  color: orange;
+  
+  background:
+    linear-gradient(
+      237.5deg,
+      transparent 77px,
+      currentColor 77px,
+      currentColor 129px,
+      white 129px
+    );
+}
+
+.haskell-lower-lambda {
+  width: 312px;
+  height: 144px;
+  
+  color: orange;
+  
+  background:
+    linear-gradient(
+      122.5deg,
+      transparent 80px,
+      currentColor 80px,
+      currentColor 132px,
+      transparent 132px
+    ),
+    linear-gradient(
+      237.5deg,
+      transparent 77px,
+      currentColor 77px,
+      currentColor 129px,
+      white 129px
+    ) 156px 0;
+  
+  background-size: 156px 144px;
+  background-repeat: no-repeat;
+}
+
+.haskell-lambda {
+  width: 312px;
+  height: 288px;
+  
+  color: orange;
+  
+  background:
+    linear-gradient(
+      237.5deg,
+      transparent 77px,
+      currentColor 77px,
+      currentColor 129px,
+      transparent 129px
+    ) 65px 0,
+    linear-gradient(
+      122.5deg,
+      transparent 80px,
+      currentColor 80px,
+      currentColor 132px,
+      transparent 132px
+    ) 65px 144px,
+    linear-gradient(
+      237.5deg,
+      transparent 77px,
+      currentColor 77px,
+      currentColor 129px,
+      white 129px
+    ) 156px 144px;
+  
+  background-size: 156px 144px;
+  background-repeat: no-repeat;
+}
+
+.haskell-chevron {
+  width: 345px;
+  height: 288px;
+  
+  color: orange;
+  
+  background:
+    /* black chevron */
+    /* upper part */
+    linear-gradient(
+      237.5deg,
+      transparent 77px,
+      #101c24 77px,
+      #101c24 129px,
+      transparent 129px
+    ) 0 0,
+    /* lower part */
+    linear-gradient(
+      122.5deg,
+      transparent 80px,
+      #101c24 80px,
+      #101c24 132px,
+      transparent 132px
+    ) 0 144px,
+    /* lambda */
+    /* upper part */
+    linear-gradient(
+      237.5deg,
+      transparent 77px,
+      currentColor 77px,
+      currentColor 129px,
+      transparent 129px
+    ) 85px 0,
+    /* lower left part */
+    linear-gradient(
+      122.5deg,
+      transparent 80px,
+      currentColor 80px,
+      currentColor 132px,
+      transparent 132px
+    ) 85px 144px,
+    /* lower right part */
+    linear-gradient(
+      237.5deg,
+      transparent 77px,
+      currentColor 77px,
+      currentColor 129px,
+      white 129px
+    ) 176px 144px;
+  
+  background-size: 156px 144px;
+  background-repeat: no-repeat;
+}
+
+.haskell-with-lines {
+  width: 380px;
+  height: 288px;
+  
+  color: orange;
+  
+  background:
+    /* black chevron */
+    /* upper part */
+    linear-gradient(
+      237.5deg,
+      transparent 77px,
+      #101c24 77px,
+      #101c24 129px,
+      transparent 129px
+    ) 0 0,
+    /* lower part */
+    linear-gradient(
+      122.5deg,
+      transparent 80px,
+      #101c24 80px,
+      #101c24 132px,
+      transparent 132px
+    ) 0 144px,
+    /* lambda */
+    /* upper part */
+    linear-gradient(
+      237.5deg,
+      transparent 77px,
+      currentColor 77px,
+      currentColor 129px,
+      transparent 129px
+    ) 85px 0,
+    /* lower left part */
+    linear-gradient(
+      122.5deg,
+      transparent 80px,
+      currentColor 80px,
+      currentColor 132px,
+      transparent 132px
+    ) 85px 144px,
+    /* lower right part */
+    linear-gradient(
+      237.5deg,
+      transparent 77px,
+      currentColor 77px,
+      currentColor 129px,
+      white 129px
+    ) 176px 144px,
+    
+    /* black lines */
+    /* upper line */
+    linear-gradient(
+      180deg,
+      white 80px,
+      #101c24 80px,
+      #101c24 132px,
+      white 132px
+    ) 220px 0px,
+    
+    /* lower line */
+    linear-gradient(
+      180deg,
+      white 12px,
+      #101c24 12px,
+      #101c24 64px,
+      white 64px
+    ) 220px 144px;
+  
+  background-size: 156px 144px;
+  background-repeat: no-repeat;
+}
+
+.haskell {
+  width: 380px;
+  height: 288px;
+  
+  color: orange;
+  
+  background:
+    /* black chevron */
+    /* upper part */
+    linear-gradient(
+      237.5deg,
+      transparent 77px,
+      #101c24 77px,
+      #101c24 129px,
+      transparent 129px
+    ) 0 0,
+    /* lower part */
+    linear-gradient(
+      122.5deg,
+      transparent 80px,
+      #101c24 80px,
+      #101c24 132px,
+      transparent 132px
+    ) 0 144px,
+    /* lambda */
+    /* upper part */
+    linear-gradient(
+      237.5deg,
+      transparent 77px,
+      currentColor 77px,
+      currentColor 129px,
+      transparent 129px
+    ) 85px 0,
+    /* lower left part */
+    linear-gradient(
+      122.5deg,
+      transparent 80px,
+      currentColor 80px,
+      currentColor 132px,
+      transparent 132px
+    ) 85px 144px,
+    /* lower right part */
+    linear-gradient(
+      237.5deg,
+      transparent 77px,
+      currentColor 77px,
+      currentColor 129px,
+      white 129px
+    ) 176px 144px,
+    
+    /* white spacer */
+    /* upper part */
+    linear-gradient(
+      237.5deg,
+      transparent 77px,
+      white 77px,
+      white 129px,
+      transparent 129px
+    ) 110px 0,
+    /* lower part */
+    linear-gradient(
+      237.5deg,
+      transparent 80px,
+      white 80px,
+      white 132px,
+      transparent 132px
+    ) 206px 144px,
+    
+    /* black lines */
+    /* upper line */
+    linear-gradient(
+      180deg,
+      white 80px,
+      #101c24 80px,
+      #101c24 132px,
+      white 132px
+    ) 220px 0px,
+    
+    /* lower line */
+    linear-gradient(
+      180deg,
+      white 12px,
+      #101c24 12px,
+      #101c24 64px,
+      white 64px
+    ) 220px 144px;
+  
+  background-size: 156px 144px;
+  background-repeat: no-repeat;
+}

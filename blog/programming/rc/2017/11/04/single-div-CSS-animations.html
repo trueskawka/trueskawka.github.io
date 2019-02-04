@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8" />
+  <title>
+    
+        Alicja Raszkowska
+    
+  </title>
+
+  <link
+    rel="canonical"
+    href="http://localhost:4000/blog/programming/rc/2017/11/04/single-div-CSS-animations.html"
+  />
+
+  <link rel="stylesheet" href="/css/blog.css">
+</head>
+
+  <body>
+    <div class="container">
+      <header role="banner">
+  <hgroup id="header-title">
+    <h1><a href="/">Alicja Raszkowska</a></h1>
+  </hgroup>
+  <nav role="navigation" id="main-navigation">
+    <ul>
+      <li><a href="/blog">blog &middot;</a></li>
+      <li><a href="/ideas">ideas &middot;</a></li>
+      <li><a href="/resume">resume &middot;</a></li>
+    </ul>
+  </nav>
+  <ul id="external-links">
+    <li>
+      <a href="https://github.com/trueskawka">github &middot;</a>
+    </li>
+    <li>
+      <a href="https://twitter.com/mamrotynka">twitter</a>
+    </li>
+  </ul>
+</header>
+
+      <main>
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <div>
+    <p class="post-meta">
+      <time datetime="2017-11-04T21:45:00-07:00" itemprop="datePublished">
+        
+          11/04/2017 21:45
+        
+      </time>
+    </p>
+    <p>
+      <h2 class="post-title" itemprop="name headline">
+        Single <b>div</b> CSS animations
+      </h2>
+    </p>
+  </div>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>I recently got inspired to try pure CSS single div
+animations, as I came across <a href="https://hacks.mozilla.org/2014/09/single-div-drawings-with-css/">this blog post</a> (thank you, Gabrielle!).
+There were only two problems:</p>
+
+<ol>
+  <li>I can’t draw</li>
+  <li>I don’t know enough about CSS</li>
+</ol>
+
+<p>It seemed impossible to tackle without a lot of
+effort, so I’ve been putting it off, until I
+realized the more I think about it, the harder it
+gets. I decided this is more of a learning
+challenge than it is a problem. Would I ever be able to draw well enough to be a designer? I don’t think so. Would I be able to have fun creating a small project from time to time and see improvements? I betcha.</p>
+
+<p>How do I usually approach learning a new programming concept?</p>
+
+<ol>
+  <li>I read about it and find a tangible example</li>
+  <li>I look around the example and break it in a controlled way,
+ to make sure I understand what happens</li>
+  <li>I come up with a small enough problem of my own that uses
+the concept I want to learn and keep the example as reference,
+googling for other ideas and suggestions</li>
+  <li>I incorporate the concept into other projects, to make sure
+I understand it</li>
+</ol>
+
+<p>For the animations, I decided there are a few key factors:</p>
+<ul>
+  <li>I want to make them cute, so that I’ll share them and get
+ encouraged to create more</li>
+  <li>I want to write quality code, not just make them look good</li>
+  <li>I’d like to be able to plan my approach before coding, either
+by drawing them by hand or breaking into building blocks</li>
+</ul>
+
+<h3 id="i-cant-draw">I can’t draw</h3>
+
+<p>The more I work on my laptop, the less I write, so my
+handwriting went from cute tiny letters to
+barely legible tiny squiggles. And even though I can draw a
+passable cat (meaning - my youngest sister can identify it as a
+cat without much trouble), I don’t think I can draw.</p>
+
+<p>For the initial experiment, I decided to explore what makes
+for a cute cat. I looked for various tutorials and thought of
+a few key features:</p>
+<ul>
+  <li>pointy ears, usually a bit rounded</li>
+  <li>cute little nose, sometimes heart-shaped</li>
+  <li>big eyes, with or without snake-like pupils</li>
+  <li>tiny mouth, often smiling or meowing</li>
+  <li>whiskers, usually 2 or 3 on each side</li>
+  <li>oval or rounded head</li>
+</ul>
+
+<p>I then explored them on paper, to get a better grasp of what I
+need.</p>
+
+<p><img src="/blog/cat_exploring_final.jpeg" /></p>
+
+<p>Finally, I worked to recreate <a href="https://codepen.io/johanmouchet/pen/OXxvqr">this cute cat
+animation</a>
+and it sort of, kind of
+<a href="https://codepen.io/trueskawka/pen/zPYXLM">worked</a>. Granted,
+it’s not my own design and I didn’t fully understand what was
+happening with some parts of it, but I’ve learned to decompose
+an image and then translate it into basic shapes, colors
+and layers. Also, it wasn’t yet a single div image - but I was
+getting closer.</p>
+
+<link rel="stylesheet" href="/css/cat.css" />
+
+<div class="cat-container">
+  <div class="cat">
+    <div class="ear ear-left"></div>
+    <div class="ear ear-right"></div>
+    <div class="head">
+      <div class="eye eye-left">
+        <div class="pupil"></div>
+      </div>
+      <div class="eye eye-right">
+        <div class="pupil"></div>
+      </div>
+      <div class="muzzle"></div>
+    </div>
+  </div>
+</div>
+
+<h3 id="i-dont-know-enough-about-css">I don’t know enough about CSS</h3>
+
+<p>Don’t get me wrong, I know enough CSS to create websites and
+work on HTML email templates (which require you to write CSS
+like it’s 2004), but I’ve never gone into more intricate
+styling techniques.</p>
+
+<p>For one, I am not a designer and designers usually provide me
+with either images or relatively simple UIs to code. It
+doesn’t make much sense to use CSS images in a production
+environment - who has the time to write and review them?</p>
+
+<p>But CSS seems like a good medium for me to draw - I can build
+on basic shapes as I deconstruct images and the examples are
+reproducible (which I can’t yet say about my hand-drawn
+images).</p>
+
+<p>I looked for more examples and came across <a href="https://www.dotconferences.com/2016/12/wenting-zhang-make-css-your-secret-super-drawing-tool">this
+talk</a>
+by Wenting Zhang. I decided to follow along with the tutorial and
+create a simple mustache animation.</p>
+
+<link rel="stylesheet" href="/css/mustache.css" />
+
+<div class="mustache-container">
+  <div class="mustache"></div>
+</div>
+
+<p>It was a great exercise, as it taught me a bit more about
+<code class="highlighter-rouge">box-shadow</code>, most importantly, that there is no limit on the
+number of shadows and they can be moved around, stretched and
+recolored. It also helped me start treating <code class="highlighter-rouge">:before</code> and
+<code class="highlighter-rouge">:after</code> pseudoelements as layers.</p>
+
+<p>I then proceeded to create a few more animations, trying to
+get a good grasp of how I should divide my images between
+those layers. It turns out there is a lot of flexibility with
+shadows, but reshaping is not their strongest feature - they
+mostly stay the same shape as the initial layer and, although
+they can be manipulated with <code class="highlighter-rouge">border-radius</code>, since I wanted
+more than a few basic shapes in my drawings, I needed to learn
+more.</p>
+
+<p>Still, I could now create pretty complex shapes with three
+layers and <code class="highlighter-rouge">box-shadows</code>, like this animation of the Recurse
+Center logo.</p>
+
+<link rel="stylesheet" href="/css/rc.css" />
+
+<div class="rc-container">
+  <div class="rc"></div>
+</div>
+
+<p>Creating shapes with a single div is sometimes quite
+challenging and can use all three layers (the div, its
+<code class="highlighter-rouge">:before</code> and <code class="highlighter-rouge">:after</code>). One a tad more complex shape I wanted
+to use was a chevron, in order to create a simple animation of
+the <a href="https://www.xfive.co/">Xfive</a> logo, similar to the one on
+their website, but created with pure CSS. For this I needed to
+learn and understand gradients better, so I turned to the
+<a href="http://shop.oreilly.com/product/0636920031123.do">CSS Secrets</a>
+book - after doing a few exercises, I felt ready to create
+multiple gradient layers and mix them up with pseudoelements
+and <code class="highlighter-rouge">box-shadow</code>s.</p>
+
+<link rel="stylesheet" href="/css/x5.css" />
+
+<div class="x5-container">
+  <div class="x5"></div>
+</div>
+
+<h3 id="whats-next">What’s next?</h3>
+
+<p>I want to further improve both my drawing and CSS skills. I’m
+planning to do a bigger project soon, but for now I’ll try to
+do a few CSS animations a week - you can check out my <a href="https://github.com/trueskawka/css-drawings">GitHub
+repository</a> for
+the animations’ code and my
+<a href="https://codepen.io/trueskawka/">CodePen</a> to view them (along
+with some bits and pieces from various old projects).</p>
+
+  </div>
+</article>
+
+      </main>
+    </div>
+  </body>
+  <footer>
+  <div class="container">
+    <div class="squiggle" aria-hidden="true">
+      ∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿
+    </div>
+  </div>
+</footer>
+
+</html>

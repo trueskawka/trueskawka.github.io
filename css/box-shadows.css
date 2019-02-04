@@ -1,0 +1,428 @@
+.drawing-container {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 580px;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  box-sizing: initial;
+}
+
+/* boxy elements */
+.boxy {
+  background-color: black;
+  height: 100px;
+  width: 100px;
+}
+
+.boxy-shadow {
+  margin-bottom: 120px;
+
+  box-shadow: 
+    0 120px 0 -20px lightseagreen;
+}
+
+.boxy-shadows {
+  margin-bottom: 120px;
+
+  box-shadow:
+    100px 120px 0 -30px cyan, 
+    0 120px 0 -20px lightseagreen,
+    -100px 120px 0 -30px cyan;
+}
+
+.boxy-before:before {
+  content: "";
+  background-color: red;
+  height: 60px;
+  width: 60px;
+  position: absolute;
+  left: 160px;
+  border-radius: 50%;
+}
+
+.boxy-before-shadows:before {
+  content: "";
+  background-color: red;
+  height: 60px;
+  width: 60px;
+  position: absolute;
+  left: 160px;
+  border-radius: 50%;
+  
+  box-shadow: 
+    -80px 0 0 tomato,
+    0 80px 0 -10px tomato;
+}
+
+.boxy-after:after {
+  content: "";
+  background-color: green;
+  height: 40px;
+  width: 60px;
+  position: absolute;
+  left: 360px;
+  
+  box-shadow: 
+    80px 0 0 yellowgreen,
+    0 80px 0 -10px yellowgreen;
+}
+
+/* paragraph insertions */
+.pseudo:before {
+  content: "were created ";
+  color: red;
+}
+
+.pseudo:after {
+  content: " or after an element.";
+  color: green;
+}
+
+/* RC logo */
+.container-rc {
+  height: 380px;
+  width: 300px;
+}
+
+.rc {
+  background-color: black;
+  height: 380px;
+  width: 300px;
+}
+
+.rc-before-show:before {
+  content: "";
+  background-color: red;
+  height: 200px;
+  width: 250px;
+  position: absolute;
+  top: 20px;
+  left: 320px;
+}
+
+.rc-before-screen:before {
+  content: "";
+  background-color: transparent;
+  height: 200px;
+  width: 250px;
+  position: absolute;
+  top: 20px;
+  left: 320px;
+
+  box-shadow:
+    /*screen*/
+    -295px 20px 0 -20px black,
+    -295px 20px 0 0 white;
+}
+
+.rc-before-side:before {
+  content: "";
+  background-color: transparent;
+  height: 200px;
+  width: 250px;
+  position: absolute;
+  top: 20px;
+  left: 320px;
+
+  box-shadow:
+    /*left side*/
+    -450px 185px 0 -85px white,
+    -410px 160px 0 -85px white,
+    -395px 160px 0 -85px white,
+
+    /*right side*/
+    -140px 185px 0 -85px white,
+    -180px 160px 0 -85px white,
+    -195px 160px 0 -85px white,
+
+    /*screen*/
+    -295px 20px 0 -20px black,
+    -295px 20px 0 0 white;
+}
+
+.rc-before-key:before {
+  content: "";
+  background-color: transparent;
+  height: 200px;
+  width: 250px;
+  position: absolute;
+  top: 20px;
+  left: 320px;
+
+  box-shadow:
+    /*key*/
+    -360px 245px 0 -87px white,
+    
+    /*left side*/
+    -450px 185px 0 -85px white,
+    -410px 160px 0 -85px white,
+    -395px 160px 0 -85px white,
+
+    /*right side*/
+    -140px 185px 0 -85px white,
+    -180px 160px 0 -85px white,
+    -195px 160px 0 -85px white,
+
+    /*screen*/
+    -295px 20px 0 -20px black,
+    -295px 20px 0 0 white;
+}
+
+.rc-before-keys:before {
+  content: "";
+  background-color: transparent;
+  height: 200px;
+  width: 250px;
+  position: absolute;
+  top: 20px;
+  left: 320px;
+
+  box-shadow:
+    /*top row*/
+    -160px 220px 0 -87px black,
+    -185px 220px 0 -87px white,
+    -210px 220px 0 -87px black,
+    -235px 220px 0 -87px white,
+    -260px 220px 0 -87px black,
+    -285px 220px 0 -87px white,
+    -310px 220px 0 -87px black,
+    -335px 220px 0 -87px white,
+
+    /*bottom row*/
+    -185px 245px 0 -87px black,
+    -210px 245px 0 -87px white,
+    -235px 245px 0 -87px black,
+    -260px 245px 0 -87px white,
+    -285px 245px 0 -87px black,
+    -310px 245px 0 -87px white,
+    -335px 245px 0 -87px black,
+    -360px 245px 0 -87px white,
+    
+    /*left side*/
+    -450px 185px 0 -85px white,
+    -410px 160px 0 -85px white,
+    -395px 160px 0 -85px white,
+
+    /*right side*/
+    -140px 185px 0 -85px white,
+    -180px 160px 0 -85px white,
+    -195px 160px 0 -85px white,
+
+    /*screen*/
+    -295px 20px 0 -20px black,
+    -295px 20px 0 0 white;
+}
+
+.rc-before:before {
+  content: "";
+  background-color: transparent;
+  height: 200px;
+  width: 250px;
+  position: absolute;
+  top: 20px;
+  left: 320px;
+
+  box-shadow:
+    /*top row fix*/
+    -20px 180px 0 0px white, 
+
+    /*top row*/
+    -160px 220px 0 -87px black,
+    -185px 220px 0 -87px white,
+    -210px 220px 0 -87px black,
+    -235px 220px 0 -87px white,
+    -260px 220px 0 -87px black,
+    -285px 220px 0 -87px white,
+    -310px 220px 0 -87px black,
+    -335px 220px 0 -87px white,
+
+    /*bottom row*/
+    -185px 245px 0 -87px black,
+    -210px 245px 0 -87px white,
+    -235px 245px 0 -87px black,
+    -260px 245px 0 -87px white,
+    -285px 245px 0 -87px black,
+    -310px 245px 0 -87px white,
+    -335px 245px 0 -87px black,
+    -360px 245px 0 -87px white,
+    
+    /*left side*/
+    -450px 185px 0 -85px white,
+    -410px 160px 0 -85px white,
+    -395px 160px 0 -85px white,
+
+    /*right side*/
+    -140px 185px 0 -85px white,
+    -180px 160px 0 -85px white,
+    -195px 160px 0 -85px white,
+
+    /*screen*/
+    -295px 20px 0 -20px black,
+    -295px 20px 0 0 white;
+}
+
+.rc-after-show:after {
+  content: "";
+  background-color: green;
+  height: 200px;
+  width: 200px;
+  position: absolute;
+  top: 20px;
+  left: 320px;
+}
+
+.rc-after:after {
+  content: "";
+  background-color: transparent;
+  height: 200px;
+  width: 200px;
+  position: absolute;
+  top: 20px;
+  left: 320px;
+
+  box-shadow:
+    /*top row*/
+    -258px -20px 0 -87px #5dbd49,
+    -310px -20px 0 -87px #5dbd49,
+    -362px -20px 0 -87px #5dbd49,
+
+    /*bottom row*/
+    -235px 30px 0 -87px #5dbd49,
+    -260px 30px 0 -87px #5dbd49,
+    -312px 30px 0 -87px #5dbd49,    
+    -337px 30px 0 -87px #5dbd49;
+}
+
+.rc-after-animated:after {
+  content: "";
+  background-color: transparent;
+  height: 200px;
+  width: 200px;
+  position: absolute;
+  top: 20px;
+  left: 320px;
+
+  box-shadow:
+    /*top row*/
+    -258px -20px 0 -87px #5dbd49,
+    -310px -20px 0 -87px #5dbd49,
+    -362px -20px 0 -87px #5dbd49,
+
+    /*bottom row*/
+    -235px 30px 0 -87px #5dbd49,
+    -260px 30px 0 -87px #5dbd49,
+    -312px 30px 0 -87px #5dbd49,    
+    -337px 30px 0 -87px #5dbd49;
+
+  animation: pride 3s linear infinite;
+}
+
+@keyframes pride {
+  0% {
+    box-shadow:
+    /*top row*/
+    -258px -20px 0 -87px #5dbd49,
+    -310px -20px 0 -87px #5dbd49,
+    -362px -20px 0 -87px #5dbd49,
+
+    /*bottom row*/
+    -235px 30px 0 -87px #5dbd49,
+    -260px 30px 0 -87px #5dbd49,
+    -312px 30px 0 -87px #5dbd49,    
+    -337px 30px 0 -87px #5dbd49; 
+  }
+  24% {
+    box-shadow:
+    /*top row*/
+    -258px -20px 0 -87px #5dbd49,
+    -310px -20px 0 -87px #5dbd49,
+    -362px -20px 0 -87px #5dbd49,
+
+    /*bottom row*/
+    -235px 30px 0 -87px #5dbd49,
+    -260px 30px 0 -87px #5dbd49,
+    -312px 30px 0 -87px #5dbd49,    
+    -337px 30px 0 -87px #5dbd49;
+  }
+  25% {
+    box-shadow:
+    /*top row*/
+    -258px -20px 0 -87px #5dbd49,
+    -310px -20px 0 -87px #4b9bde,
+    -362px -20px 0 -87px #8f71b9,
+
+    /*bottom row*/
+    -235px 30px 0 -87px #e25786,
+    -260px 30px 0 -87px #e25786,
+    -312px 30px 0 -87px #f19e5a,    
+    -337px 30px 0 -87px #f19e5a;
+  }
+  49% {
+    box-shadow:
+    /*top row*/
+    -258px -20px 0 -87px #5dbd49,
+    -310px -20px 0 -87px #4b9bde,
+    -362px -20px 0 -87px #8f71b9,
+
+    /*bottom row*/
+    -235px 30px 0 -87px #e25786,
+    -260px 30px 0 -87px #e25786,
+    -312px 30px 0 -87px #f19e5a,    
+    -337px 30px 0 -87px #f19e5a;
+  }
+  50% {
+    box-shadow:
+    /*top row*/
+    -258px -20px 0 -87px #f19e5a,
+    -310px -20px 0 -87px #5dbd49,
+    -362px -20px 0 -87px #4b9bde,
+
+    /*bottom row*/
+    -235px 30px 0 -87px #8f71b9,
+    -260px 30px 0 -87px #8f71b9,
+    -312px 30px 0 -87px #e25786,    
+    -337px 30px 0 -87px #e25786;
+  }
+  74% {
+    box-shadow:
+    /*top row*/
+    -258px -20px 0 -87px #f19e5a,
+    -310px -20px 0 -87px #5dbd49,
+    -362px -20px 0 -87px #4b9bde,
+
+    /*bottom row*/
+    -235px 30px 0 -87px #8f71b9,
+    -260px 30px 0 -87px #8f71b9,
+    -312px 30px 0 -87px #e25786,    
+    -337px 30px 0 -87px #e25786;
+  }
+  75% {
+    box-shadow:
+    /*top row*/
+    -258px -20px 0 -87px #e25786,
+    -310px -20px 0 -87px #f19e5a,
+    -362px -20px 0 -87px #5dbd49,
+
+    /*bottom row*/
+    -235px 30px 0 -87px #4b9bde,
+    -260px 30px 0 -87px #4b9bde,
+    -312px 30px 0 -87px #8f71b9,    
+    -337px 30px 0 -87px #8f71b9;
+  }
+  100% {
+    box-shadow:
+    /*top row*/
+    -258px -20px 0 -87px #e25786,
+    -310px -20px 0 -87px #f19e5a,
+    -362px -20px 0 -87px #5dbd49,
+
+    /*bottom row*/
+    -235px 30px 0 -87px #4b9bde,
+    -260px 30px 0 -87px #4b9bde,
+    -312px 30px 0 -87px #8f71b9,    
+    -337px 30px 0 -87px #8f71b9;
+  }
+}

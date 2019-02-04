@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8" />
+  <title>
+    
+        Alicja Raszkowska
+    
+  </title>
+
+  <link
+    rel="canonical"
+    href="http://localhost:4000/blog/programming/css/2018/04/01/drawing-with-CSS-part-2-linear-gradients.html"
+  />
+
+  <link rel="stylesheet" href="/css/blog.css">
+</head>
+
+  <body>
+    <div class="container">
+      <header role="banner">
+  <hgroup id="header-title">
+    <h1><a href="/">Alicja Raszkowska</a></h1>
+  </hgroup>
+  <nav role="navigation" id="main-navigation">
+    <ul>
+      <li><a href="/blog">blog &middot;</a></li>
+      <li><a href="/ideas">ideas &middot;</a></li>
+      <li><a href="/resume">resume &middot;</a></li>
+    </ul>
+  </nav>
+  <ul id="external-links">
+    <li>
+      <a href="https://github.com/trueskawka">github &middot;</a>
+    </li>
+    <li>
+      <a href="https://twitter.com/mamrotynka">twitter</a>
+    </li>
+  </ul>
+</header>
+
+      <main>
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <div>
+    <p class="post-meta">
+      <time datetime="2018-04-01T16:55:00-07:00" itemprop="datePublished">
+        
+          04/01/2018 16:55
+        
+      </time>
+    </p>
+    <p>
+      <h2 class="post-title" itemprop="name headline">
+        Drawing with CSS - part 2: linear gradients
+      </h2>
+    </p>
+  </div>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>The first part of the drawing with CSS tutorial was all about 
+<a href="/blog/programming/2018/02/07/drawing-with-CSS-part-1-box-shadows.html">box shadows</a>.
+They are pretty flexible when it comes to creating multiple rectangular and circular shapes, but there are some
+limitations.</p>
+
+<p>Three main disadvantages of using only box shadows for drawing:</p>
+<ul>
+  <li>their rotation is the same as the rotation of the parent element</li>
+  <li>their size is defined relative to the parent element</li>
+  <li>there is a limit of three base shapes</li>
+</ul>
+
+<p>In this blog post I want to focus on another tool for drawing with CSS - gradients. Gradients are images created with a 
+function. In their most basic form, they are a progressive transition between two colors. Let’s take an initial look as 
+to what that means, starting with a simple black square.</p>
+
+<link rel="stylesheet" href="/css/linear-gradients.css" />
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.boxy {
+  height: 100px;
+  width: 100px;
+  
+  background: black;
+}
+</code></pre></div></div>
+
+<div class="drawing-container"><div class="boxy"></div></div>
+
+<p>Now we can add different transitions using a simple linear gradient:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/* From top to bottom */
+.boxy {
+  height: 100px;
+  width: 100px;
+
+  background: linear-gradient(to bottom, black, white);
+}
+</code></pre></div></div>
+
+<div class="drawing-container"><div class="boxy boxy-gradient-bottom"></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/* From bottom to top */
+.boxy {
+  height: 100px;
+  width: 100px;
+  
+  background: linear-gradient(to top, black, white);
+}
+</code></pre></div></div>
+
+<div class="drawing-container"><div class="boxy boxy-gradient-top"></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/* From left to right */
+.boxy {
+  height: 100px;
+  width: 100px;
+  
+  background: linear-gradient(to right, black, white);
+}
+</code></pre></div></div>
+
+<div class="drawing-container"><div class="boxy boxy-gradient-right"></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/* From right to left */
+.boxy {
+  height: 100px;
+  width: 100px;
+  
+  background: linear-gradient(to left, black, white);
+}
+</code></pre></div></div>
+
+<div class="drawing-container"><div class="boxy boxy-gradient-left"></div></div>
+
+<p>So how are gradients defined? Because they are images created with a function, they are applied to 
+the <code class="highlighter-rouge">background</code> property, more specifically <code class="highlighter-rouge">background-image</code>. Before we go any further, let’s take a closer 
+look at the some of the <code class="highlighter-rouge">background</code> properties:</p>
+<ul>
+  <li><code class="highlighter-rouge">background-color</code> (keyword/RGB/HSL) - sets the background color of an element</li>
+  <li><code class="highlighter-rouge">background-image</code> - sets one or more background images for an element, including 
+gradients</li>
+  <li><code class="highlighter-rouge">background-position</code> (keyword/px/em/percentage) - sets the position of the background</li>
+  <li><code class="highlighter-rouge">background-repeat</code> (keyword) - defines how background images are repeated</li>
+  <li><code class="highlighter-rouge">background-size</code> (keyword/px/em/percentage) - specifies the size of a background element</li>
+  <li><code class="highlighter-rouge">background-attachment</code> (keyword) - defines the scrolling beahviour</li>
+</ul>
+
+<p>Most of the time there is no need to set all of those properties at once and it’s possible to
+use a <code class="highlighter-rouge">background</code> shorthand to concisely define only those that are needed. All the other properties
+will be set to their initial values.</p>
+
+<p>The <code class="highlighter-rouge">background</code> shorthand is defined as:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>background: &lt;attachment&gt; &lt;image&gt; &lt;position&gt; &lt;size&gt; &lt;repeat&gt;;
+</code></pre></div></div>
+<p>and it can have multiple layers. The layers are positioned as a stack from the bottom-most declaration - the 
+lowest layer is going to be at the bottom of the stack and the subsequent layers are going to cover
+it - which we can use for multi-layer drawings!</p>
+
+<p>Linear gradients are defined with the <code class="highlighter-rouge">linear-gradient()</code> function that we can use in the <code class="highlighter-rouge">background-image</code>
+property. Let’s dive into the properties of that function:</p>
+<ul>
+  <li><code class="highlighter-rouge">&lt;side-or-corner&gt;</code> or <code class="highlighter-rouge">&lt;angle&gt;</code> - the first property of a linear gradient defines where the transition 
+  between colors starts and ends, which can be defined either by keywords (<code class="highlighter-rouge">to bottom</code>, <code class="highlighter-rouge">to right</code>) or angles
+  (<code class="highlighter-rouge">180deg</code>, <code class="highlighter-rouge">90deg</code>)</li>
+  <li>two or more <code class="highlighter-rouge">&lt;color-stop&gt;</code> values - each has a color value (keyword/RGB/HSL) followed by an optional <code class="highlighter-rouge">stop</code> 
+position (percentage/px/em), they define what colors and at what points are transitioning</li>
+</ul>
+
+<p>The description on its own might not be entirely clear, so let’s look at some examples. To better understand 
+the angle of a linear gradient, you can play with the fiddle below - it’s a linear gradient transitioning 
+between three colors: red, pink and orange (the middle pink color is used to visualize the gradient line better).</p>
+
+<div id="gradient-container">
+  <div id="gradient-box">
+    <div id="js-gradient">
+      <div id="perpendicular-line"></div>
+      <div id="gradient-line"></div>
+    </div>
+  </div>
+  <div id="angle-form">
+    <h4>Angle <span id="ang">45</span>&deg;</h4>
+    <input name="angle" type="range" min="0" max="360" value="45" step="1" id="angle" />
+  </div>
+</div>
+
+<p>This gradient is defined as follows:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>linear-gradient(
+  &lt;angle&gt; deg,
+  red 0%,
+  #ff9a9e 50%, #ff9a9e 50%,
+  orange 100%
+);
+</code></pre></div></div>
+
+<ol>
+  <li>The <code class="highlighter-rouge">&lt;angle&gt;</code> value is taken directly from the value in the fiddle.</li>
+  <li>The first color-stop declaration <code class="highlighter-rouge">red 0%</code> means that color <code class="highlighter-rouge">red</code> is the first color and it starts at the 
+  very beginning of the gradient line at <code class="highlighter-rouge">0%</code>. Technically, the <code class="highlighter-rouge">0%</code> here is superfluous, as it’s the initial 
+  value for the first color-stop.</li>
+  <li>The second and third color-stop declarations define the pink strip - it starts and stops at <code class="highlighter-rouge">50%</code>. The first 
+  color-stop is linearly transitioning from being pure <code class="highlighter-rouge">red</code> to being more and more <code class="highlighter-rouge">#ff9a9e</code>. Then the third
+  color-stop is linearly transitioning from being pure <code class="highlighter-rouge">#ff9a9e</code> to being more and more <code class="highlighter-rouge">orange</code> - the last color
+  stop.</li>
+  <li>The last color-stop declaration defines the orange part of the gradient - it goes from where the last color-stop
+  ends at <code class="highlighter-rouge">50%</code> to the end of the gradient line at <code class="highlighter-rouge">100%</code>. Technically <code class="highlighter-rouge">100%</code> here is superfluous, as it’s the initial
+  value for the last color-stop.</li>
+</ol>
+
+<p>A few things worth mentioning at this point:</p>
+<ul>
+  <li>CSS gradients have no intrinsic dimensions - they define a color progression within the element they are applied to 
+and don’t have a preferred size nor a preferred ratio. They repeat so as to fill the container. You can imagine them
+as stripes of color progressively transitioning from the first color to the last, placed along the gradient line.</li>
+  <li>CSS function calculates the color values in a way that makes the corners the full defined color - the starting points 
+start at a perpendicular line between the corner and the gradient line - I found the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/linear-gradient#Composition_of_a_linear_gradient">MDN visualization</a>
+useful for understanding how it works.</li>
+  <li>Color-stops can have values below <code class="highlighter-rouge">0%</code> and above <code class="highlighter-rouge">100%</code> - since linear gradients don’t have an intrinsic size and are 
+defined along a gradient line, the stop values can be placed at any point along this line.</li>
+</ul>
+
+<p>By now you probably understand pretty well how to use gradients as backgrounds, but how can they be used for drawing? 
+Let’s gather some useful insights here:</p>
+<ul>
+  <li>an element can have multiple background images that can be layered on top of each other</li>
+  <li>each background image can have a precisely defined size (its bounding box) and position for the upper left corner</li>
+  <li>linear gradients can be defined with either percentages or pixels and can be used as background images</li>
+</ul>
+
+<p>Before we get started with drawing, let’s explore the last point a bit more - a linear gradient can be defined using 
+either percentages or lenghts.</p>
+
+<p>The first gradient below is defined using percentages and the second one is using pixels. Initially, the angle is <code class="highlighter-rouge">0deg</code>
+and they both look the same. But changing the angle is going to either change the width of the line (percentage gradient)
+or the position (pixel gradient). Depending on which variable we want to control, it’s sensible to use an appropriate 
+approach for linear gradients.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/* Percentages */
+linear-gradient(
+  &lt;angle&gt; deg,
+  white 0%, white 40%,
+  orange 40%, orange 60%,
+  white 60%, white 100%
+);
+
+/* Pixels */
+linear-gradient(
+  &lt;angle&gt; deg,
+  white 0%, white 80px,
+  orange 80px, orange 120px,
+  white 120px, white 100%
+);
+</code></pre></div></div>
+
+<div id="gradient-container2">
+  <div class="gradient" id="percentage-gradient"></div>
+  <div class="gradient" id="pixel-gradient"></div>
+  <div id="angle-form2">
+    <h4>Angle <span id="ang2">0</span>&deg;</h4>
+    <input name="angle2" type="range" min="0" max="360" id="angle2" value="0" />
+  </div>
+</div>
+
+<p>Now we have all the tools to draw something using linear gradients. Let’s work through an example, recreating the
+<a href="https://www.haskell.org/">Haskell</a> logo. It consists of a few simple linear elements and we’re going to start from
+the lower right part of the lambda as the base element. If you look at the image closely, you can see that the same
+element is repeated throughout the lambda and the preceeding chevron, simply mirrored at different angles.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.haskell {
+  width: 156px;
+  height: 144px;
+  
+  color: orange;
+  
+  background:
+    linear-gradient(
+      237.5deg,
+      transparent 77px,
+      currentColor 77px,
+      currentColor 129px,
+      white 129px
+    );
+}
+</code></pre></div></div>
+
+<div class="container-haskell"><div class="haskell-lower-right"></div></div>
+
+<p>Next let’s mirror the lower right part to create the bottom part of the lambda. We need more fine-grained 
+control for positioning the elements, so let’s set the size of each background element to <code class="highlighter-rouge">156</code> by <code class="highlighter-rouge">144</code> 
+pixels with <code class="highlighter-rouge">background-size</code> and make sure the background doesn’t repeat itself. Now we’re going to use
+an initial position for each background element, to make sure it’s in the right place, and double the width
+of the image.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.haskell {
+  width: 312px;
+  height: 144px;
+  
+  color: orange;
+  
+  background:
+    linear-gradient(
+      122.5deg,
+      transparent 80px,
+      currentColor 80px,
+      currentColor 132px,
+      transparent 132px
+    ),
+    linear-gradient(
+      237.5deg,
+      transparent 77px,
+      currentColor 77px,
+      currentColor 129px,
+      white 129px
+    ) 156px 0;
+  
+  background-size: 156px 144px;
+  background-repeat: no-repeat;
+}
+</code></pre></div></div>
+
+<div class="container-haskell"><div class="haskell-lower-lambda"></div></div>
+
+<p>Let’s add the upper part of the lambda - we need to move elements around a bit, to make sure they overlap properly.
+Also, now the image needs double the single element height.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.haskell {  
+  width: 312px;
+  height: 288px;
+  
+  color: orange;
+  
+  background:
+    linear-gradient(
+      237.5deg,
+      transparent 77px,
+      currentColor 77px,
+      currentColor 129px,
+      transparent 129px
+    ) 65px 0,
+    linear-gradient(
+      122.5deg,
+      transparent 80px,
+      currentColor 80px,
+      currentColor 132px,
+      transparent 132px
+    ) 65px 144px,
+    linear-gradient(
+      237.5deg,
+      transparent 77px,
+      currentColor 77px,
+      currentColor 129px,
+      white 129px
+    ) 156px 144px;
+  
+  background-size: 156px 144px;
+  background-repeat: no-repeat;
+}
+</code></pre></div></div>
+
+<div class="container-haskell"><div class="haskell-lambda"></div></div>
+
+<p>The next element of the logo is a chevron on the left side of the lambda. It’s made of the same base 
+elements as the lambda, just mirrored a bit. Let’s increase the size of the image, move the lambda a bit
+to the right and add a black chevron.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.haskell {
+  width: 345px;
+  height: 288px;
+  
+  color: orange;
+  
+  background:
+    /* black chevron */
+    /* upper part */
+    linear-gradient(
+      237.5deg,
+      transparent 77px,
+      #101c24 77px,
+      #101c24 129px,
+      transparent 129px
+    ) 0 0,
+    /* lower part */
+    linear-gradient(
+      122.5deg,
+      transparent 80px,
+      #101c24 80px,
+      #101c24 132px,
+      transparent 132px
+    ) 0 144px,
+
+    /* lambda */
+    /* upper part */
+    linear-gradient(
+      237.5deg,
+      transparent 77px,
+      currentColor 77px,
+      currentColor 129px,
+      transparent 129px
+    ) 85px 0,
+    /* lower left part */
+    linear-gradient(
+      122.5deg,
+      transparent 80px,
+      currentColor 80px,
+      currentColor 132px,
+      transparent 132px
+    ) 85px 144px,
+    /* lower right part */
+    linear-gradient(
+      237.5deg,
+      transparent 77px,
+      currentColor 77px,
+      currentColor 129px,
+      white 129px
+    ) 176px 144px;
+  
+  background-size: 156px 144px;
+  background-repeat: no-repeat;
+}
+</code></pre></div></div>
+
+<div class="container-haskell"><div class="haskell-chevron"></div></div>
+
+<p>The last part of the image are two parallel lines on the right. We need to add a bit of space to
+fit the lines to the right and add two linear gradients with either <code class="highlighter-rouge">0deg</code> or <code class="highlighter-rouge">180deg</code>.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.haskell {
+  width: 380px;
+  height: 288px;
+  
+  color: orange;
+  
+  background:
+    /* black chevron */
+    /* upper part */
+    linear-gradient(
+      237.5deg,
+      transparent 77px,
+      #101c24 77px,
+      #101c24 129px,
+      transparent 129px
+    ) 0 0,
+    /* lower part */
+    linear-gradient(
+      122.5deg,
+      transparent 80px,
+      #101c24 80px,
+      #101c24 132px,
+      transparent 132px
+    ) 0 144px,
+
+    /* lambda */
+    /* upper part */
+    linear-gradient(
+      237.5deg,
+      transparent 77px,
+      currentColor 77px,
+      currentColor 129px,
+      transparent 129px
+    ) 85px 0,
+    /* lower left part */
+    linear-gradient(
+      122.5deg,
+      transparent 80px,
+      currentColor 80px,
+      currentColor 132px,
+      transparent 132px
+    ) 85px 144px,
+    /* lower right part */
+    linear-gradient(
+      237.5deg,
+      transparent 77px,
+      currentColor 77px,
+      currentColor 129px,
+      white 129px
+    ) 176px 144px,
+    
+    /* black lines */
+    /* upper line */
+    linear-gradient(
+      180deg,
+      white 80px,
+      #101c24 80px,
+      #101c24 132px,
+      white 132px
+    ) 220px 0px,
+    /* lower line */
+    linear-gradient(
+      180deg,
+      white 12px,
+      #101c24 12px,
+      #101c24 64px,
+      white 64px
+    ) 220px 144px;
+  
+  background-size: 156px 144px;
+  background-repeat: no-repeat;
+}
+</code></pre></div></div>
+
+<div class="container-haskell"><div class="haskell-with-lines"></div></div>
+
+<p>Now it’s almost done - we just need to add two more white base elements between the orange lambda
+and the black lines to visually separate them.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.haskell {
+  width: 380px;
+  height: 288px;
+  
+  color: orange;
+  
+  background:
+    /* black chevron */
+    /* upper part */
+    linear-gradient(
+      237.5deg,
+      transparent 77px,
+      #101c24 77px,
+      #101c24 129px,
+      transparent 129px
+    ) 0 0,
+    /* lower part */
+    linear-gradient(
+      122.5deg,
+      transparent 80px,
+      #101c24 80px,
+      #101c24 132px,
+      transparent 132px
+    ) 0 144px,
+
+    /* lambda */
+    /* upper part */
+    linear-gradient(
+      237.5deg,
+      transparent 77px,
+      currentColor 77px,
+      currentColor 129px,
+      transparent 129px
+    ) 85px 0,
+    /* lower left part */
+    linear-gradient(
+      122.5deg,
+      transparent 80px,
+      currentColor 80px,
+      currentColor 132px,
+      transparent 132px
+    ) 85px 144px,
+    /* lower right part */
+    linear-gradient(
+      237.5deg,
+      transparent 77px,
+      currentColor 77px,
+      currentColor 129px,
+      white 129px
+    ) 176px 144px,
+    
+    /* white spacer */
+    /* upper part */
+    linear-gradient(
+      237.5deg,
+      transparent 77px,
+      white 77px,
+      white 129px,
+      transparent 129px
+    ) 110px 0,
+    /* lower part */
+    linear-gradient(
+      237.5deg,
+      transparent 80px,
+      white 80px,
+      white 132px,
+      transparent 132px
+    ) 206px 144px,
+    
+    /* black lines */
+    /* upper line */
+    linear-gradient(
+      180deg,
+      white 80px,
+      #101c24 80px,
+      #101c24 132px,
+      white 132px
+    ) 220px 0px,
+    /* lower line */
+    linear-gradient(
+      180deg,
+      white 12px,
+      #101c24 12px,
+      #101c24 64px,
+      white 64px
+    ) 220px 144px;
+  
+  background-size: 156px 144px;
+  background-repeat: no-repeat;
+}
+</code></pre></div></div>
+
+<div class="container-haskell"><div class="haskell"></div></div>
+
+<p>You can edit this drawing interactively on <a href="https://codepen.io/trueskawka/pen/pLVGgx?editors=1100">CodePen</a>.</p>
+
+<script src="/scripts/linear-gradients.js"></script>
+
+
+  </div>
+</article>
+
+      </main>
+    </div>
+  </body>
+  <footer>
+  <div class="container">
+    <div class="squiggle" aria-hidden="true">
+      ∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿
+    </div>
+  </div>
+</footer>
+
+</html>

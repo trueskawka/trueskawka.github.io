@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8" />
+  <title>
+    
+        Alicja Raszkowska
+    
+  </title>
+
+  <link
+    rel="canonical"
+    href="http://localhost:4000/blog/programming/2016/10/20/learning-by-observing.html"
+  />
+
+  <link rel="stylesheet" href="/css/blog.css">
+</head>
+
+  <body>
+    <div class="container">
+      <header role="banner">
+  <hgroup id="header-title">
+    <h1><a href="/">Alicja Raszkowska</a></h1>
+  </hgroup>
+  <nav role="navigation" id="main-navigation">
+    <ul>
+      <li><a href="/blog">blog &middot;</a></li>
+      <li><a href="/ideas">ideas &middot;</a></li>
+      <li><a href="/resume">resume &middot;</a></li>
+    </ul>
+  </nav>
+  <ul id="external-links">
+    <li>
+      <a href="https://github.com/trueskawka">github &middot;</a>
+    </li>
+    <li>
+      <a href="https://twitter.com/mamrotynka">twitter</a>
+    </li>
+  </ul>
+</header>
+
+      <main>
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <div>
+    <p class="post-meta">
+      <time datetime="2016-10-20T15:48:00-07:00" itemprop="datePublished">
+        
+          10/20/2016 15:48
+        
+      </time>
+    </p>
+    <p>
+      <h2 class="post-title" itemprop="name headline">
+        Learning by observing
+      </h2>
+    </p>
+  </div>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>Recently I’ve had the pleasure of seeing <a href="https://www.harihareswara.net/">Sumana Harihareswara</a> live documenting <a href="https://zulip.tabbott.net/#narrow/stream/test.20suites/topic/watch.20over.20my.20shoulder.20as.20I.20improve.20the.20linter">a coding adventure</a> on Zulip. As I wanted to learn even more from this experience, I’ve reread it and tried to break it into high level activities.</p>
+
+<h4 id="disclaimer">Disclaimer</h4>
+<p>The following text is a rephrasing of a live-coding session. If you find any smart, hilarious and generally great quotes - those are Sumana’s words when not directly attributed and Steve’s or Tim’s words for the appropriate dramatis persona.</p>
+
+<h2 id="updating-the-linter">Updating the Linter</h2>
+
+<h3 id="an-adventure-in-eight-and-some-acts">an Adventure in Eight and Some Acts</h3>
+
+<h4 id="dramatis-personae">Dramatis personae</h4>
+<p>The Developer - Sumana Harihareswara</p>
+
+<p>The Counselor - Steve Howell</p>
+
+<p>The Backstage Voice - Tim Abbott</p>
+
+<h3 id="acts-1---finding-an-adventure">Acts[-1] - Finding an Adventure</h3>
+
+<p>The Developer noticed a disturbing string in one of the <a href="https://github.com/zulip/zulip/commit/ca1789892dca27f8acdb57344f12d571ee5649ca">recent commits to Zulip</a>.
+An existing linter rule for assuring proper capitalization of <code class="highlighter-rouge">JavaScript</code> seems not to be working. It should find any unwanted occurrences of <code class="highlighter-rouge">javascript</code> or <code class="highlighter-rouge">Javascript</code> during testing and suggest a change in code.</p>
+
+<h3 id="whats-a-linter"><em>What’s a linter?</em></h3>
+
+<p><a href="https://en.wikipedia.org/wiki/Lint_(software)">source: Wikipedia</a></p>
+
+<p>A linter (or lint) is a tool that flags suspicious usage in any computer language. Lint-like tools generally perform static analysis of source code. Linters are used for finding common errors in code, e.g. syntactic discrepancies in the code - mainly code that doesn’t correspond to style guidelines or doesn’t follow specific rules.</p>
+
+<p><em>I’ve had an example of that in my own code - Zulip linter tests were failing, because I didn’t use the 4-space indentation in JavaScript, as defined in the style guideline.</em></p>
+
+<h3 id="acts0---gearing-up-for-the-adventure">Acts[0] - Gearing up for the Adventure</h3>
+
+<p>Before the adventure, the Developer updates her local repository with a shell script, as to assure it’s up to date and any possible bugs are not caused by outdated code.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/bash</span>
+
+<span class="c"># update a bunch of Zulip git repositories</span>
+
+checkout_repo<span class="o">(){</span>
+    git checkout master
+    git pull upstream master
+    git push origin master
+    git checkout -
+<span class="o">}</span>
+<span class="k">for </span>repo <span class="k">in </span>zulip zulip-android zulip-electron zulip.github.io
+<span class="k">do
+    </span><span class="nb">pushd</span> <span class="k">${</span><span class="nv">repo</span><span class="k">}</span>
+    checkout_repo
+    <span class="nb">popd
+</span><span class="k">done</span>
+</code></pre></div></div>
+
+<h3 id="acts1---in-search-of-code">Acts[1] - In Search of Code</h3>
+
+<p>The Developer remembers she was facing a similar problem earlier and so she uses a <code class="highlighter-rouge">git log --grep="JavaScript"</code> command to find an appropriate commit, with which she finds:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>commit 2338421c6ddf8c520f2ebbb5b3c040aebc1ad197
+Author: Tim Abbott &lt;tabbott@mit.edu&gt;
+Date:   Tue Jul 12 19:22:21 2016 -0700
+
+    lint: Add documentation lint check for JavaScript spelling.
+</code></pre></div></div>
+
+<p>She then copies the commit hash and runs <code class="highlighter-rouge">git show 2338421c6ddf8c520f2ebbb5b3c040aebc1ad197</code>, to see changes introduced in that commit. She has identified a change to <code class="highlighter-rouge">tools/lint-all</code> that has a pattern having to do with the word <code class="highlighter-rouge">JavaScript</code>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-markdown_rules = markdown_whitespace_rules
++markdown_rules = markdown_whitespace_rules + [
++    {'pattern': ' [jJ]avascript',
++     'exclude': set(['README.dev.md']), # temporary exclusion to avoid merge conflicts
++     'description': "javascript should be spelled JavaScript"},
++]
+</code></pre></div></div>
+
+<p>She realizes that the solution is going to involve a regular expression (“regex”).</p>
+
+<p>To make sure that the appropriate file to edit is <code class="highlighter-rouge">tools/lint-all</code>, the Developer turns to the <a href="https://zulip.readthedocs.io/en/latest/testing.html">testing documentation</a>. It has a link to the <a href="https://zulip.readthedocs.io/en/latest/linters.html">linter(s)</a> and she finds reassurance in the quote:</p>
+
+<blockquote>
+  <p>Most of our lint checks get performed by <code class="highlighter-rouge">./tools/lint-all</code></p>
+</blockquote>
+
+<p>The Developer finds the relevant code on line <code class="highlighter-rouge">333</code>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>markdown_rules = markdown_whitespace_rules + [
+    {'pattern': ' [jJ]avascript',
+     'exclude': set(['README.dev.md']), # temporary exclusion to avoid merge conflicts
+     'description': "javascript should be spelled JavaScript"},
+</code></pre></div></div>
+
+<p>and she wonders if she should remove the temporary exclusion of <code class="highlighter-rouge">README.dev.md</code> - is it a thing of the past?</p>
+
+<p>In her terminal she goes to <code class="highlighter-rouge">docs</code>, starts doing <code class="highlighter-rouge">ls RE</code> and hits tab to see what completes - there’s only <code class="highlighter-rouge">README.md</code>. But she wants to be sure:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ find . -iname "*.dev.md"
+$ find . -iname "README.md"
+./README.md
+$ find . -iname "*README.md"
+./README.md
+</code></pre></div></div>
+
+<p>and it means there are <em>no</em> results when she searches case-insensitively for the files that end with <code class="highlighter-rouge">.dev.md</code>. Just to be sure that her syntax was right, the Developer searched for something that she knew was there, and it worked.</p>
+
+<h3 id="acts2---branching">Acts[2] - Branching</h3>
+
+<p>The Developer decides it’s time to make a change, which means it’s time to switch to a new branch in git!</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git checkout -b JavaScript-linter
+Switched to a new branch 'JavaScript-linter'
+</code></pre></div></div>
+
+<p>She quickly deletes the exclusion line and saves the file.</p>
+
+<p>Now there is time for the real adventure to begin - why is the current rule, that searches for <code class="highlighter-rouge">[jJ]avascript</code>, not working with the commit in question (<code class="highlighter-rouge">ca1789892dca27f8acdb57344f12d571ee5649ca</code>)? That regular expression should catch the lower-case <code class="highlighter-rouge">s</code>.</p>
+
+<p>Ah but wait! The actual line says:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>'pattern': ' [jJ]avascript'
+</code></pre></div></div>
+
+<p>There’s a space before the bracket! Maybe - yes, the commit that just came through has the following:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;a href="https://github.com/zulip/zulip-js"&gt;Javascript library&lt;/a&gt;
+</code></pre></div></div>
+
+<p>Which means there’s no space before the initial J! So maybe deleting the space will allow the linter to catch this problem.</p>
+
+<p>The Developer decides to do just that and run the linter - she deletes the space and saves the file.</p>
+
+<h3 id="acts3---testing-the-null-hypothesis">Acts[3] - Testing the Null Hypothesis</h3>
+<p>The Developer wants to run the linter. She wants to save some time and decides not to run Vagrant - in a bold move she just starts up her <code class="highlighter-rouge">virtualenv</code> that has the right packages installed:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ workon zulip
+$ cd ..
+$ ./tools/lint-all
+ImportError: No module named typing
+You need to run the Zulip linters inside a Zulip dev environment.
+If you are using Vagrant, you can `vagrant ssh` to enter the Vagrant guest.
+</code></pre></div></div>
+
+<p>As this approach fails her, she decides to reprovision Vagrant:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ vagrant up
+$ vagrant ssh
+$ cd /srv/zulip
+$ python tools/provision.py
+</code></pre></div></div>
+
+<p><em>The Developer goes in search for refreshments and conquers her email, as reprovisioning takes some time</em></p>
+
+<p>After the reprovisioning is done, the Developer runs the linter:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(zulip-venv)vagrant@vagrant-base-trusty-amd64:/srv/zulip$ ./tools/lint-all
+</code></pre></div></div>
+
+<p>And she encounters a different result:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>javascript should be spelled JavaScript at docs/code-style.md line 140:
+[[1]](http://stackoverflow.com/questions/500504/javascript-for-in-with-arrays),
+
+javascript should be spelled JavaScript at docs/code-style.md line 141:
+[[2]](http://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml#for-in_loop),
+</code></pre></div></div>
+
+<p>The Developer quickly realizes the space in the regex was there to avoid the situation when a lowercased <code class="highlighter-rouge">javascript</code> in a URL would cause a linter problem. Additionally, the file because of which the adventure began (<code class="highlighter-rouge">templates/zerver/api.html</code>) is not causing the linter to complain, which may mean it’s a word boundary issue.</p>
+
+<p>Time to use new battle gear - the Developer decides to fire up a regex tool <a href="http://regexr.com/">RegExr</a>!</p>
+
+<h3 id="acts4---in-the-land-of-regex">Acts[4] - In the Land of Regex</h3>
+
+<p>RegExr makes it easy to say <em>help me write a regular expression that catches THIS case but not THAT case</em>. The Developer copies and pastes the lines the linter is complaining about <em>now</em> and the line from <code class="highlighter-rouge">templates/zerver/api.html</code> that she wants the regex to complain about, into RegExr’s web interface:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;p&gt;We have a &lt;a href="/api/endpoints"&gt;well-documented API&lt;/a&gt; that allows you to build custom integrations, in addition to our &lt;a href="/integrations"&gt;existing integrations&lt;/a&gt;. For ease-of-use, we've created a Python module that you can drop in to a project to start interacting with our API. There is also a &lt;a href="https://github.com/zulip/zulip-js"&gt;Javascript library&lt;/a&gt; that can be used either in the browser or in Node.js.&lt;/p&gt;
+[[1]](http://stackoverflow.com/questions/500504/javascript-for-in-with-arrays),
+[[2]](http://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml#for-in_loop)
+</code></pre></div></div>
+
+<p><a href="/other/regexr.png" data-lightbox="regexr" data-title="">
+  <img src="/other/regexr.png" />
+</a></p>
+
+<p>She is going to try to find a regex that only matches what she wants to match and chooses the current <code class="highlighter-rouge">'[jJ]avascript'</code> rule as her starting point. Before she starts the regex struggle, she skims the code of <code class="highlighter-rouge">lint-all</code>, to make sure no comments require anything particularly special in the syntax of regular expressions. She notices a few things:</p>
+
+<ul>
+  <li>
+    <p>the line she’s editing is within the <code class="highlighter-rouge">markdown_rules</code> definition, which is within the <code class="highlighter-rouge">build_custom_checkers</code> function</p>
+  </li>
+  <li>
+    <p>later, in another function (<code class="highlighter-rouge">check_custom_checks_nonpy</code> within the <code class="highlighter-rouge">build_custom_checkers</code> function), there’s:</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>      for fn in by_lang['md']:
+          if custom_check_file(fn, markdown_rules):
+</code></pre></div>    </div>
+
+    <p>So <code class="highlighter-rouge">build_custom_checkers</code> is a higher-order function that has other functions within it. But the main thing is, the rule she’s editing is one that only gets applied to Markdown files (filenames ending in <code class="highlighter-rouge">.md</code>).</p>
+  </li>
+  <li>
+    <p>the top of the file includes <code class="highlighter-rouge">import re</code> which is the part of the standard library that does regular expression parsing - she thinks that implies she can use regular regexes and there’s nothing special about the syntax the linter will use</p>
+  </li>
+</ul>
+
+<p>The view of the numerous rules fills her heart with joy -  it’s great that these rules save us from bugs!</p>
+
+<p>The Developer turns back to RegExr and she is confused - the initial rule <code class="highlighter-rouge">[jJ]avascript</code> matches everything, so why doesn’t the linter catch the first issue? She remembers that it is in an HTML page, not a Markdown page!</p>
+
+<p>In conclusion, she now has two problems:</p>
+
+<ul>
+  <li>
+    <p>how to deal with the possibility that the word might have or not have a space in front of it (but exclude URLs)</p>
+  </li>
+  <li>
+    <p>how to get this check to happen in HTML pages as well as Markdown pages</p>
+  </li>
+</ul>
+
+<p>She wonders if she could build on others’ work to say “if this is in a URL then don’t bother with it”? She looks in the existing <code class="highlighter-rouge">lint-all</code> code and searches for “url”, “http” with no luck.</p>
+
+<p>There’s a common saying in software, the Developer believes initially spoken by Jamie Zawinski:</p>
+<blockquote>
+  <p>You had a problem. You decided to use regular expressions. Now you have two problems.</p>
+</blockquote>
+
+<p>Regexes are legendarily headache-inducing.</p>
+
+<p>Facing this adventure, she can’t think of a better solution. She thinks of turning to the world-renowned Stack Overflow, a source of answers to numerous questions bothering developers, but she first decides to look through RegExr - they may have a library of solutions to common problems like this. She finds the “Community” section and finds <a href="http://regexr.com/2rj36">a rule that matches URLs</a>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/[-a-zA-Z0-9@:%_\+.~#?&amp;//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&amp;//=]*)?/gi
+</code></pre></div></div>
+
+<p>which seems like a very long and complicated regex. Does it really need to be that complicated? Won’t URLs start with HTTP? She realizes it’s not always true, as sometimes there will be hyperlinks to references elsewhere in the documentation.</p>
+
+<p>She checks if there are currently any docs that have <code class="highlighter-rouge">javascript</code> in their filenames:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ find . -iname "*javascript*"
+./.git/logs/refs/heads/JavaScript-linter
+./.git/refs/heads/JavaScript-linter
+</code></pre></div></div>
+
+<p>and she finds none, but that’s not to say they will never exist.</p>
+
+<p>She also realizes this RegExr example is clearly also matching email addresses. And there may come a day when in code there will be an address similar to javascript@facebook.com.</p>
+
+<h3 id="acts5---enter-the-counselor">Acts[5] - Enter the Counselor</h3>
+
+<p>Facing so many doubts, she decides to trust that other engineers will review her pull request and tell her whether there was a better way to do this. The best way she now sees fit to face the problem is to use the regex to exclude URLs, while also including HTML as well as MD files when the linter runs this rule.</p>
+
+<p><em>The Counselor</em>: For the proximal problem I’d consider just exempting any case of <code class="highlighter-rouge">/javascript</code> and avoid the nasty URL regex. (But now that you’re looking at the URL regex, maybe make a note of that as something we can additionally clean up. If a simpler URL regex suffices for us, the code will be easier on the eyes and maybe it will run a bit faster too.)</p>
+
+<p>The Developer fiddles with this regex in RegExr to combine it with the JavaScript check. She comes to a fork on the road - in the alternate universe where she got no advice from the Counselor, she would simply use the RegExr interface to figure out how to say <em>match <code class="highlighter-rouge">javascript</code> and <code class="highlighter-rouge">Javascript</code> <strong>except</strong> within URLs</em>. But no! She is in this universe, so she follows the Counselor’s suggestion and just excludes <code class="highlighter-rouge">/javascript</code> for now.</p>
+
+<p><em>The Counselor</em>: I think it’s a valid strategy to say we make the regex very broad and then exempt only <code class="highlighter-rouge">/javascript</code> cases for now. This mostly errors on the side of fixing things. There’s some risk that somebody will have another legitimate use of wrongly-cased javascript someday like <code class="highlighter-rouge">http://learn-javascript.com</code>, but we can deal with that reactively.</p>
+
+<p>The Developer goes to RegExr to learn how to do the exclusion she wants to do. She does a LOT of iterations while looking at the “Cheatsheet” in the lefthand sidebar of RegExr, and comes up with:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[^\/-]([jJ]avascript)
+</code></pre></div></div>
+
+<p>Which catches the bit of that HTML page she wants - <code class="highlighter-rouge">zulip-js"&gt;Javascript</code> - but none of:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[[1]](http://stackoverflow.com/questions/500504/javascript-for-in-with-arrays),
+[[2]](http://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml#for-in_loop),
+http://my-javascript-guide.com
+</code></pre></div></div>
+
+<p>(she just came up with that last one because the preceding hyphen strikes her as a plausible potential case)</p>
+
+<p>The Developer is now going to figure out how to get this check into the HTML rule(s) as well. Maybe there’s some way to abstract things, so it’s defined in one place and run both by the HTML checker and the MD checker.</p>
+
+<p>The structure of the linter seems to be that developers set up rules/rulesets, and then reuse them elsewhere. The Developer decides to define this rule within the ruleset of <em>capitalization of proper nouns in prose rules</em>. She sets up a new ruleset, just before the current definition of <code class="highlighter-rouge">html_rules</code>, and simply copies the formatting of the other rules.</p>
+
+<p>To make sure she is right about how this structure works, she made a change and commits it. This will run the linter, to see whether it breaks. She saves the file and runs <code class="highlighter-rouge">git diff</code> in the terminal:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+    prose_style_rules = [
++        {'pattern': '[^\/-]([jJ]avascript)',
++         'description': "javascript should be spelled JavaScript"},
++    ] # type: RuleList
+     html_rules = whitespace_rules + [
+         {'pattern': 'placeholder="[^{]',
+          'description': "`placeholder` value should be translatable."},
+@@ -327,11 +331,7 @@ def build_custom_checkers(by_lang):
+          'description': "`placeholder` value should be translatable."},
+         ] # type: RuleList
+     json_rules = [] # type: RuleList # just fix newlines at ends of files
+-    markdown_rules = markdown_whitespace_rules + [
+-        {'pattern': ' [jJ]avascript',
+-         'exclude': set(['README.dev.md']), # temporary exclusion to avoid merg
+-         'description': "javascript should be spelled JavaScript"},
+-    ] # type: RuleList
++    markdown_rules = markdown_whitespace_rules + prose_style_rules
+</code></pre></div></div>
+
+<p>The Developer decides to test one thing at a time - - change the rule <em>or</em> the structure of the rule-calling. She goes for the rule-calling structure and changes the pattern for <code class="highlighter-rouge">prose_style_rules</code> to <code class="highlighter-rouge">'pattern': '[jJ]avascript',</code>. Saves. Runs:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./tools/lint-all
+javascript should be spelled JavaScript at docs/code-style.md line 140:
+[[1]](http://stackoverflow.com/questions/500504/javascript-for-in-with-arrays),
+
+javascript should be spelled JavaScript at docs/code-style.md line 141:
+[[2]](http://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml#for-in_loop),
+</code></pre></div></div>
+
+<p>At first surprised, she quickly realizes she took out the space from the pattern - she adds the space in and runs again - it works!</p>
+
+<p>The Developer is now going to try changing the regex. She changes it to <code class="highlighter-rouge">'pattern': '[^\/-]([jJ]avascript)'</code> and runs the linter, which seems to work.</p>
+
+<p>Next she’s going to try <code class="highlighter-rouge">test-all</code> which is more formidable and which she probably should have run earlier in this set of iterative changes.</p>
+
+<p><em>The Developer checks email and Zulip traffic, while waiting for the tests to finish</em></p>
+
+<p><em>The Counselor</em>: Although not related to your fix, take a look at <code class="highlighter-rouge">json_rules</code> in your diff. :)</p>
+
+<p>While she’s waiting for that to run - tests seem to be passing - she wants to see what she would do to add… FAILED. The failing tests are Casper timeouts that some other developers are also getting, as they have mentioned reporting on their adventures. The Developer decides to ignore them.</p>
+
+<p>She does a fresh diff and notices <code class="highlighter-rouge">json_rules</code> is completely empty, which may require further investigation in the future, to see whether it’s worth blowing away or filling.</p>
+
+<p><em>The Counselor</em>: For the json thing, my two cents is that we should blow it away now. It’s clearly empty and just clutter at this point, and it wouldn’t be hard to restore the json section in the event that we come up with new json rules in the future.</p>
+
+<p><em>The Developer notes that and focuses on the regex for the time being.</em></p>
+
+<h3 id="acts6---the-battle-of-debugging">Acts[6] - The Battle of Debugging</h3>
+
+<p>The Developer’s current hypothesis is that the new regex works, and the new placement works, and the next step is to get the HTML checker to use it.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>html_rules = whitespace_rules + prose_style_rules + [
+</code></pre></div></div>
+
+<p>But wait! There are some failures! Some of these seem to imply a need to fix prose, some imply a need to fix the rule.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./tools/lint-all
+javascript should be spelled JavaScript at templates/zerver/api.html line 8:
+    &lt;p&gt;We have a &lt;a href="/api/endpoints"&gt;well-documented API&lt;/a&gt; that allows you to build custom integrations, in addition to our &lt;a href="/integrations"&gt;existing integrations&lt;/a&gt;. For ease-of-use, we've created a Python module that you can drop in to a project to start interacting with our API. There is also a &lt;a href="https://github.com/zulip/zulip-js"&gt;Javascript library&lt;/a&gt; that can be used either in the browser or in Node.js.&lt;/p&gt;
+
+javascript should be spelled JavaScript at templates/zerver/api.html line 29:
+    &lt;h4&gt;Javascript&lt;/h4&gt;
+
+javascript should be spelled JavaScript at templates/zerver/api.html line 39:
+      &lt;li&gt;&lt;a href="#javascript" data-toggle="tab"&gt;Javascript&lt;/a&gt;&lt;/li&gt;
+
+javascript should be spelled JavaScript at templates/zerver/api.html line 136:
+&lt;div class="tab-pane" id="javascript"&gt;
+
+javascript should be spelled JavaScript at templates/zerver/index.html line 54:
+    &lt;p&gt;{ trans }If this message does not go away, please wait a couple seconds and &lt;a href="javascript:location.reload(true)"&gt;reload&lt;/a&gt; the page.{ endtrans }&lt;/p&gt;
+</code></pre></div></div>
+
+<p>There are five incongruities:</p>
+
+<ol>
+  <li>
+    <p>Is the one the Developer wanted to find, yay!</p>
+  </li>
+  <li>
+    <p>Is similar to 1</p>
+  </li>
+  <li>
+    <p>The hash should be excluded, but there is also some English to fix</p>
+  </li>
+  <li>
+    <p>Is to be excluded (id in an HTML tag)</p>
+  </li>
+  <li>
+    <p>Is to be excluded (href in an HTML tag)</p>
+  </li>
+</ol>
+
+<p><em>The Counselor</em>: Nice work!</p>
+
+<p>She fixes the English bits and starts to wonder how to include a hash. She believes it needs special escaping, because she tried just including it using <code class="highlighter-rouge">'[^\/-#]([jJ]avascript)'</code> or <code class="highlighter-rouge">'[^\/-\#]([jJ]avascript)'</code> - running <code class="highlighter-rouge">lint-all</code> gave a lot of failures. She turns to RegExr, using her new knowledge gained from the five linter failures.</p>
+
+<p>She finds some help in the “Community” examples - looking for the word hash it turns out that <code class="highlighter-rouge">\#</code> does indeed search for a hash. She tries to copy and paste the regex from her editor to RegExr, which responds with some errors about the ordering. She then switches the order to put the hash before the hyphen:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[^\/\#-]([jJ]avascript)
+</code></pre></div></div>
+
+<p>And now it matches what she wants it to match! Also, it catches the quotation marks which she thought she’d have to manually check for.</p>
+
+<p><em>The Counselor</em>: haha, do you know what it’s doing there? [<em>meaning the ordering error</em>]</p>
+
+<p><em>The Developer notes that she has a guess about it - something about a range of characters in ASCII - but she is going to try running it to see whether now it catches anything she doesn’t want it to</em></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./tools/lint-all
+</code></pre></div></div>
+
+<p>Hmm. Wait. She realizes she does <strong>not</strong> want to catch the quotation marks. She adds <code class="highlighter-rouge">\"</code> to that set.</p>
+
+<p>Adding it to the end causes <code class="highlighter-rouge">lint-all</code> to go back into <em>everything is failing</em> mode.</p>
+
+<p><em>The Counselor</em>: This is a good case to step back. You got a cryptic red flag on the hyphen, and you made a change that you don’t completely understand, although it sounds like you have a hypothesis. What function does “-“ serve in regexes?</p>
+
+<p>The Developer thinks out loud:</p>
+
+<p><em><code class="highlighter-rouge">-</code> gives you a range</em></p>
+
+<p><em>so if it’s at the start of a sequence….</em></p>
+
+<p><em>or rather, in the middle….</em></p>
+
+<p><em>it’ll cause the regex to think “you mean everything between [char to the left] and [char to the right]”</em></p>
+
+<p><em>The Counselor</em>: you probably want to escape that dash for future readability <em>alone</em></p>
+
+<p>And it turns out that is not the only reason! The Developer is now escaping it:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>'pattern': '[^\/\#\-\"]([jJ]avascript)'
+</code></pre></div></div>
+
+<p>And, since she’s fixed the prose problems, <code class="highlighter-rouge">lint-all</code> gives her zero results. Yay!</p>
+
+<h3 id="acts7---creating-a-pull-request">Acts[7] - Creating a Pull Request</h3>
+
+<p>It’s time for the Developer to add a code comment explaining the cryptic regex:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{'pattern': '[^\/\#\-\"]([jJ]avascript)', # exclude usage in hrefs/divs
+</code></pre></div></div>
+
+<p>She wants to have a fine-grained control over what she’s adding in this commit, so she types outside of Vagrant (unsure if she should maybe do it in Vagrant):</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git add -p
+</code></pre></div></div>
+
+<p><em>The Counselor</em>: You should always do git stuff outside of Vagrant, unless you just enjoy pain. :)</p>
+
+<p>She reviews all the changes:</p>
+
+<ul>
+  <li>
+    <p>she made prose fixes</p>
+  </li>
+  <li>
+    <p>she changed the rule for finding the incorrect spellings of <code class="highlighter-rouge">JavaScript</code> and moved it to a new ruleset</p>
+  </li>
+  <li>
+    <p>she removed the temporary <code class="highlighter-rouge">README.dev.md</code> exclusion, since that file doesn’t exist anymore</p>
+  </li>
+</ul>
+
+<p>The Developer makes the judgment call that all this is one logical change and decides to put it in one commit.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git commit
+Running lint-all using vagrant...
+[sudo] password for sumanah:
+</code></pre></div></div>
+
+<p>Which pops up her editor to write a commit message. The Backstage Voice’s commit message from July was <code class="highlighter-rouge">lint: Add documentation lint check for JavaScript spelling.</code> - she can’t go wrong by copying its format.</p>
+
+<p><em>The Counselor</em>: This is a pretty borderline call, but I’ll make the argument that you should actually split the commit–doc changes and lint changes.</p>
+
+<p>The Developer argues that The Backstage Voice did a similar fix all in one go (prose + linter), so she’s ok with doing the same right now.</p>
+
+<p><em>The Counselor</em>: If there was some subtle bug in the regex (not likely at this point, but just suppose the possibility), then it would be nice to roll back the lint changes without regressing the docs. But one commit is realistically fine here.</p>
+
+<p>The Developer agrees she’s not not necessarily following the absolute most pristine best practices here.</p>
+
+<p><em>The Counselor</em>: There are occasions where we need to combine the commits because without the lint change, the code fixups will actually break. But sometimes we’re just lazy, too, haha. :)</p>
+
+<p>The Developer made a commit and is now making the change to remove the empty JSON ruleset, to add in a different commit. She thought she could just snip out that one line, but then when she tried to commit, the linter complained, because guess what, the linter actually calls <code class="highlighter-rouge">json_rules</code> elsewhere!</p>
+
+<p>When she looks for <code class="highlighter-rouge">json</code> in this file she sees a lot of things she is not going to change during this adventure. She is going to file an issue for someone else to look at it. She gets back to the state she wanted to be in, where she has not touched the JSON-related code.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git reset HEAD
+</code></pre></div></div>
+
+<p>It is now the time for a pull request with a single commit.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git status
+</code></pre></div></div>
+
+<p>It shows a lot of untracked files, but the Developer knows that the modifications she wants to push are in the tracked ones.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git push origin JavaScript-linter
+Counting objects: 54, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (7/7), 944 bytes | 0 bytes/s, done.
+Total 7 (delta 6), reused 0 (delta 0)
+remote: Resolving deltas: 100% (6/6), completed with 6 local objects.
+To git@github.com:brainwane/zulip.git
+ * [new branch]      JavaScript-linter -&gt; JavaScript-linter
+</code></pre></div></div>
+
+<p>She opens a new tab in her browser and GitHub agrees she has just pushed a new branch. She wants to start her pull request, but suddenly realizes she forgot to mention in her commit message why she was removing that exclusion for the nonexistent page.</p>
+
+<p>The Developer goes back to fix it:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git commit --amend
+</code></pre></div></div>
+
+<p>After updating the commit message she runs:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git push -f origin JavaScript-linter
+</code></pre></div></div>
+
+<p>and reloads GitHub. Control-R on the pull request doesn’t quite work - the new commit message shows up as the page is loading, but when it finishes loading, it has the old one. Cache issue? She goes to the <code class="highlighter-rouge">zulip/zulip</code> GitHub repo and then to <code class="highlighter-rouge">brainwane/zulip</code> and she tries clicking “Pull requests” and manually constructing one from her branch, and now the <a href="https://github.com/zulip/zulip/pull/2029">pull request</a> is there.</p>
+
+<p>The Developer waits for Travis CI to decide if it’s going to complain when running the test suite.</p>
+
+<h3 id="acts8---aftermath">Acts[8] - Aftermath</h3>
+
+<p>The Developer is surprised how much time it took her to fix the linter issue.</p>
+
+<p><em>The Counselor</em>: Even seemingly small changes like this can be time-consuming when you’re thorough. :) The good news is that the fix is broader than the original problem–we’re looking not just for markdown, but also HTML, and we removed some obsolete temporary shim code. Also, the new code is cleaner is terms of separating out the rules. (Also, regexes are always tricky and time-consuming.)</p>
+
+<p><em>Travis CI concludes the Developer’s code failed the tests.</em></p>
+
+<p><em>The Counselor</em>: @The Backstage Voice the pull request seems to be breaking due to a provisioning thing unrelated to the Developer’s fix.</p>
+
+<p>The Developer remembers to create an issue for the <code class="highlighter-rouge">json_rule</code>. She runs <code class="highlighter-rouge">git blame</code> to see who added the <code class="highlighter-rouge">json_rule</code> and sees it was last touched by The Counselor in 3c401571. She runs <code class="highlighter-rouge">git show 3c401571</code> and sees it was a refactor.</p>
+
+<p><em>The Counselor</em>: Yep, my change was just moving code around. I’m about to investigate where the rules were actually emptied out.</p>
+
+<p>The Developer has filed <a href="https://github.com/zulip/zulip/issues/2030">an issue</a> and asks the Counselor to teach her more about the investigative skill he intends to use. She is particularly interested in the specifics of how to find deleted code.</p>
+
+<p><em>The Counselor</em>: First, I want to get the latest copy of master, so I do this:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  $ git checkout master
+  $ git fetch upstream
+  $ git rebase upstream/master
+</code></pre></div></div>
+
+<p><em>The Counselor</em>: I then do <code class="highlighter-rouge">git log -S json_rules</code> to find changes that might have touched <code class="highlighter-rouge">json_rules</code>, and I find this change: <code class="highlighter-rouge">e71d8bb4b6b1e90f4b6c0fb9ab93cd9929c9d87e</code></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git show e71d8bb4b6b1e90f4b6c0fb9ab93cd9929c9d87e
+commit e71d8bb4b6b1e90f4b6c0fb9ab93cd9929c9d87e
+Author: Tim Abbott &lt;tabbott@mit.edu&gt;
+Date:   Thu Apr 14 10:48:30 2016 -0700
+
+    lint-all: Require newlines at end of JSON files.
+</code></pre></div></div>
+
+<p><em>The Counselor</em>: So, this is a bit messy, but it turns out that when you call <code class="highlighter-rouge">custom_check_file</code> on a file, even if the <code class="highlighter-rouge">rules</code> parameter is an empty list, it still does a check for trailing newlines. So the current code’s behavior is correct, although there might be a way to refactor the code to improve clarity. Checking for whitespace issues is decidedly non-custom, so the name of the function is misleading to the extent that it does non-custom checks.</p>
+
+<p><em>The Counselor</em>: It’s a little bit of a performance hack that we try to sweep a file all in one pass, both for custom regex things and generic things. If we separated out those concerns, which would be cleaner for somebody reading the code, then we’d introduce a small performance penalty in that we’d have to open every file twice.</p>
+
+<p><em>The Counselor</em>: We could go down a huge rabbit hole trying to clean this up, but I think for now the simple fix is to clarify the comment. Something like:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># It is okay that json_rules is empty, because we will
+# still check JSON files for whitespace
+</code></pre></div></div>
+
+<p><em>The Counselor</em>: The current comment is <code class="highlighter-rouge"># just fix newlines at ends of files</code>, which sort of implies that, but I think we can be more explicit.</p>
+
+<p><em>The Counselor</em>: It might be worth making that quick fix, so that as a side effect, your re-push will kick off a new Travis build. I’m curious if the Travis errors you got are permanent or just a one-time flakiness thing.</p>
+
+<p>The Developer makes the quick fix for the newly filed issue in a new commit and re-pushes her code.</p>
+
+<p><em>The Counselor</em>: Indeed! Incidentally, your build passed, so I think the prior failure was just some sort of flakiness in the Travis infrastructure.</p>
+
+<p>Phew!</p>
+
+<p><em>The Backstage Voice</em>: Yeah, if you ever see an error about being unable to download a URL on the public internet, that’s almost certainly caused by internal networking infrastructure problems with Travis CI.</p>
+
+<p>The Developer wonders if it’s a durable enough prediction that it should go in our testing docs?</p>
+
+<p><em>The Backstage Voice</em>: I think it might be better to add some retry logic around the network-intensive parts of our testing system (e.g. <code class="highlighter-rouge">apt-get</code> commands). It’s probably about as much work as writing good docs for this, and has the advantage that it might actually solve the problem.</p>
+
+<p>The Developer files <a href="https://github.com/zulip/zulip/issues/2034">another issue</a>.</p>
+
+<p>THE END</p>
+
+<h2 id="lessons-learned">Lessons Learned</h2>
+
+<ol>
+  <li>
+    <p>The developer’s journey requires a methodic and mindful approach. They have to first understand the problem and identify the probable causes. They should not be afraid of making mistakes and testing hypotheses.</p>
+  </li>
+  <li>
+    <p>Reading the documentation while looking for answers to specific questions seems to work well while trying to solve a problem. Initial familiarity with the documentation helps with finding the relevant documents.</p>
+  </li>
+  <li>
+    <p>Asking for help after trying and looking is the logical next step. There is no point in getting lost in a jungle of bugs.</p>
+  </li>
+  <li>
+    <p>Good understanding of what’s exactly happening in code is crucial. Sometimes developers look over small discrepancies, but they may become causes of bigger problems.</p>
+  </li>
+  <li>
+    <p>Even seemingly small changes can be time-consuming when one is thorough. While solving one problem a developer may encounter many other problems on many levels.</p>
+  </li>
+  <li>
+    <p>It is often wise for a developer to be cautious about believing they know the truth. When approaching a problem it is important to have some history of the project that gives a sense of how risky the change is. It is also helpful to approach it with the scientific method and creating hypotheses about what could fail if they make a change.</p>
+  </li>
+  <li>
+    <p>Coding is an adventure. It’s demanding, requires a lot of patience and perseverance, but it’s a most rewarding endeavor.</p>
+  </li>
+</ol>
+
+  </div>
+</article>
+
+      </main>
+    </div>
+  </body>
+  <footer>
+  <div class="container">
+    <div class="squiggle" aria-hidden="true">
+      ∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿
+    </div>
+  </div>
+</footer>
+
+</html>

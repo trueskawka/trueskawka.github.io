@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8" />
+  <title>
+    
+        Alicja Raszkowska
+    
+  </title>
+
+  <link
+    rel="canonical"
+    href="http://localhost:4000/blog/programming/2017/11/16/designing-HTML-emails.html"
+  />
+
+  <link rel="stylesheet" href="/css/blog.css">
+</head>
+
+  <body>
+    <div class="container">
+      <header role="banner">
+  <hgroup id="header-title">
+    <h1><a href="/">Alicja Raszkowska</a></h1>
+  </hgroup>
+  <nav role="navigation" id="main-navigation">
+    <ul>
+      <li><a href="/blog">blog &middot;</a></li>
+      <li><a href="/ideas">ideas &middot;</a></li>
+      <li><a href="/resume">resume &middot;</a></li>
+    </ul>
+  </nav>
+  <ul id="external-links">
+    <li>
+      <a href="https://github.com/trueskawka">github &middot;</a>
+    </li>
+    <li>
+      <a href="https://twitter.com/mamrotynka">twitter</a>
+    </li>
+  </ul>
+</header>
+
+      <main>
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <div>
+    <p class="post-meta">
+      <time datetime="2017-11-16T20:49:00-08:00" itemprop="datePublished">
+        
+          11/16/2017 20:49
+        
+      </time>
+    </p>
+    <p>
+      <h2 class="post-title" itemprop="name headline">
+        Designing HTML emails
+      </h2>
+    </p>
+  </div>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>It’s 2017 and it seems that plain text emails are just boring for most users.
+Communicating without the emoji, GIFs or images seems rather stiff and your
+brand is better than that! It’s approachable and fun, or sleek and high-end, or
+in some other way remarkable. No plain text email will do.</p>
+
+<p>The world of HTML email is the Wild Wild West of the World Wide Web. It’s
+basically writing websites like it’s 2004. Forget flexible user interfaces or
+interactive elements  - it’s built on tables upon tables, with no JavaScript
+and poor CSS support. If you want your design not to break on major clients,
+you need to carefully place and think through each element, keeping in mind all
+the various ways that your design could break.</p>
+
+<h3 id="how-is-email-displayed">How is email displayed?</h3>
+<p>The email is sent from a server to an email address that is hosted on another
+server. This server then shares the email with various email clients (e.g. the
+Mail app on iOS), that decide how to display the content. The server and/or
+email client can strip away some or even all elements that are not plain text -
+specific or all HTML tags, styles, images, links - leaving the user with the
+end content, that is then being displayed.</p>
+
+<p>The main difference between an email and a website is that you can’t know
+what email client the user is going to choose and so you can’t send a specific
+version to each user - you send the same email to everyone. You can’t detect
+beforehand if it’s Firefox or Chrome, Gmail or Outlook, you can’t swap images
+for smaller versions on mobile. You send an email and it sits in your client’s
+inbox - as soon as they get it, you have no control over how it’s going to be
+displayed and can’t adjust accordingly.</p>
+
+<h3 id="understand-your-users">Understand your users</h3>
+<p>If you ever went through building a static website or a web app, figuring out
+how to support the features you want in most browsers was hard enough. Nobody
+expects every web app to work perfectly on every setup - that would take insane
+amounts of work and give very low marginal gains. That’s why web developers are
+telling you they’re going to support the modern browsers like Chrome or Firefox
+and no-one in their right mind wants to support older Internet Explorers*.</p>
+
+<p>Testing with tools like <a href="https://litmus.com/">Litmus</a> or <a href="https://www.emailonacid.com/">Email on
+Acid</a> will help you get a better grasp of how
+your design works in most popular email clients - but there can still be issues
+with clients that are not being tested by those tools. It is impractical to
+expect the email to work in <strong>all</strong> clients - that’s why it’s good to research
+how your clients are using email.</p>
+
+<ol>
+  <li>
+    <p>What <a href="https://en.wikipedia.org/wiki/Comparison_of_webmail_providers">webmail
+providers</a>
+and/or <a href="https://en.wikipedia.org/wiki/Comparison_of_email_clients">email
+clients</a> are they
+using? Which of those give you most marginal gains and you need to support
+them? Consider having a cutoff point for the share of various software in your
+client base - adding support for additional clients takes time and might also
+cost you some features, maybe it’s not worth doing for 0.01% of your clients.</p>
+  </li>
+  <li>
+    <p>How are they accessing their inbox? Do they read emails on their desktop or
+their phones? Decide if you want to design mobile- or desktop-first.</p>
+  </li>
+  <li>
+    <p>What email campaigns worked best for the measures that are important to you,
+e.g. how many of your users click links in emails? Think about the things you
+want to include in your email - you’re taking the time to design it, so make
+sure you’re not spamming your users with irrelevant content.</p>
+  </li>
+</ol>
+
+<h3 id="focus-on-the-content">Focus on the content</h3>
+<p>There are many reasons your users will only read plain text emails - some of
+them do it by choice, some of them by necessity, e.g. if they are visually
+impaired, some simply use email clients that only support plain text. That’s
+one thing every email client does and they do it pretty well.</p>
+
+<p>Before you design your email, take a moment to focus on the message - why are
+you sending an email to your users? If you were to strip away all the design,
+what should be included in it? How should you divide it into paragraphs and
+make sure the users get your message?</p>
+
+<p>Assuming that your users will always be able to read the HTML version of your
+email might be overly optimistic. Don’t assume - assure that your message
+always gets through and use plain text as your main tool.</p>
+
+<p>There are also things you should consider including in your email, to improve
+user experience no matter the client:</p>
+<ul>
+  <li>subject - clear and concise, usually under 50 characters</li>
+  <li>professional sender address and name - preferably with your company name</li>
+  <li>pre-header text - some email clients present it in the inbox as a preview of
+an email</li>
+  <li>footer - preferably with unsubscribe options</li>
+  <li>link to a web-hosted version of the email</li>
+</ul>
+
+<h3 id="add-the-design-gradually">Add the design gradually</h3>
+<p>You might want to include more than just plain text in your message - your logo
+at the top, an image or a GIF that would make it more appealing, a nice button
+to encourage users to click the link.</p>
+
+<p>Keep the design simple. Add it in gradually and make sure you always have
+fallback options, e.g.:</p>
+
+<ul>
+  <li>
+    <p>for every image have a fallback text that displays before the images are
+loaded, e.g. Gmail often loads images after a user action, so take the time to
+look at your design with placeholder text instead of images</p>
+  </li>
+  <li>
+    <p>many clients, including Gmail, won’t support custom fonts (unless the user
+has them already installed on their computer) - use web fonts to make the
+design more appealing on some clients, but always have a fallback option like
+<code class="highlighter-rouge">Arial</code> or <code class="highlighter-rouge">Helvetica</code> handy; check how your design looks with the fallback font</p>
+  </li>
+  <li>
+    <p>if you’d like something slightly more fancy, like a video or an interactive
+element, keep in mind it won’t be supported in most email clients and simply
+link to it in your email in an appealing way</p>
+  </li>
+</ul>
+
+<h3 id="rethink-flexibility">Rethink flexibility</h3>
+<p>In web development, we’re getting more and more used to flexible, seamless
+designs that flow with the ever changing screen size of our devices. Emails,
+even though they use the same basic blocks of HTML and CSS, are not that
+advanced - to adjust for different devices, you need to make your design fluid
+rather than flexible.</p>
+
+<ol>
+  <li>
+    <p>Some email clients don’t support media queries - if you want to go from
+two-column design to a single mobile column or even just adjust the font size,
+keep in mind Android or any number of less popular mobile clients might not
+agree with you.<br /><br />
+There are two main breakpoints in email - 600px for desktop and 320px for
+mobile - but the most bulletproof way is to avoid them altogether, by either
+using a device-agnostic single-column design or making your design fluid rather
+than flexible. Think percentages, not breakpoints, define margins and paddings
+rather than set sizes.</p>
+  </li>
+  <li>
+    <p>Don’t expect emails to be pixel-perfect - you might really like those
+rounded corners on your buttons, but making them work in older clients is going
+to take a lot of work using images and careful placing, that might break on
+some clients regardless of all the effort.<br /><br />
+Start with a simple, flat design and add improvements for more modern clients,
+but don’t expect them to work across all devices. Just make sure that adding
+additional elements or flavors is not breaking your base design.</p>
+  </li>
+  <li>
+    <p>You can’t control your users - some users adjust their setups and increase
+the default fonts, make their displays monochrome or block images by default.
+You won’t know how your users see the email exactly and that’s ok - if you
+design with a fluid approach in mind, they’ll still be able to read your
+message and find the relevant information.</p>
+  </li>
+</ol>
+
+<h3 id="mind-the-quirks">Mind the quirks</h3>
+<p>There are many effects and elements you might be used to that cause
+mind-boggling issues in HTML emails. Some of the more common ones are:</p>
+
+<ul>
+  <li>
+    <p>custom fonts - you can get away with web fonts, but not all clients support
+them; also, you have no control over user-specific settings, e.g. if they’re
+using an increased font in Android, the email client might render it regardless
+of all your efforts to avoid it</p>
+  </li>
+  <li>
+    <p>overlapping elements/layers - you can’t overlap elements in emails, other
+than adding a background image, and even that might not work in some clients,
+but careful use of whitespace might help you achieve a similar effect</p>
+  </li>
+  <li>
+    <p>putting text in symmetrical shapes - there are no flexible CSS properties to
+ensure the shape will stay symmetrical, so it’s better to use ovals than
+circles and rectangles than squares</p>
+  </li>
+  <li>
+    <p>motion/animation - email clients don’t support JavaScript and most of them
+don’t work well with CSS animations, so there is virtually no way to make them
+interactive</p>
+  </li>
+  <li>
+    <p>hiding overflow - if you want to truncate text, do it before sending the
+email, as hiding overflow might be problematic</p>
+  </li>
+  <li>
+    <p>gradients - they won’t display in many clients and can cause a solid
+background color to obscure text</p>
+  </li>
+  <li>
+    <p>non-image shapes other than rectangles - some email clients won’t support
+border-radius for circles or rounded corners, most don’t play well with more
+complicated shapes - try to keep it simple with rectangles and/or images</p>
+  </li>
+</ul>
+
+<p>This is not an exhaustive list, but it can give you some ideas on where to
+simplify your design.</p>
+
+<h3 id="reading-code">Reading code</h3>
+<p>If you have some experience with regular web development, you might expect the
+code to be written in a certain way. HTML email code breaks many of the best
+practices one gets used to.</p>
+
+<ol>
+  <li>
+    <p>In modern web development, using the <code class="highlighter-rouge">!important</code>  keyword too much (or
+ever) or inlining styles are often considered code smells. In HTML emails they
+might the only way to display the email as intended - it’s not uncommon to see
+an inlined style with <code class="highlighter-rouge">!important</code>,  just to force this one stubborn email
+client to render it properly.</p>
+  </li>
+  <li>
+    <p>Email code is not DRY - you can define both a <code class="highlighter-rouge">background</code> property on a
+table and add a declaration for the <code class="highlighter-rouge">background</code> and <code class="highlighter-rouge">background-image</code>  in the
+inlined style for the same element, just because some clients support the table
+property, some understand only the <code class="highlighter-rouge">background</code> shorthand and there are those
+quirky ones, that only render the <code class="highlighter-rouge">background-image</code> if forced by a more
+specific declaration. Oh, and don’t forget about this class that also sets the
+<code class="highlighter-rouge">background</code> with <code class="highlighter-rouge">!important</code>.</p>
+  </li>
+  <li>
+    <p>Arranging elements in email uses tables, which is the most widely supported
+HTML element across all clients. If you want to make sure your layout is going
+to work, the number of tables within tables can increase dramatically with each
+element.</p>
+  </li>
+</ol>
+
+<h2 id="summary">Summary</h2>
+<p>Designing emails is different from designing websites - email clients have at
+best patchy support for CSS and often require writing code that breaks the best
+practices of web development.</p>
+
+<ol>
+  <li>
+    <p>Understand your users - have a list of email clients you want to support,
+understand what to include in your emails and how to appeal to your user base.
+Decide if you want to design mobile or desktop first.</p>
+  </li>
+  <li>
+    <p>Focus on the content - write a plain text email first, structuring it by
+using paragraphs, bullet points, links. Make sure to always include plain text
+version of your message.</p>
+  </li>
+  <li>
+    <p>Add the design gradually - the simpler the email, the better the chance it’s
+going to work well on multiple clients. Add in fallback for your features
+(images, fonts, videos) and make sure to check how your message looks using
+only the fallbacks.</p>
+  </li>
+  <li>
+    <p>Rethink flexibility - think fluid, not flexible. You can’t control how your
+user is going to see the design, so let go of pixel-perfect and make sure to
+design with percentages and paddings, rather than set sizes.</p>
+  </li>
+  <li>
+    <p>Mind the quirks - the simpler, the better. Email clients have many quirks
+and the more complicated the design, the higher the chance it’s going to look
+bad in some clients.</p>
+  </li>
+  <li>
+    <p>Reading code - email clients require you to write code that’s not in line
+with web development best practices. Get used to <code class="highlighter-rouge">!important</code> and loads of
+tables.</p>
+  </li>
+</ol>
+
+<h3 id="useful-links">Useful links</h3>
+<ol>
+  <li>Xfive <a href="https://www.xfive.co/blog/10-tips-better-email-design/">10 Tips for Better Email
+Design</a></li>
+  <li>Tuts+ <a href="https://webdesign.tutsplus.com/articles/the-complete-guide-to-designing-for-email--webdesign-12941">The Complete Guide to Designing for
+Email</a></li>
+  <li>Sigstr <a href="https://www.sigstr.com/2017/05/23/email-structure-scientifically-backed-guide/">How People ACTUALLY Read Your
+Emails</a></li>
+  <li>Campaign Monitor <a href="https://www.campaignmonitor.com/css/">CSS Support Guide for Email
+Clients</a></li>
+  <li>MailChimp <a href="https://mailchimp.com/email-design-guide/">Email Design Guide</a></li>
+  <li>Webdesigner Depot <a href="https://www.webdesignerdepot.com/2014/06/the-ultimate-guide-to-email-design/">The ultimate guide to email
+design</a></li>
+</ol>
+
+<hr />
+
+<p style="font-size: 14px">*though it is sometimes necessary to support IE8, but that's mostly because target user group uses outdated software</p>
+
+  </div>
+</article>
+
+      </main>
+    </div>
+  </body>
+  <footer>
+  <div class="container">
+    <div class="squiggle" aria-hidden="true">
+      ∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿
+    </div>
+  </div>
+</footer>
+
+</html>

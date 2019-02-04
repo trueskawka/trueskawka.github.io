@@ -1,0 +1,7 @@
+h2, h3 { font-family: 'Tofino Cond'; font-weight: 600; color: #00a797; text-align: left; }
+
+h2 { color: #b57ab4; }
+
+.to-bottom { position: relative; top: 350px; }
+
+.upper-right { background: linear-gradient(55deg); }

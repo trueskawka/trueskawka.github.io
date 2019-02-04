@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8" />
+  <title>
+    
+        Alicja Raszkowska
+    
+  </title>
+
+  <link
+    rel="canonical"
+    href="http://localhost:4000/blog/2018/07/20/Browsing-in-grayscale.html"
+  />
+
+  <link rel="stylesheet" href="/css/blog.css">
+</head>
+
+  <body>
+    <div class="container">
+      <header role="banner">
+  <hgroup id="header-title">
+    <h1><a href="/">Alicja Raszkowska</a></h1>
+  </hgroup>
+  <nav role="navigation" id="main-navigation">
+    <ul>
+      <li><a href="/blog">blog &middot;</a></li>
+      <li><a href="/ideas">ideas &middot;</a></li>
+      <li><a href="/resume">resume &middot;</a></li>
+    </ul>
+  </nav>
+  <ul id="external-links">
+    <li>
+      <a href="https://github.com/trueskawka">github &middot;</a>
+    </li>
+    <li>
+      <a href="https://twitter.com/mamrotynka">twitter</a>
+    </li>
+  </ul>
+</header>
+
+      <main>
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <div>
+    <p class="post-meta">
+      <time datetime="2018-07-20T12:50:00-07:00" itemprop="datePublished">
+        
+          07/20/2018 12:50
+        
+      </time>
+    </p>
+    <p>
+      <h2 class="post-title" itemprop="name headline">
+        Browsing in grayscale
+      </h2>
+    </p>
+  </div>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>I started exploring my browsing habits to better understand why certain websites grab my attention.
+As aware of UX dark patterns as I am, I grew tired of mindfully noticing when they want to “nudge” 
+me into certain behaviors with vibrant colors and obscuring others by making them less visually
+appealing.</p>
+
+<p>While I was trying to unsubscribe from yet another unwanted email marketing list, chasing for the 
+“unsubscribe” link hidden in plain sight, I noticed that grayscale works well for techincally showing the 
+information required of advertisers, yet obscuring it among the flashy colorful action calls.</p>
+
+<p>My previous attempt at decreasing the time I spend on social media was leveraging <a href="https://addons.mozilla.org/en-US/firefox/addon/styl-us/">Stylus</a>
+to hide certain parts of websites, e.g. related videos and comments on YouTube. It manages user styles, 
+with a simple checkbox menu for enabling and disabling them.</p>
+
+<p>Since I use FireFox, switching to grayscale is fairly simple. I created a new stylesheet that applies to 
+all websites and added a single property for <code class="highlighter-rouge">body</code>. (you can also add a filter in <a href="https://superuser.com/questions/330830/how-to-turn-web-pages-in-browser-into-black-white-grayscale">other browsers</a>)</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>body {
+  filter: grayscale(100%);
+}
+</code></pre></div></div>
+
+<p>It’s easy to turn it off when I want to. And it encouraged me to fix minor annoyances on some websites. 
+I stopped using AdBlock when I switched to FireFox and I now use targeted <code class="highlighter-rouge">display: none</code> on elements 
+I find distracting.</p>
+
+<p>A minor caveat of the extension is that it doesn’t work on all websites, because it’s a WebExtension. 
+I found that it only makes me appreciate it more when I encouter a page that doesn’t apply my user 
+styles.</p>
+
+<p>One more surprising issue I encountered is that the <code class="highlighter-rouge">grayscale</code> filter sometimes breaks scrolling. I tried 
+debugging it on my website, thinking it might be caused by some legacy code or a hidden Stylus property, 
+but adding it directly to the <code class="highlighter-rouge">body</code> also changed scrolling behavior.</p>
+
+  </div>
+</article>
+
+      </main>
+    </div>
+  </body>
+  <footer>
+  <div class="container">
+    <div class="squiggle" aria-hidden="true">
+      ∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿
+    </div>
+  </div>
+</footer>
+
+</html>

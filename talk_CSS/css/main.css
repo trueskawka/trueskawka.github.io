@@ -1,0 +1,64 @@
+@import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+@import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+@import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+body { font-family: 'Droid Serif'; }
+
+h1, h2, h3 { font-family: 'Yanone Kaffeesatz'; font-weight: normal; }
+
+.remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+
+.inverse { background: #272822; color: #777872; text-shadow: 0 0 20px #333; }
+
+.inverse h1, .inverse h2 { color: #f3f3f3; line-height: 0.8em; }
+
+.remark-slide-number { display: none; }
+
+.left-column { color: #777; width: 40%; float: left; }
+
+.left-column h2:last-of-type, .left-column h3:last-child, .left-column h1 { color: #000; }
+
+.right-column { width: 60%; float: right; }
+
+h1 { font-weight: 700; }
+
+.title-2, .title-3 { font-family: 'Tofino Cond'; font-weight: 600; color: #00a797; text-align: left; }
+
+.title-2 { color: #b57ab4; }
+
+h5 { font-family: 'Tofino Cond'; font-weight: 400; font-size: 35px; text-align: left; line-height: 80px; margin: 10px 0; }
+
+.to-bottom { position: relative; top: 350px; }
+
+.to-middle { position: relative; top: 100px; }
+
+img { max-width: 500px; }
+
+a { text-decoration: none; color: #b57ab4; }
+
+.gray { color: #777; }
+
+.go-to::before, .go-to-2::before { content: "go to this "; color: black; font-weight: 600; }
+
+.go-to-2::after { content: " for more!"; color: black; font-weight: 600; }
+
+.bg-red-black { height: 50px; width: 100px; background: linear-gradient(to bottom, #b57ab4, #b57ab4) 0 0/50px 50px, #ef4f5f; background-repeat: no-repeat; }
+
+.boxy { height: 150px; width: 150px; position: relative; top: 10px; left: 20px; background-color: white; box-shadow: inset 50px 50px 0 0 #ef4f5f, 0 0 0 20px #ed8384; }
+
+.radial { width: 200px; height: 200px; background: radial-gradient(closest-side, #00acca 0%, #b57ab4 50%, #b57ab4 50%, #ef4f5f 100%); }
+
+#gradient-container { position: relative; margin: 0 auto; height: 380px; width: 400px; }
+
+#gradient-box { height: 260px; width: 360px; overflow: hidden; margin: 0 auto; }
+
+#js-gradient { position: relative; top: 30px; left: 30px; height: 200px; width: 300px; }
+
+#angle-form { text-align: center; }
+
+#angle { width: 360px; }
+
+#gradient-container2 { position: relative; margin: 0 auto; width: 360px; text-align: center; margin-bottom: 20px; }
+
+.gradient { display: inline-block; height: 200px; width: 300px; border: 1px solid lightgray; }
+
+#angle2 { width: 360px; }

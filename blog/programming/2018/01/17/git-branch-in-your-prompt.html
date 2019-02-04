@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8" />
+  <title>
+    
+        Alicja Raszkowska
+    
+  </title>
+
+  <link
+    rel="canonical"
+    href="http://localhost:4000/blog/programming/2018/01/17/git-branch-in-your-prompt.html"
+  />
+
+  <link rel="stylesheet" href="/css/blog.css">
+</head>
+
+  <body>
+    <div class="container">
+      <header role="banner">
+  <hgroup id="header-title">
+    <h1><a href="/">Alicja Raszkowska</a></h1>
+  </hgroup>
+  <nav role="navigation" id="main-navigation">
+    <ul>
+      <li><a href="/blog">blog &middot;</a></li>
+      <li><a href="/ideas">ideas &middot;</a></li>
+      <li><a href="/resume">resume &middot;</a></li>
+    </ul>
+  </nav>
+  <ul id="external-links">
+    <li>
+      <a href="https://github.com/trueskawka">github &middot;</a>
+    </li>
+    <li>
+      <a href="https://twitter.com/mamrotynka">twitter</a>
+    </li>
+  </ul>
+</header>
+
+      <main>
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <div>
+    <p class="post-meta">
+      <time datetime="2018-01-17T20:41:00-08:00" itemprop="datePublished">
+        
+          01/17/2018 20:41
+        
+      </time>
+    </p>
+    <p>
+      <h2 class="post-title" itemprop="name headline">
+        Git branch in your prompt
+      </h2>
+    </p>
+  </div>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>I have paired a lot over the past week (which makes me tremendously happy!)
+and I noticed how lost I can get in someone else’s terminal if I don’t have
+my regular bash prompt - not only the cute little heart that welcomes me
+every time I run the terminal, but also the git branch name I’m currently on.</p>
+
+<p>As I couldn’t find the tutorial I used to learn how to parse the git branch, 
+I decided to go through my <code class="highlighter-rouge">.bashrc</code> and write one myself.</p>
+
+<h3 id="bash-prompt-variables">Bash prompt variables</h3>
+<p>Bash prompt variables hold the text that shows as the terminal prompt in 
+various contexts. Their values are examined and executed just before Bash 
+prints them. There are several of them, but for now I’m going to 
+focus on <code class="highlighter-rouge">PS1</code>, which is the primary prompt string.</p>
+
+<p>In a bash prompt, you can use:</p>
+<ul>
+  <li><a href="https://tiswww.case.edu/php/chet/bash/bashref.html#Controlling-the-Prompt">special characters</a> 
+that can be used for current user name (<code class="highlighter-rouge">\u</code>), time (<code class="highlighter-rouge">\t</code>), host name (<code class="highlighter-rouge">\h</code>) etc.</li>
+  <li><a href="https://en.wikipedia.org/wiki/ANSI_escape_code#Colors">colors</a> both for the 
+foreground and the background</li>
+  <li>unicode characters (letters, numbers, symbols, emoji)</li>
+  <li>custom variables</li>
+</ul>
+
+<p>Let’s look at an example value of <code class="highlighter-rouge">PS1</code>: <code class="highlighter-rouge">\s-\v\$</code></p>
+<ul>
+  <li><code class="highlighter-rouge">\s</code> the name of the shell</li>
+  <li><code class="highlighter-rouge">-</code> just a dash</li>
+  <li><code class="highlighter-rouge">\v</code> the version of the shell</li>
+  <li><code class="highlighter-rouge">$</code> a dollar sign at the end of the prompt</li>
+</ul>
+
+<p>which in my terminal evaluates to: <code class="highlighter-rouge">-bash-3.2$</code></p>
+
+<p>To change the value of <code class="highlighter-rouge">PS1</code> for the current session, you can use 
+<code class="highlighter-rouge">export PS1="&lt;value&gt;"</code> in the terminal:</p>
+<ul>
+  <li>adding a lambda
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>export PS1="λ "
+</code></pre></div>    </div>
+  </li>
+  <li>changing the lambda’s color to red
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>export PS1="\[\033[0;31m\]λ \[\033[0m\]"
+</code></pre></div>    </div>
+  </li>
+  <li>adding the current directory before the red lambda
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>export PS1="\w\[\033[0;31m\] λ \[\033[0m\]"
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p>and so on.</p>
+
+<p>If you want to make the <code class="highlighter-rouge">PS1</code> more permanent, you can add it to your <code class="highlighter-rouge">.bashrc</code> (or <code class="highlighter-rouge">.bash_profile</code>,
+if <a href="https://apple.stackexchange.com/questions/51036/what-is-the-difference-between-bash-profile-and-bashrc">you’re on a Mac</a>),
+reload your session with</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>source .bashrc
+</code></pre></div></div>
+<p>et voilà!</p>
+
+<h3 id="getting-information-from-git">Getting information from git</h3>
+<p>When I work on code, I usually want to know a few things:</p>
+<ul>
+  <li>am I using git? (if not, I might want to <code class="highlighter-rouge">git init</code>)</li>
+  <li>what branch I am currently on?</li>
+  <li>are there any changes in the directory - untracked, unadded, added or deleted files?</li>
+</ul>
+
+<p>All of those things I can check by simply using the <code class="highlighter-rouge">git status</code> command, but it gets 
+tedious to do that every time I need to change something (am I on the right branch? 
+did I add everything? did I switch to a feature branch?). I can also parse git commands 
+output with Bash and add the parsed information to my prompt, using custom variables.</p>
+
+<p><strong>Branch</strong></p>
+
+<p>In order to get the current branch, you can parse the output of
+<a href="https://stackoverflow.com/questions/6245570/how-to-get-the-current-branch-name-in-git">several different git commands</a>. 
+I don’t think there is one good way to do it, as you might want to get slightly different
+results depending on the context, but some good ideas are:</p>
+<ul>
+  <li><code class="highlighter-rouge">git rev-parse --abbrev-ref HEAD</code> - which gives you the right name of the local branch and consistent 
+<code class="highlighter-rouge">HEAD</code> for other contexts</li>
+  <li><code class="highlighter-rouge">git branch | sed -n '/\* /s///p'</code> - which gives you the right name of the local branch and appropriate
+outputs for other contexts</li>
+</ul>
+
+<p>Whichever method you choose, to add it to your <code class="highlighter-rouge">PS1</code> prompt you can:</p>
+<ul>
+  <li>add a function for parsing the branch (the <code class="highlighter-rouge">2&gt;/dev/null</code> stops the command from printing the output):
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git_prompt() {
+  local ref=$(git branch 2&gt;/dev/null | sed -n '/\* /s///p')
+  if [ "$ref" != "" ]
+  then
+    echo "($ref) "
+  fi
+}
+</code></pre></div>    </div>
+  </li>
+  <li>add the function output to your prompt
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>export PS1="\w\[\033[0;31m\] λ $(git_prompt)\[\033[0m\]"
+</code></pre></div>    </div>
+    <p>or, with a hint of color</p>
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>export PS1="\w\[\033[0;31m\] λ \[\033[0;95m\]\$(git_prompt)\[\033[0m\]\[\033[0m\]"
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p><strong>Number of various changes</strong></p>
+
+<p>You can run <code class="highlighter-rouge">git status</code> with various options - if you use the <a href="https://git-scm.com/docs/git-status#_short_format">short format</a>,
+you will get the statuses of your paths that are a bit easier to understand for parsing purposes, notably:</p>
+<ul>
+  <li><code class="highlighter-rouge">?</code> for untracked paths</li>
+  <li><code class="highlighter-rouge">M</code> for modified paths</li>
+  <li><code class="highlighter-rouge">A</code> for added paths</li>
+  <li><code class="highlighter-rouge">D</code> for deleted paths</li>
+</ul>
+
+<p>To parse untracked paths you can:</p>
+<ul>
+  <li>grep <code class="highlighter-rouge">git status --porcelain</code> for <code class="highlighter-rouge">?</code> and count the number of lines in the output (as each untracked path
+is on a new line)
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>untracked=`expr $(git status --porcelain 2&gt;/dev/null | grep "?" | wc -l)`
+</code></pre></div>    </div>
+  </li>
+  <li>wrap it in a function that returns the number of untracked paths with a symbol of your choice when it’s not 0
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function parse_untracked {
+  local untracked=`expr $(git status --porcelain 2&gt;/dev/null | grep "?" | wc -l)`
+  if [ "$untracked" != "0" ]
+  then
+    echo " ?$untracked"
+  fi
+}
+</code></pre></div>    </div>
+  </li>
+  <li>add it to your <code class="highlighter-rouge">PS1</code> prompt
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git_prompt() {
+  local ref=$(git branch 2&gt;/dev/null | sed -n '/\* /s///p')
+  if [ "$ref" != "" ]
+  then
+    echo "($ref)$(parse_untracked) "
+  fi
+}
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p>You can add a separate function for each status and add them to your prompt by simply grepping for the appropriate
+symbol and wrapping it in a function. For reference, my full git parsing code is 
+<a href="https://gist.github.com/trueskawka/aab826ea75d7219790df92fba8bb8e47">in this gist</a>.</p>
+
+<p>Have fun adjusting your prompt and hopefully never getting lost among your git branches!</p>
+
+  </div>
+</article>
+
+      </main>
+    </div>
+  </body>
+  <footer>
+  <div class="container">
+    <div class="squiggle" aria-hidden="true">
+      ∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿
+    </div>
+  </div>
+</footer>
+
+</html>
