@@ -60,7 +60,8 @@ p {
 
 h1 {
   font-size: 3em;
-  color: #ee4266;
+  /* color: #ee4266; */
+  color: #E9113E;
   font-weight: 700;
   margin-bottom: 20px;
 }
@@ -81,7 +82,8 @@ h4 {
 
 a {
   text-decoration: none;
-  color: #ee4266;
+  /* color: #ee4266; */
+  color: #E9113E;
 }
 
 header {
@@ -113,7 +115,6 @@ nav {
   width: 70%;
   max-width: 45em;
   min-width: 400px;
-  /* min-height: 400px; */
 
   margin: 0 auto;
   padding: 20px 40px 0 40px;
@@ -124,7 +125,8 @@ nav {
 .squiggle {
   letter-spacing: -14px;
   font-size: 50px;
-  color: #ee4266;
+  /* color: #ee4266; */
+  color: #E9113E;
   margin-left: -60px;
   margin-right: -60px;
 }
@@ -154,4 +156,8 @@ blockquote {
   margin: 0;
   padding: 0 0 0 20px;
   font-style: italic;
+}
+
+.idea > h3 {
+  font-weight: 700;
 }
