@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="pl"><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://trueskawka.github.io/mini-jekyll-deploy/pl/feed.xml" rel="self" type="application/atom+xml" /><link href="https://trueskawka.github.io/mini-jekyll-deploy/pl/" rel="alternate" type="text/html" hreflang="pl" /><updated>2019-02-27T12:03:29+00:00</updated><id>https://trueskawka.github.io/mini-jekyll-deploy/pl/feed.xml</id><title type="html">Alicja’s thoughts</title><subtitle>A blog on learning and programming ideas</subtitle><author><name>Alicja Raszkowska</name></author><entry><title type="html">Dostosowanie do RODO</title><link href="https://trueskawka.github.io/mini-jekyll-deploy/pl/blog/2018/05/25/GDPR-compliance.html" rel="alternate" type="text/html" title="Dostosowanie do RODO" /><published>2018-05-25T15:30:00+01:00</published><updated>2018-05-25T15:30:00+01:00</updated><id>https://trueskawka.github.io/mini-jekyll-deploy/pl/blog/2018/05/25/GDPR-compliance</id><content type="html" xml:base="https://trueskawka.github.io/mini-jekyll-deploy/pl/blog/2018/05/25/GDPR-compliance.html">&lt;p&gt;W związku z nadejściem terminu wdrożenia &lt;em&gt;Rozporządzenia Parlamentu Europejskiego w sprawie ochrony osób fizycznych 
+w związku z przetwarzaniem danych osobowych i w sprawie swobodnego przepływu takich danych oraz uchylenia dyrektywy 95/46/WE&lt;/em&gt;
+(zwanym &lt;a href=&quot;https://pl.wikipedia.org/wiki/Og%C3%B3lne_rozporz%C4%85dzenie_o_ochronie_danych&quot;&gt;RODO&lt;/a&gt;), usunęłam ze swojej strony
+wszelkie skrypty zbierające dane użytkowników.&lt;/p&gt;
+
+&lt;p&gt;Robię to wyłącznie w celu ochrony własnej, ponieważ jako osoba prowadząca działalność gospodarczą jestem
+traktowana jako osoba prawna. Nigdy nie gromadziłam danych poza wejściami użytkowników, w szczególności
+danych osobowych czy haseł.&lt;/p&gt;
+
+&lt;p&gt;Używałam jedynie dwóch skryptów zbierających dane, obu zewnętrznych:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;skrypt Google Analytics dla śledzenia wejść na stronę - całkowicie usunięty&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;skrypt Recurse Center dla śledzenia poleceń - usunęłam skrypt i obecnie używam tylko statycznego linka (nawet animacja z logo
+Recurse Center jest stworzona całkowicie w CSS)&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Ponieważ ta strona jest hostowana na &lt;a href=&quot;https://pages.github.com/&quot;&gt;GitHub pages&lt;/a&gt;, dane użytkowników są 
+w jakimś stopniu nadal zbieranie przez serwery GitHuba w celu dostarczenia usługi hostingowej. Nie mam
+kontroli nad tym, co GitHub może śledzić, ale nie przekazuję im żadnych dodatkowych informacji. Jakiekolwiek
+dane, które GitHub ma na temat użytkownika, który wchodzi na tę stronę internetową, są przekazywane przez
+użytkownika w wyniku przeglądania Internetu.&lt;/p&gt;
+
+&lt;p&gt;W przyszłości być może wprowadzę nowy sposób gromadzenia zbiorczych informacji o wejściach na stronę, po dokładnym 
+zapoznaniu się z działaniem usługi Google Analytics i jej ewentualnymi konsekwencjami prawnymi.&lt;/p&gt;</content><author><name>alicja</name></author><summary type="html">W związku z nadejściem terminu wdrożenia Rozporządzenia Parlamentu Europejskiego w sprawie ochrony osób fizycznych w związku z przetwarzaniem danych osobowych i w sprawie swobodnego przepływu takich danych oraz uchylenia dyrektywy 95/46/WE (zwanym RODO), usunęłam ze swojej strony wszelkie skrypty zbierające dane użytkowników.</summary></entry><entry><title type="html">Pierwsze 20 godzin</title><link href="https://trueskawka.github.io/mini-jekyll-deploy/pl/blog/life/2016/09/18/first-20-hours.html" rel="alternate" type="text/html" title="Pierwsze 20 godzin" /><published>2016-09-18T22:11:00+01:00</published><updated>2016-09-18T22:11:00+01:00</updated><id>https://trueskawka.github.io/mini-jekyll-deploy/pl/blog/life/2016/09/18/first-20-hours</id><content type="html" xml:base="https://trueskawka.github.io/mini-jekyll-deploy/pl/blog/life/2016/09/18/first-20-hours.html">&lt;p&gt;Niedawno przeczytałam ponownie &lt;a href=&quot;https://www.amazon.com/First-20-Hours-Learn-Anything/dp/1591846943&quot;&gt;Pierwsze 20 godzin: jak nauczyć się czegokolwiek… szybko!&lt;/a&gt; [EN] Josha Kaufmana - lekką książkę z przydatnymi spostrzeżeniami na temat uczenia się nowych umiejętności. Ponieważ mam tyle do nauczenia się i tak mało czasu (a przynajmniej mam takie poczucie), idea spędzenia tylko 20 godzin nad czymś, od nieznajomości tematu do całkiem niezłego radzenia sobie z nim, brzmi zachęcająco.&lt;/p&gt;
+
+&lt;p&gt;Trzeba zapomnieć o założeniu, że nauczenie się nowej umiejętności wymaga 10 tysięcy godzin. Oczywiście, przeznaczenie pięciu lat w wymiarze pełnego etatu na pewno przyczyni się do zdobycia i doprowadzenia do perfekcji nowej umiejętności, ale nie każdy z nas musi być ekspertem w każdej dziedzinie. Czasami wystarczy tylko podstawowa znajomość tematu.&lt;/p&gt;
+
+&lt;p&gt;Niektóre pomysły przedstawione w książce skojarzyły mi się ze znanymi z ekonomii ideami, przede wszystkim:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;prawem malejących przychodów - im więcej się uczysz, tym mniej zauważalne będą Twoje postępy (tak samo jak jedzenie coraz więcej czekolady po pierwszej połówce tabliczki nie przyczynia się zauważalnie do zwiększenia zadowolenia)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;zasadą Pareto - 20% wysiłków przynosi 80% zysków (ale wysiłki te muszą być ukierunkowane i celowe)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;prawem Parkinsona - praca wypełni cały czas przeznaczony na zadanie (więc krótsze terminy mogą czasem zwiększyć produktywność)&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Wyłącznie rozumienie i zauważanie tych zasad może nie być wystarczające dla ich przezwyciężenia, stąd Josh prezentuje proste kroki do nauczenia się dowolnej umiejętności. Przez ‘dowolną umiejętność’ ma na myśli ‘dowolną umiejętność, na której Ci zależy’. Stąd pierwszym krokiem jest wybranie istotnego tematu i skupienie się na jednym projekcie.&lt;/p&gt;
+
+&lt;p&gt;Następnie należy określić docelowy poziom umiejętności. Co dla Ciebie znaczy nauczenie się czegoś nowego? Jeśli chcesz się nauczyć języka obcego, pragniesz być komunikatywnym turystą w trakcie wakacji czy prowadzić niekończące się dysputy filozoficzne? Chcesz grać na gitarze przy ognisku czy zostać gwiazdą rocka? Josh radzi, żeby zacząć powoli - kiedy już rozumiesz podstawowe pojęcia i umiesz wykonywać proste czynności, możesz zacząć utrudniać sobie życie. Aby zostać gwiazdą rocka, musisz najpierw wiedzieć, jak działa gitara i w jak na niej brzdąkać.&lt;/p&gt;
+
+&lt;p&gt;Aby zacząć naukę, można zastosować zasady szybkiego uczenia się umiejętności, przede wszystkim:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;dekonstrukcję&lt;/strong&gt; umiejętności i rozbicie jej na mniejsze kroki&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;uczenie się o każdym kroku z osobna&lt;/strong&gt;, aby móc właściwie ćwiczyć i poprawiać się w oparciu o szybkie informacje zwrotne&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;usunięcie barier&lt;/strong&gt; do nauki
+    &lt;ul&gt;
+      &lt;li&gt;fizycznych - zebranie potrzebnych narzędzi (np. gitary, książek) i wyznaczenie czasu na naukę (np. codziennie 45 minut)&lt;/li&gt;
+      &lt;li&gt;psychicznych - przyjęcie czynnego podejścia do nauki (np. jestem w stanie uczyć się na ten temat przez kolejne 20 minut)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;świadome i celowe &lt;strong&gt;ćwiczenie&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Ograniczenie się do tylko 20 godzin ćwiczenia nowej umiejętności (albo osiągnięcia docelowego poziomu umiejętności) pozwala uniknąć pułapki prawa Parkinsona. Dodatkowo  rozwój umiejętności jest zazwyczaj najszybszy na początku, ponieważ funkcja poziomu umiejętności do czasu gwałtownie rośnie w pierwszym okresie. Można więc w miarę szybko nauczyć się dużo i oprzeć dalszą motywację na już osiągniętym sukcesie.&lt;/p&gt;
+
+&lt;p&gt;Skupienie się na jednej umiejętności przez krótki czas pozwala też na przetestowanie pomysłu. Czy na pewno chcę się nauczyć hiszpańskiego, czy jest to tylko coś, co uważam, że powinnam umieć? Czy chcę nad tym spędzić więcej czasu? Czasami nie da się poznać swoich własnych preferencji bez odpowiedniego przetestowania założeń. Rezygnacja z dalszej nauki po krótkim eksperymencie jest jak najbardziej pożądana, jeśli okaże się ona bezcelowa.&lt;/p&gt;
+
+&lt;p&gt;W swojej książce Josh opisuje, w jaki sposób nauczył się sześciu nowych umiejętności w ciągu roku:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;codzienne ćwiczenie jogi&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;podstawowe programowanie i zbudowanie dwóch aplikacji&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;bezwzrokowe pisanie na klawiaturze w Colemaku&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;granie w Go&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;granie na ukulele&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;windsurfing&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Nie chciałabym zepsuć nikomu przyjemności z czytania książki opiszę więc tylko pokrótce rozdział o grze na ukulele.&lt;/p&gt;
+
+&lt;p&gt;Jak możnaby się tego nauczyć?&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Zakup ukulele i innego niezbędnego sprzętu brzmi jak dobry początek.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Nauczenie się, jak działa ukulele (części instrumentu, skąd bierze się dźwięk etc.).
+ &lt;img src=&quot;/blog/20hours/ukulele.JPG&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Skupienie się na nauce czterech podstawowych chwytów (podobno większość popularnych piosenek można zagrać używając tylko G, D, Em i C).
+ &lt;img src=&quot;/blog/20hours/chords.JPG&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Kiedy już granie tych chwytów bezwzrokowo jest proste, skupienie się na graniu ich bez zastanawiania się.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Uczenie się piosenek przez najpierw nucenie, a potem śpiewanie.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Eksperymentowanie, np. nauczenie się fingerpickingu i nowych chwytów.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Ciągłe uczenie się.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=5MgBikgcWnY&quot;&gt;Tutaj&lt;/a&gt; Josh opowiada o swoich pomysłach, a &lt;a href=&quot;https://www.amazon.com/First-20-Hours-Learn-Anything/dp/1591846943&quot;&gt;tu&lt;/a&gt; można kupić jego książkę [EN]. Inne przydatne źródła:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://www.empik.com/sila-nawyku-duhigg-charles,p1066293191,ksiazka-p&quot;&gt;Siła nawyku&lt;/a&gt; Charlesa Duhigga, książka o zrozumieniu nawyków i pomysłach na ich zmienianie&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://www.coursera.org/learn/learning-how-to-learn&quot;&gt;Learning How to Learn&lt;/a&gt; [EN] - darmowy kurs online o tym, jak działa umysł, i sposobach uczenia się&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://www.udemy.com/&quot;&gt;Become a Superlearner&lt;/a&gt; [EN] stosunkowo niedrogi kurs skupiający się na szybkim uczeniu się i technikach zapamiętywania, z dość dużym naciskiem na szybkie czytanie&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://lifehacker.com/&quot;&gt;Lifehacker&lt;/a&gt; [EN] strona z codziennymi poradami na różnorodne tematy, w duchu lifehackingu (&lt;em&gt;hackowania życia&lt;/em&gt;)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://xkcd.com/&quot;&gt;xkcd&lt;/a&gt; [EN] wspaniały komiks o życiu i nauce, prowadzony przez Randalla Munroe (ma też świetne &lt;a href=&quot;https://www.amazon.com/Randall-Munroe/e/B004H66444/ref=dp_byline_cont_book_1&quot;&gt;książki&lt;/a&gt;)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://smbc-comics.com/&quot;&gt;Saturday Morning Breakfast Cereal&lt;/a&gt; [EN] filozoficzno-satyryczny komiks ZachA WeinersmithA&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Przyjemnej nauki!&lt;/p&gt;</content><author><name>alicja</name></author><summary type="html">Niedawno przeczytałam ponownie Pierwsze 20 godzin: jak nauczyć się czegokolwiek… szybko! [EN] Josha Kaufmana - lekką książkę z przydatnymi spostrzeżeniami na temat uczenia się nowych umiejętności. Ponieważ mam tyle do nauczenia się i tak mało czasu (a przynajmniej mam takie poczucie), idea spędzenia tylko 20 godzin nad czymś, od nieznajomości tematu do całkiem niezłego radzenia sobie z nim, brzmi zachęcająco.</summary></entry></feed>
