@@ -1,4 +1,74 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://trueskawka.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://trueskawka.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2019-02-28T14:17:55+00:00</updated><id>https://trueskawka.github.io/feed.xml</id><title type="html">Alicja’s thoughts</title><subtitle>A blog on learning and programming ideas</subtitle><author><name>Alicja Raszkowska</name></author><entry><title type="html">Retrieving drawings from Notability</title><link href="https://trueskawka.github.io/blog/2019/02/27/retrieving-drawings-from-Notability.html" rel="alternate" type="text/html" title="Retrieving drawings from Notability" /><published>2019-02-27T21:47:00+00:00</published><updated>2019-02-27T21:47:00+00:00</updated><id>https://trueskawka.github.io/blog/2019/02/27/retrieving-drawings-from-Notability</id><content type="html" xml:base="https://trueskawka.github.io/blog/2019/02/27/retrieving-drawings-from-Notability.html">&lt;p&gt;I use &lt;a href=&quot;https://www.gingerlabs.com/&quot;&gt;Notability&lt;/a&gt; a lot to take notes while learning and during meetings. It’s fast and comfortable, allowing me to jot down my ideas on the fly. One caveat of taking notes in this way is that they’re not easily exportable in an editable format, so I can’t reuse them in other contexts (e.g. when creating diagrams to explain ideas).&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://alicja.dev/feed.xml" rel="self" type="application/atom+xml" /><link href="https://alicja.dev/" rel="alternate" type="text/html" hreflang="en" /><updated>2019-03-02T14:20:53+00:00</updated><id>https://alicja.dev/feed.xml</id><title type="html">Alicja’s thoughts</title><subtitle>A blog on learning and programming ideas</subtitle><author><name>Alicja Raszkowska</name></author><entry><title type="html">On passing for a native speaker</title><link href="https://alicja.dev/blog/2019/03/02/on-passing-for-a-native-speaker.html" rel="alternate" type="text/html" title="On passing for a native speaker" /><published>2019-03-02T13:51:00+00:00</published><updated>2019-03-02T13:51:00+00:00</updated><id>https://alicja.dev/blog/2019/03/02/on-passing-for-a-native-speaker</id><content type="html" xml:base="https://alicja.dev/blog/2019/03/02/on-passing-for-a-native-speaker.html">&lt;p&gt;I came to realize how many thoughts I have around my English accent. It’s a mix of pride and anxiety, and this is discomfort I’m not going to get away from anytime soon.&lt;/p&gt;
+
+&lt;h3 id=&quot;why-is-this-important&quot;&gt;Why is this important?&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Okay, so you’re bragging, right? You want to show off and tell everyone how good your accent is. That you’re passing for a native speaker and it is about your ego.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;I keep struggling with that idea, because, yes, part of it is pride in my skill level and effort I put into learning it. Part if it is lack of comfort, and awareness of my privilege.&lt;/p&gt;
+
+&lt;p&gt;I have small interactions around my accent daily. They are usually positive for me and well-meaning from others. I enjoy them, but they leave me with a sense of uneasiness every so often. And digging into that uneasiness seems worth the effort.&lt;/p&gt;
+
+&lt;h4 id=&quot;working-as-a-software-engineer&quot;&gt;Working as a software engineer&lt;/h4&gt;
+
+&lt;p&gt;English is the &lt;em&gt;lingua franca&lt;/em&gt; of software engineering, as is it in many other fields. I need it for my day to day work. I needed it even when I was living in Poland. All my code is in English. All my comments are in English. Most of my writing is in English because of the value of sharing ideas and the high cost of translating it. Translating is like rewriting your thoughts in a different voice that somehow needs to still feel like you.&lt;/p&gt;
+
+&lt;p&gt;To keep up to date with technology, grow our skills and work as engineers, we need English.&lt;/p&gt;
+
+&lt;h4 id=&quot;perception-of-certain-vernaculars&quot;&gt;Perception of certain vernaculars&lt;/h4&gt;
+
+&lt;p&gt;It is my understanding that on average people perceive certain vernaculars of English as more-than. There are many dimensions to it: more sophisticated, more fluent, more appropriate. When I was learning English, the vernacular was a somewhat posh Oxbridge version of British English. My grammar, my vocabulary, and my perception of the &lt;em&gt;right&lt;/em&gt; accent come from my impressions of learning the language in Poland.&lt;/p&gt;
+
+&lt;p&gt;Certain vernaculars are undesirable - one of them is Eastern European. To speak with an Eastern European accent is to bring about all our heritage into the room. Suddenly, there is a faint whiff of vodka and a meaty sound of rolling Rs. The consonants are hard and thick, the vowels are sparse and flat. The possible topics of conversation shift to hardship, folklore, and drinking.&lt;/p&gt;
+
+&lt;p&gt;To speak with an Eastern European accent is to label oneself as the other. That other is often perceived as less-than.&lt;/p&gt;
+
+&lt;h4 id=&quot;living-in-an-english-speaking-country&quot;&gt;Living in an English speaking country&lt;/h4&gt;
+
+&lt;p&gt;I look like I could be from anywhere in Europe with my generic European face. My accent and vocuabulary put me somewhere close to Northern and Western Europe. My job puts me firmly in the category of professionals.&lt;/p&gt;
+
+&lt;p&gt;When someone asks where I’m from, they bring about curiousness. They expect to hear about a land full of happy blond people speaking a fast-paced Germanic language. They have expectations around good social security systems and an outstanding education.&lt;/p&gt;
+
+&lt;p&gt;Polish.&lt;/p&gt;
+
+&lt;p&gt;But what do you mean Polish? Surely, you’re second generation? Or you moved somewhere as a child? Maybe you had special training and loads of effort put into this? Maybe you’re Polish in an American, second-generation your-grandma-was-Polish way?&lt;/p&gt;
+
+&lt;p&gt;Polish.&lt;/p&gt;
+
+&lt;p&gt;Oh, but you don’t sound Polish! How can it be? I’d never think that! Your English is so good! Where did you learn the accent? Did you study abroad? Have you been in Canada long?&lt;/p&gt;
+
+&lt;p&gt;They’re impressed, they’re amazed, they’re speechless. They grab bits and pieces from their patchy pattern of Eastern European cultures. So, you drink a lot of vodka? And pierogi, yes, I love pierogi!&lt;/p&gt;
+
+&lt;h4 id=&quot;why-cant-people-just-learn-an-accent&quot;&gt;Why can’t people &lt;em&gt;just&lt;/em&gt; learn an accent?&lt;/h4&gt;
+
+&lt;p&gt;Say, how many languages do you speak, with how many different accents?&lt;/p&gt;
+
+&lt;p&gt;Did you learn them at home or at school?&lt;/p&gt;
+
+&lt;p&gt;How many opportunities do you have to practice your second, third, fourth language, on a day-to-day basis?&lt;/p&gt;
+
+&lt;p&gt;How much time do you have to learn anything, with all this stuff going on in your life?&lt;/p&gt;
+
+&lt;p&gt;What’s an accent? How do you make those sounds you make when you speak your language?&lt;/p&gt;
+
+&lt;h3 id=&quot;why-does-it-bother-me-so-much&quot;&gt;Why does it bother me so much?&lt;/h3&gt;
+
+&lt;p&gt;Because learning a language is different than many other ways of being the other. It is not something you were born with. It is something you can change up to a point. It is not something you can &lt;em&gt;just&lt;/em&gt; learn, you need to find your way into it.&lt;/p&gt;
+
+&lt;p&gt;But it’s not perceived as such by an average native English speaker I interact with. They usually assume it’s about effort. If you don’t have the right accent, you didn’t work hard enough. You should take an English class and work on it.&lt;/p&gt;
+
+&lt;p&gt;I can pass for a native speaker. I can experience the same level of comfort in English as I do in Polish. My skill level, my abilities, myself - they’re not judged based on my accent. And that’s comfort that many people don’t have.&lt;/p&gt;
+
+&lt;p&gt;It’s hard to watch movies where accents are being used as a shorthand. Person A has this accent, therefore person A has these characteristics. This is how you should perceive person A. If person A is Eastern European, they’re probably a blue-collar worker who drinks too much. Or an unhappy &lt;em&gt;homo sovieticus&lt;/em&gt; struggling with the post-communist reality. Or a beautiful woman who was saved from being Eastern European by marrying a rich Westerner.&lt;/p&gt;
+
+&lt;p&gt;It’s hard to see people shift their language and behaviour ever so slightly when they hear a hint of otherness. They assume things, they adjust things, they adapt to what they expect an interaction to be like.&lt;/p&gt;
+
+&lt;p&gt;It’s hard not to say the &lt;em&gt;obvious&lt;/em&gt; things. If I have an accent, that means I learned a second language. You have no idea how my thoughts sound. I have to translate them for you and translation makes me speak with somebody else’s voice.&lt;/p&gt;
+
+&lt;p&gt;I am not one of you. I am the other.&lt;/p&gt;
+
+&lt;p&gt;I am not the other. I am one of you.&lt;/p&gt;</content><author><name>alicja</name></author><summary type="html">I came to realize how many thoughts I have around my English accent. It’s a mix of pride and anxiety, and this is discomfort I’m not going to get away from anytime soon.</summary></entry><entry><title type="html">Retrieving drawings from Notability</title><link href="https://alicja.dev/blog/2019/02/27/retrieving-drawings-from-Notability.html" rel="alternate" type="text/html" title="Retrieving drawings from Notability" /><published>2019-02-27T21:47:00+00:00</published><updated>2019-02-27T21:47:00+00:00</updated><id>https://alicja.dev/blog/2019/02/27/retrieving-drawings-from-Notability</id><content type="html" xml:base="https://alicja.dev/blog/2019/02/27/retrieving-drawings-from-Notability.html">&lt;p&gt;I use &lt;a href=&quot;https://www.gingerlabs.com/&quot;&gt;Notability&lt;/a&gt; a lot to take notes while learning and during meetings. It’s fast and comfortable, allowing me to jot down my ideas on the fly. One caveat of taking notes in this way is that they’re not easily exportable in an editable format, so I can’t reuse them in other contexts (e.g. when creating diagrams to explain ideas).&lt;/p&gt;
 
 &lt;p&gt;I poked around and found a blog post by &lt;a href=&quot;https://jvns.ca/blog/2018/03/31/reverse-engineering-notability-format/&quot;&gt;Julia Evans&lt;/a&gt; on reverse engineering the Notability format, which was a great starting point. My use case is a bit different, since I didn’t want to put my notes in the format - I wanted to get them out of it. It also seems that Notability has changed formats since then, but the initial ideas turned very helpful.&lt;/p&gt;
 
@@ -150,7 +220,7 @@
 
 &lt;image src=&quot;/images/notability/drawing.png&quot; alt=&quot;drawing&quot; style=&quot;width: 100%&quot; /&gt;
 
-&lt;p&gt;I wrote a short script for retrieving drawings from Notability, you can grab it &lt;a href=&quot;https://gist.github.com/trueskawka/7ff89ff12e6529e6cca65015956eaf6e&quot;&gt;from this gist&lt;/a&gt;. It also has a copy of a Jupyter notebook I wrote this post in.&lt;/p&gt;</content><author><name>alicja</name></author><summary type="html">I use Notability a lot to take notes while learning and during meetings. It’s fast and comfortable, allowing me to jot down my ideas on the fly. One caveat of taking notes in this way is that they’re not easily exportable in an editable format, so I can’t reuse them in other contexts (e.g. when creating diagrams to explain ideas).</summary></entry><entry><title type="html">Gender fluid in a gendered language</title><link href="https://trueskawka.github.io/blog/2018/08/08/gender-fluid-in-a-gendered-language.html" rel="alternate" type="text/html" title="Gender fluid in a gendered language" /><published>2018-08-08T12:18:00+01:00</published><updated>2018-08-08T12:18:00+01:00</updated><id>https://trueskawka.github.io/blog/2018/08/08/gender-fluid-in-a-gendered-language</id><content type="html" xml:base="https://trueskawka.github.io/blog/2018/08/08/gender-fluid-in-a-gendered-language.html">&lt;p&gt;I changed the default English pronoun I use to &lt;code class=&quot;highlighter-rouge&quot;&gt;they&lt;/code&gt; some time ago. For a long time I thought it 
+&lt;p&gt;I wrote a short script for retrieving drawings from Notability, you can grab it &lt;a href=&quot;https://gist.github.com/trueskawka/7ff89ff12e6529e6cca65015956eaf6e&quot;&gt;from this gist&lt;/a&gt;. It also has a copy of a Jupyter notebook I wrote this post in.&lt;/p&gt;</content><author><name>alicja</name></author><summary type="html">I use Notability a lot to take notes while learning and during meetings. It’s fast and comfortable, allowing me to jot down my ideas on the fly. One caveat of taking notes in this way is that they’re not easily exportable in an editable format, so I can’t reuse them in other contexts (e.g. when creating diagrams to explain ideas).</summary></entry><entry><title type="html">Gender fluid in a gendered language</title><link href="https://alicja.dev/blog/2018/08/08/gender-fluid-in-a-gendered-language.html" rel="alternate" type="text/html" title="Gender fluid in a gendered language" /><published>2018-08-08T12:18:00+01:00</published><updated>2018-08-08T12:18:00+01:00</updated><id>https://alicja.dev/blog/2018/08/08/gender-fluid-in-a-gendered-language</id><content type="html" xml:base="https://alicja.dev/blog/2018/08/08/gender-fluid-in-a-gendered-language.html">&lt;p&gt;I changed the default English pronoun I use to &lt;code class=&quot;highlighter-rouge&quot;&gt;they&lt;/code&gt; some time ago. For a long time I thought it 
 impossible to incorporate a similar approach in my native language, until I realized I’ve been doing 
 it all along.&lt;/p&gt;
 
@@ -166,7 +236,7 @@ male forms. It’s seamless for my loved ones, as they use both (though they usu
 with my mom using my first name and my grandparents using &lt;code class=&quot;highlighter-rouge&quot;&gt;Karol&lt;/code&gt; exclusively, unless they’re mad at me).&lt;/p&gt;
 
 &lt;p&gt;Thinking back, it’s suprising how easy it has been to use both my names without focusing on gender. 
-If anyone had an issue with it, I’d just refer to it as a “personal choice” or a “family tradition”.&lt;/p&gt;</content><author><name>alicja</name></author><summary type="html">I changed the default English pronoun I use to they some time ago. For a long time I thought it impossible to incorporate a similar approach in my native language, until I realized I’ve been doing it all along.</summary></entry><entry><title type="html">The curb cut effect of the Internet</title><link href="https://trueskawka.github.io/blog/2018/07/27/the-curb-cut-effect-of-the-internet.html" rel="alternate" type="text/html" title="The curb cut effect of the Internet" /><published>2018-07-27T18:52:00+01:00</published><updated>2018-07-27T18:52:00+01:00</updated><id>https://trueskawka.github.io/blog/2018/07/27/the-curb-cut-effect-of-the-internet</id><content type="html" xml:base="https://trueskawka.github.io/blog/2018/07/27/the-curb-cut-effect-of-the-internet.html">&lt;p&gt;I recently listened to an episode of the 99% Invisible podcast on &lt;a href=&quot;https://99percentinvisible.org/episode/curb-cuts/transcript/&quot;&gt;curb cuts&lt;/a&gt; 
+If anyone had an issue with it, I’d just refer to it as a “personal choice” or a “family tradition”.&lt;/p&gt;</content><author><name>alicja</name></author><summary type="html">I changed the default English pronoun I use to they some time ago. For a long time I thought it impossible to incorporate a similar approach in my native language, until I realized I’ve been doing it all along.</summary></entry><entry><title type="html">The curb cut effect of the Internet</title><link href="https://alicja.dev/blog/2018/07/27/the-curb-cut-effect-of-the-internet.html" rel="alternate" type="text/html" title="The curb cut effect of the Internet" /><published>2018-07-27T18:52:00+01:00</published><updated>2018-07-27T18:52:00+01:00</updated><id>https://alicja.dev/blog/2018/07/27/the-curb-cut-effect-of-the-internet</id><content type="html" xml:base="https://alicja.dev/blog/2018/07/27/the-curb-cut-effect-of-the-internet.html">&lt;p&gt;I recently listened to an episode of the 99% Invisible podcast on &lt;a href=&quot;https://99percentinvisible.org/episode/curb-cuts/transcript/&quot;&gt;curb cuts&lt;/a&gt; 
 and it made me pause to appreciate some of the curb cuts I experienced. One with 
 the most profound impact on my life is the Internet.&lt;/p&gt;
 
@@ -181,7 +251,7 @@ my partner and move to Canada.&lt;/p&gt;
 to explore, experiment and embarrass myself. A way to learn resilience and build up confidence
 by overcoming challenges, making mistakes and getting back on my feet.&lt;/p&gt;
 
-&lt;p&gt;It’s often a mixed bag, yet I can’t be anything but grateful.&lt;/p&gt;</content><author><name>alicja</name></author><summary type="html">I recently listened to an episode of the 99% Invisible podcast on curb cuts and it made me pause to appreciate some of the curb cuts I experienced. One with the most profound impact on my life is the Internet.</summary></entry><entry><title type="html">Browsing in grayscale</title><link href="https://trueskawka.github.io/blog/2018/07/20/Browsing-in-grayscale.html" rel="alternate" type="text/html" title="Browsing in grayscale" /><published>2018-07-20T12:50:00+01:00</published><updated>2018-07-20T12:50:00+01:00</updated><id>https://trueskawka.github.io/blog/2018/07/20/Browsing-in-grayscale</id><content type="html" xml:base="https://trueskawka.github.io/blog/2018/07/20/Browsing-in-grayscale.html">&lt;p&gt;I started exploring my browsing habits to better understand why certain websites grab my attention.
+&lt;p&gt;It’s often a mixed bag, yet I can’t be anything but grateful.&lt;/p&gt;</content><author><name>alicja</name></author><summary type="html">I recently listened to an episode of the 99% Invisible podcast on curb cuts and it made me pause to appreciate some of the curb cuts I experienced. One with the most profound impact on my life is the Internet.</summary></entry><entry><title type="html">Browsing in grayscale</title><link href="https://alicja.dev/blog/2018/07/20/Browsing-in-grayscale.html" rel="alternate" type="text/html" title="Browsing in grayscale" /><published>2018-07-20T12:50:00+01:00</published><updated>2018-07-20T12:50:00+01:00</updated><id>https://alicja.dev/blog/2018/07/20/Browsing-in-grayscale</id><content type="html" xml:base="https://alicja.dev/blog/2018/07/20/Browsing-in-grayscale.html">&lt;p&gt;I started exploring my browsing habits to better understand why certain websites grab my attention.
 As aware of UX dark patterns as I am, I grew tired of mindfully noticing when they want to “nudge” 
 me into certain behaviors with vibrant colors and obscuring others by making them less visually
 appealing.&lt;/p&gt;
@@ -212,7 +282,7 @@ styles.&lt;/p&gt;
 
 &lt;p&gt;One more surprising issue I encountered is that the &lt;code class=&quot;highlighter-rouge&quot;&gt;grayscale&lt;/code&gt; filter sometimes breaks scrolling. I tried 
 debugging it on my website, thinking it might be caused by some legacy code or a hidden Stylus property, 
-but adding it directly to the &lt;code class=&quot;highlighter-rouge&quot;&gt;body&lt;/code&gt; also changed scrolling behavior.&lt;/p&gt;</content><author><name>alicja</name></author><summary type="html">I started exploring my browsing habits to better understand why certain websites grab my attention. As aware of UX dark patterns as I am, I grew tired of mindfully noticing when they want to “nudge” me into certain behaviors with vibrant colors and obscuring others by making them less visually appealing.</summary></entry><entry><title type="html">Improving my English</title><link href="https://trueskawka.github.io/blog/2018/06/29/Improving-my-English.html" rel="alternate" type="text/html" title="Improving my English" /><published>2018-06-29T22:30:00+01:00</published><updated>2018-06-29T22:30:00+01:00</updated><id>https://trueskawka.github.io/blog/2018/06/29/Improving-my-English</id><content type="html" xml:base="https://trueskawka.github.io/blog/2018/06/29/Improving-my-English.html">&lt;p&gt;I encountered a thread in a community group chat asking for advice on guiding someone through improving English skills. Some of the resources and ideas I shared were helpful, so I decided to write a longer blog post about it.&lt;/p&gt;
+but adding it directly to the &lt;code class=&quot;highlighter-rouge&quot;&gt;body&lt;/code&gt; also changed scrolling behavior.&lt;/p&gt;</content><author><name>alicja</name></author><summary type="html">I started exploring my browsing habits to better understand why certain websites grab my attention. As aware of UX dark patterns as I am, I grew tired of mindfully noticing when they want to “nudge” me into certain behaviors with vibrant colors and obscuring others by making them less visually appealing.</summary></entry><entry><title type="html">Improving my English</title><link href="https://alicja.dev/blog/2018/06/29/Improving-my-English.html" rel="alternate" type="text/html" title="Improving my English" /><published>2018-06-29T22:30:00+01:00</published><updated>2018-06-29T22:30:00+01:00</updated><id>https://alicja.dev/blog/2018/06/29/Improving-my-English</id><content type="html" xml:base="https://alicja.dev/blog/2018/06/29/Improving-my-English.html">&lt;p&gt;I encountered a thread in a community group chat asking for advice on guiding someone through improving English skills. Some of the resources and ideas I shared were helpful, so I decided to write a longer blog post about it.&lt;/p&gt;
 
 &lt;p&gt;First, a few disclaimers:&lt;/p&gt;
 
@@ -427,7 +497,7 @@ but adding it directly to the &lt;code class=&quot;highlighter-rouge&quot;&gt;bo
   &lt;li&gt;&lt;a href=&quot;http://rationallyspeakingpodcast.org/&quot;&gt;Rationally Speaking&lt;/a&gt; - rationality and skepticism&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://www.scienceforthepeople.ca/&quot;&gt;Science For The People&lt;/a&gt; - various science&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.npr.org/podcasts/510308/hidden-brain&quot;&gt;Hidden Brain&lt;/a&gt; - mostly focused on science of human behavior&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>alicja</name></author><summary type="html">I encountered a thread in a community group chat asking for advice on guiding someone through improving English skills. Some of the resources and ideas I shared were helpful, so I decided to write a longer blog post about it.</summary></entry><entry><title type="html">GDPR compliance</title><link href="https://trueskawka.github.io/blog/2018/05/25/GDPR-compliance.html" rel="alternate" type="text/html" title="GDPR compliance" /><published>2018-05-25T15:30:00+01:00</published><updated>2018-05-25T15:30:00+01:00</updated><id>https://trueskawka.github.io/blog/2018/05/25/GDPR-compliance</id><content type="html" xml:base="https://trueskawka.github.io/blog/2018/05/25/GDPR-compliance.html">&lt;p&gt;As the &lt;a href=&quot;https://en.wikipedia.org/wiki/General_Data_Protection_Regulation&quot;&gt;General Data Protection Regulation&lt;/a&gt; compliance deadline has 
+&lt;/ul&gt;</content><author><name>alicja</name></author><summary type="html">I encountered a thread in a community group chat asking for advice on guiding someone through improving English skills. Some of the resources and ideas I shared were helpful, so I decided to write a longer blog post about it.</summary></entry><entry><title type="html">GDPR compliance</title><link href="https://alicja.dev/blog/2018/05/25/GDPR-compliance.html" rel="alternate" type="text/html" title="GDPR compliance" /><published>2018-05-25T15:30:00+01:00</published><updated>2018-05-25T15:30:00+01:00</updated><id>https://alicja.dev/blog/2018/05/25/GDPR-compliance</id><content type="html" xml:base="https://alicja.dev/blog/2018/05/25/GDPR-compliance.html">&lt;p&gt;As the &lt;a href=&quot;https://en.wikipedia.org/wiki/General_Data_Protection_Regulation&quot;&gt;General Data Protection Regulation&lt;/a&gt; compliance deadline has 
 arrived today, I have removed all tracking scripts from my website.&lt;/p&gt;
 
 &lt;p&gt;I did it to protect myself, as being self-employed implies I’m a legal entity. I never collected any data
@@ -450,7 +520,7 @@ be tracking, but I don’t provide any additional data to them. Any data GitHub 
 after visiting this website is what they willfully provide by browsing the Internet.&lt;/p&gt;
 
 &lt;p&gt;I might add a new tracking script to this website in the future, after I make sure I understand if and how 
-Google Analytics is compliant with GDPR.&lt;/p&gt;</content><author><name>alicja</name></author><summary type="html">As the General Data Protection Regulation compliance deadline has arrived today, I have removed all tracking scripts from my website.</summary></entry><entry><title type="html">Conf &amp;amp; Coffee 2018 - designing and printing name badges</title><link href="https://trueskawka.github.io/blog/2018/04/22/designing-conference-badges.html" rel="alternate" type="text/html" title="Conf &amp; Coffee 2018 - designing and printing name badges" /><published>2018-04-22T16:13:00+01:00</published><updated>2018-04-22T16:13:00+01:00</updated><id>https://trueskawka.github.io/blog/2018/04/22/designing-conference-badges</id><content type="html" xml:base="https://trueskawka.github.io/blog/2018/04/22/designing-conference-badges.html">&lt;p&gt;We recently organized &lt;a href=&quot;https://www.meetup.com/codecoffeeyvr/events/249207842/&quot;&gt;Conf &amp;amp; Coffee 2018&lt;/a&gt; in Vancouver, BC,
+Google Analytics is compliant with GDPR.&lt;/p&gt;</content><author><name>alicja</name></author><summary type="html">As the General Data Protection Regulation compliance deadline has arrived today, I have removed all tracking scripts from my website.</summary></entry><entry><title type="html">Conf &amp;amp; Coffee 2018 - designing and printing name badges</title><link href="https://alicja.dev/blog/2018/04/22/designing-conference-badges.html" rel="alternate" type="text/html" title="Conf &amp; Coffee 2018 - designing and printing name badges" /><published>2018-04-22T16:13:00+01:00</published><updated>2018-04-22T16:13:00+01:00</updated><id>https://alicja.dev/blog/2018/04/22/designing-conference-badges</id><content type="html" xml:base="https://alicja.dev/blog/2018/04/22/designing-conference-badges.html">&lt;p&gt;We recently organized &lt;a href=&quot;https://www.meetup.com/codecoffeeyvr/events/249207842/&quot;&gt;Conf &amp;amp; Coffee 2018&lt;/a&gt; in Vancouver, BC,
 and one of the bigger tasks we had to take care of was designing and printing our conference badges. A conference is 
 all about people - people who come there to learn, meet new people and have a good time. We wanted
 to make it easier for them and create useable badges.&lt;/p&gt;
@@ -595,7 +665,7 @@ It was a great experience, especially since I got to work with a wonderful group
 
 &lt;p&gt;Thank you Gavin, Paulina, Robert, Wendy, Andrea, Bernadette, Stephen and Daruvin for volunteering and making this conference happen!&lt;/p&gt;
 
-&lt;image src=&quot;/images/badges/badge.jpg&quot; style=&quot;width: 100%&quot; /&gt;</content><author><name>alicja</name></author><summary type="html">We recently organized Conf &amp;amp; Coffee 2018 in Vancouver, BC, and one of the bigger tasks we had to take care of was designing and printing our conference badges. A conference is all about people - people who come there to learn, meet new people and have a good time. We wanted to make it easier for them and create useable badges.</summary></entry><entry><title type="html">Drawing with CSS - part 2: linear gradients</title><link href="https://trueskawka.github.io/blog/programming/css/2018/04/01/drawing-with-CSS-part-2-linear-gradients.html" rel="alternate" type="text/html" title="Drawing with CSS - part 2: linear gradients" /><published>2018-04-01T16:55:00+01:00</published><updated>2018-04-01T16:55:00+01:00</updated><id>https://trueskawka.github.io/blog/programming/css/2018/04/01/drawing-with-CSS-part-2-linear-gradients</id><content type="html" xml:base="https://trueskawka.github.io/blog/programming/css/2018/04/01/drawing-with-CSS-part-2-linear-gradients.html">&lt;p&gt;The first part of the drawing with CSS tutorial was all about 
+&lt;image src=&quot;/images/badges/badge.jpg&quot; style=&quot;width: 100%&quot; /&gt;</content><author><name>alicja</name></author><summary type="html">We recently organized Conf &amp;amp; Coffee 2018 in Vancouver, BC, and one of the bigger tasks we had to take care of was designing and printing our conference badges. A conference is all about people - people who come there to learn, meet new people and have a good time. We wanted to make it easier for them and create useable badges.</summary></entry><entry><title type="html">Drawing with CSS - part 2: linear gradients</title><link href="https://alicja.dev/blog/programming/css/2018/04/01/drawing-with-CSS-part-2-linear-gradients.html" rel="alternate" type="text/html" title="Drawing with CSS - part 2: linear gradients" /><published>2018-04-01T16:55:00+01:00</published><updated>2018-04-01T16:55:00+01:00</updated><id>https://alicja.dev/blog/programming/css/2018/04/01/drawing-with-CSS-part-2-linear-gradients</id><content type="html" xml:base="https://alicja.dev/blog/programming/css/2018/04/01/drawing-with-CSS-part-2-linear-gradients.html">&lt;p&gt;The first part of the drawing with CSS tutorial was all about 
 &lt;a href=&quot;/blog/programming/2018/02/07/drawing-with-CSS-part-1-box-shadows.html&quot;&gt;box shadows&lt;/a&gt;.
 They are pretty flexible when it comes to creating multiple rectangular and circular shapes, but there are some
 limitations.&lt;/p&gt;
@@ -1135,7 +1205,7 @@ and the black lines to visually separate them.&lt;/p&gt;
 
 &lt;p&gt;You can edit this drawing interactively on &lt;a href=&quot;https://codepen.io/trueskawka/pen/pLVGgx?editors=1100&quot;&gt;CodePen&lt;/a&gt;.&lt;/p&gt;
 
-&lt;script src=&quot;/scripts/linear-gradients.js&quot;&gt;&lt;/script&gt;</content><author><name>alicja</name></author><summary type="html">The first part of the drawing with CSS tutorial was all about box shadows. They are pretty flexible when it comes to creating multiple rectangular and circular shapes, but there are some limitations.</summary></entry><entry><title type="html">Resume generator</title><link href="https://trueskawka.github.io/idea/2018/03/09/resume.html" rel="alternate" type="text/html" title="Resume generator" /><published>2018-03-09T00:00:00+00:00</published><updated>2018-03-09T00:00:00+00:00</updated><id>https://trueskawka.github.io/idea/2018/03/09/resume</id><content type="html" xml:base="https://trueskawka.github.io/idea/2018/03/09/resume.html">&lt;p&gt;While looking for a new job after moving to Canada, I decided
+&lt;script src=&quot;/scripts/linear-gradients.js&quot;&gt;&lt;/script&gt;</content><author><name>alicja</name></author><summary type="html">The first part of the drawing with CSS tutorial was all about box shadows. They are pretty flexible when it comes to creating multiple rectangular and circular shapes, but there are some limitations.</summary></entry><entry><title type="html">Resume generator</title><link href="https://alicja.dev/idea/2018/03/09/resume.html" rel="alternate" type="text/html" title="Resume generator" /><published>2018-03-09T00:00:00+00:00</published><updated>2018-03-09T00:00:00+00:00</updated><id>https://alicja.dev/idea/2018/03/09/resume</id><content type="html" xml:base="https://alicja.dev/idea/2018/03/09/resume.html">&lt;p&gt;While looking for a new job after moving to Canada, I decided
 to create a simple tool for generating the resume. The European
 format I was used to is very different from the North American
 approach, so I wanted to have some fun while working on it.&lt;/p&gt;
@@ -1149,560 +1219,4 @@ approach, so I wanted to have some fun while working on it.&lt;/p&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Check out my pure HTML + CSS &lt;a href=&quot;/resume&quot;&gt;resume&lt;/a&gt; created with this 
-tool.&lt;/p&gt;</content><author><name>Alicja Raszkowska</name></author><summary type="html">While looking for a new job after moving to Canada, I decided to create a simple tool for generating the resume. The European format I was used to is very different from the North American approach, so I wanted to have some fun while working on it.</summary></entry><entry><title type="html">Drawing with CSS - part 1: box shadows</title><link href="https://trueskawka.github.io/blog/programming/css/2018/02/07/drawing-with-CSS-part-1-box-shadows.html" rel="alternate" type="text/html" title="Drawing with CSS - part 1: box shadows" /><published>2018-02-07T17:21:00+00:00</published><updated>2018-02-07T17:21:00+00:00</updated><id>https://trueskawka.github.io/blog/programming/css/2018/02/07/drawing-with-CSS-part-1-box-shadows</id><content type="html" xml:base="https://trueskawka.github.io/blog/programming/css/2018/02/07/drawing-with-CSS-part-1-box-shadows.html">&lt;p&gt;I have been using CSS as a medium for drawing for the past few months and I appreciate its
-versatility and wide support. Since it’s hard to get started without understanding the 
-basic concepts and most of the online guides are not focusing on how to draw images with
-CSS, I decided to write a few simple guides on creating single div CSS images. In the first
-part I’ll focus on drawing using box shadows.&lt;/p&gt;
-
-&lt;link rel=&quot;stylesheet&quot; href=&quot;/css/box-shadows.css&quot; /&gt;
-
-&lt;p&gt;To understand how to use box shadows for drawing, it’s best to see them in action and learn
-about different layers we can create with them. Let’s start with a black square div and put it 
-in a container.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;.container {
-  background-color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  height: 200px;
-  width: 580px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-
-.boxy {
-  background-color: black;
-  height: 100px;
-  width: 100px;
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;drawing-container&quot;&gt;&lt;div class=&quot;boxy&quot;&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;boxy&lt;/code&gt; element is a base layer for the drawing - every other layer we add is going to be
-in some way relative to it (or its parent). The simplest way in which we can add new elements 
-without creating new divs is by adding a shadow to &lt;code class=&quot;highlighter-rouge&quot;&gt;boxy&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Let’s take a closer look at the &lt;code class=&quot;highlighter-rouge&quot;&gt;box-shadow&lt;/code&gt; property:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;inset&lt;/code&gt; [optional] - by default the shadow is assumed to be behind the element (as if the element 
-was dropping it), setting it to &lt;code class=&quot;highlighter-rouge&quot;&gt;inset&lt;/code&gt; will cause the shadow to be drawn on the inside&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;offset-x&amp;gt;&lt;/code&gt; (px) - the horizontal offset of the shadow from the default position behind the element, 
-positive values push it to the right, negative to the left of the element&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;offset-y&amp;gt;&lt;/code&gt; (px) - the vertical offset of the shadow from the default position behind the element,
-positive values push it below the element, negative above the element&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;blur-radius&amp;gt;&lt;/code&gt; (px) - positive values only, the bigger the value the bigger and lighter the shadow&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;spread-radius&amp;gt;&lt;/code&gt; (px) - positive values will expand the shadow, negative will decrease it by adding 
-or substracting the provided value from each of the sides&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;color&amp;gt;&lt;/code&gt; (keyword/hex/RGB/HSL) - color of the shadow&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Let’s add a shadow to the black box - a light sea-green, 60x60px, solid square below the black square.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;.boxy {
-  background-color: black;
-  height: 100px;
-  width: 100px;
-
-  box-shadow: 
-    0 120px 0 -20px lightseagreen;
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;drawing-container&quot;&gt;&lt;div class=&quot;boxy boxy-shadow&quot;&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;We can add as many box shadows as we want, changing the positions, shapes and colors.
-It allows for as many squares as we need, as the box shadows will keep the same shape
-as the parent element, that we can place anywhere.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;.boxy {
-  background-color: black;
-  height: 100px;
-  width: 100px;
-
-  box-shadow: 
-    120px 120px 0 -30px cyan, 
-    0 120px 0 -20px lightseagreen,
-    -120px 120px 0 -30px cyan;
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;drawing-container&quot;&gt;&lt;div class=&quot;boxy boxy-shadows&quot;&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;But we can have more layers that allow for more shapes - after all, not everything is 
-a square. To add an additional layer to the div, we can use the &lt;code class=&quot;highlighter-rouge&quot;&gt;:before&lt;/code&gt; pseudoelement. 
-Pseudoelements in their simplest form &lt;span class=&quot;pseudo&quot;&gt;to add content before&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;But we can use a trick to make them work for creating multi-layered single div images.
-The &lt;code class=&quot;highlighter-rouge&quot;&gt;boxy&lt;/code&gt; element is placed inside a container with a position &lt;code class=&quot;highlighter-rouge&quot;&gt;relative&lt;/code&gt;, which allows 
-us to use &lt;code class=&quot;highlighter-rouge&quot;&gt;absolute&lt;/code&gt; positioning for the pseudo-elements, directly controling their position.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;.boxy:before {
-  content: &quot;&quot;;
-  background-color: red;
-  height: 60px;
-  width: 60px;
-  position: absolute;
-  left: 160px;
-  border-radius: 50%;
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;drawing-container&quot;&gt;&lt;div class=&quot;boxy boxy-shadows boxy-before&quot;&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;:before&lt;/code&gt; pseudoelement can have its own shadows, with their own positons, sizes and colors.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;.boxy:before {
-  content: &quot;&quot;;
-  background-color: red;
-  height: 60px;
-  width: 60px;
-  position: absolute;
-  left: 160px;
-  border-radius: 50%;
-
-  box-shadow: 
-    -80px 0 0 tomato,
-    0 80px 0 -10px tomato;
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;drawing-container&quot;&gt;&lt;div class=&quot;boxy boxy-shadows boxy-before-shadows&quot;&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Similarly, we can add an &lt;code class=&quot;highlighter-rouge&quot;&gt;:after&lt;/code&gt; element with &lt;code class=&quot;highlighter-rouge&quot;&gt;absolute&lt;/code&gt; positioning, with its own shape and a
-set of shadows.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;.boxy:after {
-  content: &quot;&quot;;
-  background-color: green;
-  height: 40px;
-  width: 60px;
-  position: absolute;
-  left: 360px;
-  
-  box-shadow: 
-    80px 0 0 yellowgreen,
-    0 80px 0 -10px yellowgreen;
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;drawing-container&quot;&gt;&lt;div class=&quot;boxy boxy-shadows boxy-before-shadows boxy-after&quot;&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Adding all that together allows us to have:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;three base layers with three shapes (the div, its &lt;code class=&quot;highlighter-rouge&quot;&gt;:before&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;:after&lt;/code&gt;)&lt;/li&gt;
-  &lt;li&gt;unlimited number of shadows for each layer&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Using only those elements, we can create pretty complex images - let’s work through an example, 
-recreating the &lt;a href=&quot;https://www.recurse.com/&quot;&gt;Recurse Center&lt;/a&gt; logo. We’re going to start with a simple 
-base div.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;.rc {
-  background-color: black;
-  height: 380px;
-  width: 300px;
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;drawing-container container-rc&quot;&gt;&lt;div class=&quot;rc&quot;&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;The next base shape we need is a rectangle with different proportions than the base
-element, for which we’re going to use a &lt;code class=&quot;highlighter-rouge&quot;&gt;:before&lt;/code&gt; element (or rather, its shadows).&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;.rc:before {
-  content: &quot;&quot;;
-  background-color: red;
-  height: 200px;
-  width: 250px;
-  position: absolute;
-  top: 20px;
-  left: 320px;
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;drawing-container container-rc&quot;&gt;&lt;div class=&quot;rc rc-before-show&quot;&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;First we’re going to use the &lt;code class=&quot;highlighter-rouge&quot;&gt;:before&lt;/code&gt; element for the screen - both the white border 
-and the black interior of it. We can stack box shadows on top of each other, starting 
-from the bottom declaration.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;.rc:before {
-  content: &quot;&quot;;
-  background-color: transparent;
-  height: 200px;
-  width: 250px;
-  position: absolute;
-  top: 20px;
-  left: 320px;  
-  
-  box-shadow:
-    /*screen*/
-    -295px 20px 0 -20px black,
-    -295px 20px 0 0 white;
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;drawing-container container-rc&quot;&gt;&lt;div class=&quot;rc rc-before-screen&quot;&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;The next step is creating the sides of the element, by overlaying white rectangles to
-introduce negative space in the image.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;.rc:before {
-  content: &quot;&quot;;
-  background-color: transparent;
-  height: 200px;
-  width: 250px;
-  position: absolute;
-  top: 20px;
-  left: 320px;
-
-  box-shadow:
-    /*left side*/
-    -450px 185px 0 -85px white,
-    -410px 160px 0 -85px white,
-    -395px 160px 0 -85px white,
-
-    /*right side*/
-    -140px 185px 0 -85px white,
-    -180px 160px 0 -85px white,
-    -195px 160px 0 -85px white,
-
-    /*screen*/
-    -295px 20px 0 -20px black,
-    -295px 20px 0 0 white;
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;drawing-container container-rc&quot;&gt;&lt;div class=&quot;rc rc-before-side&quot;&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;We’re also going to use the &lt;code class=&quot;highlighter-rouge&quot;&gt;:before&lt;/code&gt; element to create a key - as the base element
-is a rectangle and resizing box shadows substracts the declared value from all sides,
-we’re going to first create a white rectangle with the right height for the key and
-place the leftmost bottom key on the canvas.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;.rc:before {
-  content: &quot;&quot;;
-  background-color: transparent;
-  height: 200px;
-  width: 250px;
-  position: absolute;
-  top: 20px;
-  left: 320px;
-
-  box-shadow:
-    /*key*/
-    -360px 245px 0 -87px white,
-    
-    /*left side*/
-    -450px 185px 0 -85px white,
-    -410px 160px 0 -85px white,
-    -395px 160px 0 -85px white,
-
-    /*right side*/
-    -140px 185px 0 -85px white,
-    -180px 160px 0 -85px white,
-    -195px 160px 0 -85px white,
-
-    /*screen*/
-    -295px 20px 0 -20px black,
-    -295px 20px 0 0 white;
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;drawing-container container-rc&quot;&gt;&lt;div class=&quot;rc rc-before-key&quot;&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;We can now add more keys by overlaying white and black rectangles of appropriate 
-height and offsetting them by 25px in a grid, to create two rows of keys.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;.rc:before {
-  content: &quot;&quot;;
-  background-color: transparent;
-  height: 200px;
-  width: 250px;
-  position: absolute;
-  top: 20px;
-  left: 320px;
-
-  box-shadow:
-    /*top row*/
-    -160px 220px 0 -87px black,
-    -185px 220px 0 -87px white,
-    -210px 220px 0 -87px black,
-    -235px 220px 0 -87px white,
-    -260px 220px 0 -87px black,
-    -285px 220px 0 -87px white,
-    -310px 220px 0 -87px black,
-    -335px 220px 0 -87px white,
-
-    /*bottom row*/
-    -185px 245px 0 -87px black,
-    -210px 245px 0 -87px white,
-    -235px 245px 0 -87px black,
-    -260px 245px 0 -87px white,
-    -285px 245px 0 -87px black,
-    -310px 245px 0 -87px white,
-    -335px 245px 0 -87px black,
-    -360px 245px 0 -87px white,
-    
-    /*left side*/
-    -450px 185px 0 -85px white,
-    -410px 160px 0 -85px white,
-    -395px 160px 0 -85px white,
-
-    /*right side*/
-    -140px 185px 0 -85px white,
-    -180px 160px 0 -85px white,
-    -195px 160px 0 -85px white,
-
-    /*screen*/
-    -295px 20px 0 -20px black,
-    -295px 20px 0 0 white;
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;drawing-container container-rc&quot;&gt;&lt;div class=&quot;rc rc-before-keys&quot;&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;This leaves us with a residual black rectangle from overlaying the rightmost key
-in the upper row, which we’re going to overlay with a white shadow.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;.rc:before {
-  content: &quot;&quot;;
-  background-color: transparent;
-  height: 200px;
-  width: 250px;
-  position: absolute;
-  top: 20px;
-  left: 320px;
-
-  box-shadow:
-    /*top row fix*/
-    -20px 180px 0 0px white, 
-
-    /*top row*/
-    -160px 220px 0 -87px black,
-    -185px 220px 0 -87px white,
-    -210px 220px 0 -87px black,
-    -235px 220px 0 -87px white,
-    -260px 220px 0 -87px black,
-    -285px 220px 0 -87px white,
-    -310px 220px 0 -87px black,
-    -335px 220px 0 -87px white,
-
-    /*bottom row*/
-    -185px 245px 0 -87px black,
-    -210px 245px 0 -87px white,
-    -235px 245px 0 -87px black,
-    -260px 245px 0 -87px white,
-    -285px 245px 0 -87px black,
-    -310px 245px 0 -87px white,
-    -335px 245px 0 -87px black,
-    -360px 245px 0 -87px white,
-    
-    /*left side*/
-    -450px 185px 0 -85px white,
-    -410px 160px 0 -85px white,
-    -395px 160px 0 -85px white,
-
-    /*right side*/
-    -140px 185px 0 -85px white,
-    -180px 160px 0 -85px white,
-    -195px 160px 0 -85px white,
-    
-    /*screen*/
-    -295px 20px 0 -20px black,
-    -295px 20px 0 0 white;
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;drawing-container container-rc&quot;&gt;&lt;div class=&quot;rc rc-before&quot;&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;For the last part of the image, we’re going to use the &lt;code class=&quot;highlighter-rouge&quot;&gt;:after&lt;/code&gt; pseudoelement, even 
-though we could reuse the base shape from the &lt;code class=&quot;highlighter-rouge&quot;&gt;:before&lt;/code&gt;. It will allow for adding a
-simple animation to the image with just the elements we’re going to animate - if we
-put all of the code in the same pseudoelement, we’d need to repeat all the code in 
-the animation.&lt;/p&gt;
-
-&lt;p&gt;Let’s start with a base shape.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;.rc:after {
-  content: &quot;&quot;;
-  background-color: green;
-  height: 200px;
-  width: 200px;
-  position: absolute;
-  top: 20px;
-  left: 320px;
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;drawing-container container-rc&quot;&gt;&lt;div class=&quot;rc rc-before rc-after-show&quot;&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;We’re going to reuse this shape to overlay elements on the screen, in the same way we
-did it for the keys, without the need to overlay green and black elements as the base
-shape is a square.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;.rc:after {
-  content: &quot;&quot;;
-  background-color: transparent;
-  height: 200px;
-  width: 200px;
-  position: absolute;
-  top: 20px;
-  left: 320px;
-
-  box-shadow:
-    /*top row*/
-    -258px -20px 0 -87px #5dbd49,
-    -310px -20px 0 -87px #5dbd49,
-    -362px -20px 0 -87px #5dbd49,
-
-    /*bottom row*/
-    -235px 30px 0 -87px #5dbd49,
-    -260px 30px 0 -87px #5dbd49,
-    -312px 30px 0 -87px #5dbd49,    
-    -337px 30px 0 -87px #5dbd49;
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;drawing-container container-rc&quot;&gt;&lt;div class=&quot;rc rc-before rc-after&quot;&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Now we can add an animation to the &lt;code class=&quot;highlighter-rouge&quot;&gt;:after&lt;/code&gt; layer without changing any of the other elements
-in the image. We’re going to use a simple &lt;code class=&quot;highlighter-rouge&quot;&gt;@keyframes&lt;/code&gt; approach.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;.rc:after {
-  content: &quot;&quot;;
-  background-color: transparent;
-  height: 200px;
-  width: 200px;
-  position: absolute;
-  top: 20px;
-  left: 320px;
-
-  box-shadow:
-    /*top row*/
-    -258px -20px 0 -87px #5dbd49,
-    -310px -20px 0 -87px #5dbd49,
-    -362px -20px 0 -87px #5dbd49,
-
-    /*bottom row*/
-    -235px 30px 0 -87px #5dbd49,
-    -260px 30px 0 -87px #5dbd49,
-    -312px 30px 0 -87px #5dbd49,    
-    -337px 30px 0 -87px #5dbd49;
-
-  animation: pride 3s linear infinite;
-}
-
-@keyframes pride {
-  0% {
-    box-shadow:
-    /*top row*/
-    -258px -20px 0 -87px #5dbd49,
-    -310px -20px 0 -87px #5dbd49,
-    -362px -20px 0 -87px #5dbd49,
-
-    /*bottom row*/
-    -235px 30px 0 -87px #5dbd49,
-    -260px 30px 0 -87px #5dbd49,
-    -312px 30px 0 -87px #5dbd49,    
-    -337px 30px 0 -87px #5dbd49; 
-  }
-  24% {
-    box-shadow:
-    /*top row*/
-    -258px -20px 0 -87px #5dbd49,
-    -310px -20px 0 -87px #5dbd49,
-    -362px -20px 0 -87px #5dbd49,
-
-    /*bottom row*/
-    -235px 30px 0 -87px #5dbd49,
-    -260px 30px 0 -87px #5dbd49,
-    -312px 30px 0 -87px #5dbd49,    
-    -337px 30px 0 -87px #5dbd49;
-  }
-  25% {
-    box-shadow:
-    /*top row*/
-    -258px -20px 0 -87px #5dbd49,
-    -310px -20px 0 -87px #4b9bde,
-    -362px -20px 0 -87px #8f71b9,
-
-    /*bottom row*/
-    -235px 30px 0 -87px #e25786,
-    -260px 30px 0 -87px #e25786,
-    -312px 30px 0 -87px #f19e5a,    
-    -337px 30px 0 -87px #f19e5a;
-  }
-  49% {
-    box-shadow:
-    /*top row*/
-    -258px -20px 0 -87px #5dbd49,
-    -310px -20px 0 -87px #4b9bde,
-    -362px -20px 0 -87px #8f71b9,
-
-    /*bottom row*/
-    -235px 30px 0 -87px #e25786,
-    -260px 30px 0 -87px #e25786,
-    -312px 30px 0 -87px #f19e5a,    
-    -337px 30px 0 -87px #f19e5a;
-  }
-  50% {
-    box-shadow:
-    /*top row*/
-    -258px -20px 0 -87px #f19e5a,
-    -310px -20px 0 -87px #5dbd49,
-    -362px -20px 0 -87px #4b9bde,
-
-    /*bottom row*/
-    -235px 30px 0 -87px #8f71b9,
-    -260px 30px 0 -87px #8f71b9,
-    -312px 30px 0 -87px #e25786,    
-    -337px 30px 0 -87px #e25786;
-  }
-  74% {
-    box-shadow:
-    /*top row*/
-    -258px -20px 0 -87px #f19e5a,
-    -310px -20px 0 -87px #5dbd49,
-    -362px -20px 0 -87px #4b9bde,
-
-    /*bottom row*/
-    -235px 30px 0 -87px #8f71b9,
-    -260px 30px 0 -87px #8f71b9,
-    -312px 30px 0 -87px #e25786,    
-    -337px 30px 0 -87px #e25786;
-  }
-  75% {
-    box-shadow:
-    /*top row*/
-    -258px -20px 0 -87px #e25786,
-    -310px -20px 0 -87px #f19e5a,
-    -362px -20px 0 -87px #5dbd49,
-
-    /*bottom row*/
-    -235px 30px 0 -87px #4b9bde,
-    -260px 30px 0 -87px #4b9bde,
-    -312px 30px 0 -87px #8f71b9,    
-    -337px 30px 0 -87px #8f71b9;
-  }
-  100% {
-    box-shadow:
-    /*top row*/
-    -258px -20px 0 -87px #e25786,
-    -310px -20px 0 -87px #f19e5a,
-    -362px -20px 0 -87px #5dbd49,
-
-    /*bottom row*/
-    -235px 30px 0 -87px #4b9bde,
-    -260px 30px 0 -87px #4b9bde,
-    -312px 30px 0 -87px #8f71b9,    
-    -337px 30px 0 -87px #8f71b9;
-  }
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;drawing-container container-rc&quot;&gt;&lt;div class=&quot;rc rc-before rc-after-animated&quot;&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>alicja</name></author><summary type="html">I have been using CSS as a medium for drawing for the past few months and I appreciate its versatility and wide support. Since it’s hard to get started without understanding the basic concepts and most of the online guides are not focusing on how to draw images with CSS, I decided to write a few simple guides on creating single div CSS images. In the first part I’ll focus on drawing using box shadows.</summary></entry></feed>
+tool.&lt;/p&gt;</content><author><name>Alicja Raszkowska</name></author><summary type="html">While looking for a new job after moving to Canada, I decided to create a simple tool for generating the resume. The European format I was used to is very different from the North American approach, so I wanted to have some fun while working on it.</summary></entry></feed>
