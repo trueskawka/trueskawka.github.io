@@ -1,4 +1,34 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://alicja.dev/feed.xml" rel="self" type="application/atom+xml" /><link href="https://alicja.dev/" rel="alternate" type="text/html" hreflang="en" /><updated>2019-03-26T19:30:42-07:00</updated><id>https://alicja.dev/feed.xml</id><title type="html">Alicja’s thoughts</title><subtitle>A blog on learning and programming ideas</subtitle><author><name>Alicja Raszkowska</name></author><entry><title type="html">On passing for a native speaker</title><link href="https://alicja.dev/blog/2019/03/02/on-passing-for-a-native-speaker.html" rel="alternate" type="text/html" title="On passing for a native speaker" /><published>2019-03-02T13:51:00-08:00</published><updated>2019-03-02T13:51:00-08:00</updated><id>https://alicja.dev/blog/2019/03/02/on-passing-for-a-native-speaker</id><content type="html" xml:base="https://alicja.dev/blog/2019/03/02/on-passing-for-a-native-speaker.html">&lt;p&gt;I came to realize how many thoughts I have around my English accent. It’s a mix of pride and anxiety, and this is discomfort I’m not going to get away from anytime soon.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://alicja.dev/feed.xml" rel="self" type="application/atom+xml" /><link href="https://alicja.dev/" rel="alternate" type="text/html" hreflang="en" /><updated>2019-03-26T20:18:50-07:00</updated><id>https://alicja.dev/feed.xml</id><title type="html">Alicja’s thoughts</title><subtitle>A blog on learning and programming ideas</subtitle><author><name>Alicja Raszkowska</name></author><entry><title type="html">Unblocking my writing</title><link href="https://alicja.dev/blog/2019/03/26/unblocking-my-writing.html" rel="alternate" type="text/html" title="Unblocking my writing" /><published>2019-03-26T20:12:00-07:00</published><updated>2019-03-26T20:12:00-07:00</updated><id>https://alicja.dev/blog/2019/03/26/unblocking-my-writing</id><content type="html" xml:base="https://alicja.dev/blog/2019/03/26/unblocking-my-writing.html">&lt;p&gt;I often self-identify as a person who reads and writes a lot. Yet it has been challenging to write for the past few months. I wanted to explore why, as my actions were not aligned with my goals.&lt;/p&gt;
+
+&lt;p&gt;I realized I have blocked myself. Yes, writing is hard, especially writing and sharing, but that has not stopped me before. It was the workflow I dreaded that was blocking me.&lt;/p&gt;
+
+&lt;h3 id=&quot;when-your-blog-build-takes-140-seconds&quot;&gt;When your blog build takes 140 seconds&lt;/h3&gt;
+&lt;p&gt;I have used Jekyll for my previous website. I kept using it for nearly 3 years without any refactoring or reorganizing the content. The site grew heavy with posts from different contexts, translations, buildup of old projects, abandoned ideas, drafts, and what-ifs. I wrote a few clunky Ruby plugins to use in specific contexts. I was not finding them useful anymore, but I did find it hard to part with them.&lt;/p&gt;
+
+&lt;p&gt;The legacy code and content caused the build time to slowly creep up from a few seconds to well over two minutes. Each time I saw a typo or wanted to play around with content, I could either do it directly in developer tools or wait for the files to rebuild. Not even &lt;code class=&quot;highlighter-rouge&quot;&gt;--watch&lt;/code&gt; helped here much, as I bloated my build script with unnecessary workload.&lt;/p&gt;
+
+&lt;p&gt;This made it incredibly difficult to work with, as I was unable to see my changes quickly and iterate on them. Every blog post became a painful process.&lt;/p&gt;
+
+&lt;p&gt;I only mustered to go through it once every few days. Then every few weeks. Finally even a few months was not enough time to push myself to work with it.&lt;/p&gt;
+
+&lt;h3 id=&quot;i-just-need-a-blog&quot;&gt;I just need a blog&lt;/h3&gt;
+&lt;p&gt;I like the idea of using the simplest possible tool for the job. I have a website mostly to share blog posts and update my resume from time to time. I misattributed my Jekyll issues to Jekyll, without looking too closely at the thousands of lines of legacy code hidden neatly in numerous directories, and I was reluctant to try it again.&lt;/p&gt;
+
+&lt;p&gt;Once every few months I’d try a new shiny idea for creating a workflow - Hakyll, Gatsby, WordPress. I even considered hosting Jupyter notebooks as I found it easier to work in them and review my work in chunks. But each of those ideas caused more problems than it offered solutions, as I wanted my website to be simple, static, and fast.&lt;/p&gt;
+
+&lt;p&gt;I revisited Jekyll, but instead of trying to refactor, I started with a clean slate. I took a few days to create a design without any unnecessary assets (turns out pretty much all of them were unnecessary). I coded the blog in a few hours. Migrated the posts I cared about and installed two plugins I needed. Then put back everything else I wanted to preserve as static assets, as to not bloat my build process.&lt;/p&gt;
+
+&lt;p&gt;It takes 3.5 seconds now.&lt;/p&gt;
+
+&lt;h3 id=&quot;those-jupyter-notebooks-sound-pretty-neat-tho&quot;&gt;Those Jupyter notebooks sound pretty neat tho&lt;/h3&gt;
+&lt;p&gt;For some reason, Jupyter notebooks still sounded appealing. It turns out the CSS blog posts I’ve been painstakingly managing with huge CSS files and handcrafted code chunks in Markdown can be created without much friction using Jupyter &lt;code class=&quot;highlighter-rouge&quot;&gt;display&lt;/code&gt; built-ins.&lt;/p&gt;
+
+&lt;p&gt;Lo and behold, I can iterate on my ideas and write CSS notes, saving each step of the way while exploring (more on that soon). No more “fork CodePen every time something fun happens”. No more “I just need to render this thing in a browser”. Open a notebook, explore, and export to Markdown.&lt;/p&gt;
+
+&lt;h3 id=&quot;if-you-find-a-workflow-painful-there-might-be-something-to-it&quot;&gt;If you find a workflow painful, there might be something to it&lt;/h3&gt;
+&lt;p&gt;I was writing off issues with my workflow as laziness and lack of creativity. I was &lt;em&gt;obviously&lt;/em&gt; not determined enough to write - otherwise all the issues with long build times, slow website and handcrafted CSS would not stop me. If I was a real blogger…&lt;/p&gt;
+
+&lt;p&gt;Turns out I’m still a blogger at heart and my discomfort was valid. Now I can’t wait to hack away on CSS and generate ideas that I’ll be able to quickly share. Granted, I have not figured out a way to work on fewer ideas at the same time yet. Hopefully it’s a sign of excitement.&lt;/p&gt;</content><author><name>alicja</name></author><summary type="html">I often self-identify as a person who reads and writes a lot. Yet it has been challenging to write for the past few months. I wanted to explore why, as my actions were not aligned with my goals.</summary></entry><entry><title type="html">On passing for a native speaker</title><link href="https://alicja.dev/blog/2019/03/02/on-passing-for-a-native-speaker.html" rel="alternate" type="text/html" title="On passing for a native speaker" /><published>2019-03-02T13:51:00-08:00</published><updated>2019-03-02T13:51:00-08:00</updated><id>https://alicja.dev/blog/2019/03/02/on-passing-for-a-native-speaker</id><content type="html" xml:base="https://alicja.dev/blog/2019/03/02/on-passing-for-a-native-speaker.html">&lt;p&gt;I came to realize how many thoughts I have around my English accent. It’s a mix of pride and anxiety, and this is discomfort I’m not going to get away from anytime soon.&lt;/p&gt;
 
 &lt;h3 id=&quot;why-is-this-important&quot;&gt;Why is this important?&lt;/h3&gt;
 
@@ -1208,18 +1238,4 @@ and the black lines to visually separate them.&lt;/p&gt;
 
 &lt;p&gt;You can edit this drawing interactively on &lt;a href=&quot;https://codepen.io/trueskawka/pen/pLVGgx?editors=1100&quot;&gt;CodePen&lt;/a&gt;.&lt;/p&gt;
 
-&lt;script src=&quot;/scripts/linear-gradients.js&quot;&gt;&lt;/script&gt;</content><author><name>alicja</name></author><summary type="html">The first part of the drawing with CSS tutorial was all about box shadows. They are pretty flexible when it comes to creating multiple rectangular and circular shapes, but there are some limitations.</summary></entry><entry><title type="html">Resume generator</title><link href="https://alicja.dev/idea/2018/03/09/resume.html" rel="alternate" type="text/html" title="Resume generator" /><published>2018-03-09T00:00:00-08:00</published><updated>2018-03-09T00:00:00-08:00</updated><id>https://alicja.dev/idea/2018/03/09/resume</id><content type="html" xml:base="https://alicja.dev/idea/2018/03/09/resume.html">&lt;p&gt;While looking for a new job after moving to Canada, I decided
-to create a simple tool for generating the resume. The European
-format I was used to is very different from the North American
-approach, so I wanted to have some fun while working on it.&lt;/p&gt;
-
-&lt;p&gt;This project uses:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Gulp for tasks (generating HTML, reading JSON data etc.)&lt;/li&gt;
-  &lt;li&gt;Nunjucks for the HTML template&lt;/li&gt;
-  &lt;li&gt;JSON for storing the resume data&lt;/li&gt;
-  &lt;li&gt;CSS for styling&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Check out my pure HTML + CSS &lt;a href=&quot;/resume&quot;&gt;resume&lt;/a&gt; created with this 
-tool.&lt;/p&gt;</content><author><name>Alicja Raszkowska</name></author><summary type="html">While looking for a new job after moving to Canada, I decided to create a simple tool for generating the resume. The European format I was used to is very different from the North American approach, so I wanted to have some fun while working on it.</summary></entry></feed>
+&lt;script src=&quot;/scripts/linear-gradients.js&quot;&gt;&lt;/script&gt;</content><author><name>alicja</name></author><summary type="html">The first part of the drawing with CSS tutorial was all about box shadows. They are pretty flexible when it comes to creating multiple rectangular and circular shapes, but there are some limitations.</summary></entry></feed>

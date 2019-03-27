@@ -7,13 +7,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-    <title>Alicja&#39;s ideas</title>
-    <meta name="description" content="Alicja Raszkowska - ideas and projects.">
+    <title>Unblocking my writing</title>
+    <meta name="description" content="">
   
 
   <link
     rel="canonical"
-    href="https://alicja.dev/ideas/"
+    href="https://alicja.dev/blog/2019/03/26/unblocking-my-writing.html"
   >
 
   <link rel="icon" href="https://alicja.dev/favicon.ico">
@@ -54,101 +54,57 @@
 </header>
 
       <main>
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <div>
+    <p class="post-meta">
+      <time datetime="2019-03-26T20:12:00-07:00" itemprop="datePublished">
         
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="idea">
-    <h3>Resume generator</h3>
-    <a href="https://github.com/trueskawka/resume">https://github.com/trueskawka/resume</a>
-    <p>
-        <p>While looking for a new job after moving to Canada, I decided
-to create a simple tool for generating the resume. The European
-format I was used to is very different from the North American
-approach, so I wanted to have some fun while working on it.</p>
-
-<p>This project uses:</p>
-<ul>
-  <li>Gulp for tasks (generating HTML, reading JSON data etc.)</li>
-  <li>Nunjucks for the HTML template</li>
-  <li>JSON for storing the resume data</li>
-  <li>CSS for styling</li>
-</ul>
-
-<p>Check out my pure HTML + CSS <a href="/resume">resume</a> created with this 
-tool.</p>
-
+          03/26/2019 20:12
+        
+      </time>
     </p>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="idea">
-    <h3>Drawing with CSS</h3>
-    <a href="https://github.com/trueskawka/css-drawings">https://github.com/trueskawka/css-drawings</a>
     <p>
-        <p>I wanted to learn better CSS and have some fun while exploring it,
-so I started drawing logos and simple images using pure CSS.</p>
-
-<p>Check out my tutorials:</p>
-
-<ul>
-  <li>
-    <p><a href="/blog/programming/css/2018/04/01/drawing-with-CSS-part-2-linear-gradients.html">Drawing with CSS - part 2: linear gradients</a></p>
-  </li>
-  <li>
-    <p><a href="/blog/programming/css/2018/02/07/drawing-with-CSS-part-1-box-shadows.html">Drawing with CSS - part 1: box shadows</a></p>
-  </li>
-</ul>
-
-
+      <h2 class="post-title" itemprop="name headline">
+        Unblocking my writing
+      </h2>
     </p>
-</div>
+  </div>
 
+  <div class="post-content" itemprop="articleBody">
+    <p>I often self-identify as a person who reads and writes a lot. Yet it has been challenging to write for the past few months. I wanted to explore why, as my actions were not aligned with my goals.</p>
 
+<p>I realized I have blocked myself. Yes, writing is hard, especially writing and sharing, but that has not stopped me before. It was the workflow I dreaded that was blocking me.</p>
 
+<h3 id="when-your-blog-build-takes-140-seconds">When your blog build takes 140 seconds</h3>
+<p>I have used Jekyll for my previous website. I kept using it for nearly 3 years without any refactoring or reorganizing the content. The site grew heavy with posts from different contexts, translations, buildup of old projects, abandoned ideas, drafts, and what-ifs. I wrote a few clunky Ruby plugins to use in specific contexts. I was not finding them useful anymore, but I did find it hard to part with them.</p>
 
+<p>The legacy code and content caused the build time to slowly creep up from a few seconds to well over two minutes. Each time I saw a typo or wanted to play around with content, I could either do it directly in developer tools or wait for the files to rebuild. Not even <code class="highlighter-rouge">--watch</code> helped here much, as I bloated my build script with unnecessary workload.</p>
 
+<p>This made it incredibly difficult to work with, as I was unable to see my changes quickly and iterate on them. Every blog post became a painful process.</p>
 
+<p>I only mustered to go through it once every few days. Then every few weeks. Finally even a few months was not enough time to push myself to work with it.</p>
 
+<h3 id="i-just-need-a-blog">I just need a blog</h3>
+<p>I like the idea of using the simplest possible tool for the job. I have a website mostly to share blog posts and update my resume from time to time. I misattributed my Jekyll issues to Jekyll, without looking too closely at the thousands of lines of legacy code hidden neatly in numerous directories, and I was reluctant to try it again.</p>
 
+<p>Once every few months I’d try a new shiny idea for creating a workflow - Hakyll, Gatsby, WordPress. I even considered hosting Jupyter notebooks as I found it easier to work in them and review my work in chunks. But each of those ideas caused more problems than it offered solutions, as I wanted my website to be simple, static, and fast.</p>
 
+<p>I revisited Jekyll, but instead of trying to refactor, I started with a clean slate. I took a few days to create a design without any unnecessary assets (turns out pretty much all of them were unnecessary). I coded the blog in a few hours. Migrated the posts I cared about and installed two plugins I needed. Then put back everything else I wanted to preserve as static assets, as to not bloat my build process.</p>
 
+<p>It takes 3.5 seconds now.</p>
 
+<h3 id="those-jupyter-notebooks-sound-pretty-neat-tho">Those Jupyter notebooks sound pretty neat tho</h3>
+<p>For some reason, Jupyter notebooks still sounded appealing. It turns out the CSS blog posts I’ve been painstakingly managing with huge CSS files and handcrafted code chunks in Markdown can be created without much friction using Jupyter <code class="highlighter-rouge">display</code> built-ins.</p>
 
+<p>Lo and behold, I can iterate on my ideas and write CSS notes, saving each step of the way while exploring (more on that soon). No more “fork CodePen every time something fun happens”. No more “I just need to render this thing in a browser”. Open a notebook, explore, and export to Markdown.</p>
 
+<h3 id="if-you-find-a-workflow-painful-there-might-be-something-to-it">If you find a workflow painful, there might be something to it</h3>
+<p>I was writing off issues with my workflow as laziness and lack of creativity. I was <em>obviously</em> not determined enough to write - otherwise all the issues with long build times, slow website and handcrafted CSS would not stop me. If I was a real blogger…</p>
 
+<p>Turns out I’m still a blogger at heart and my discomfort was valid. Now I can’t wait to hack away on CSS and generate ideas that I’ll be able to quickly share. Granted, I have not figured out a way to work on fewer ideas at the same time yet. Hopefully it’s a sign of excitement.</p>
 
-
-
+  </div>
+</article>
 
       </main>
     </div>
