@@ -17,11 +17,10 @@
         }
         body {
             font: 18px Verdana, sans-serif;
-            font: 36px "threemedium", "Three";
+            font: 36px "threemedium";
         }
         .zine {
-            max-width: 840px;
-            min-width: 400px;
+            width: 840px;
             margin: 0 auto;
         }
         h1, h2 {
@@ -65,6 +64,12 @@
         .body {
             width: auto;
             max-width: 500px;
+        }
+        @media print {
+            @page { size: auto portrait; margin: 0cm; }
+            .zine {
+                margin: 1cm;
+            }
         }
     </style>
   </head>
