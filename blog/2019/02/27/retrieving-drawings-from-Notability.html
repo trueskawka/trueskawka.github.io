@@ -114,16 +114,16 @@
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">struct</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
 
-<span class="c1"># directly using Julia's method with changing the result to int first 
-# also had to add some changes to process other formats than float (for colors etc.)
-</span><span class="k">def</span> <span class="nf">unpack_struct</span><span class="p">(</span><span class="n">string</span><span class="p">,</span> <span class="n">fmt</span><span class="p">,</span> <span class="n">size</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">struct</span><span class="o">.</span><span class="n">unpack</span><span class="p">(</span><span class="s">'{num}{format}'</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">num</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">string</span><span class="p">)</span><span class="o">/</span><span class="n">size</span><span class="p">),</span> <span class="nb">format</span><span class="o">=</span><span class="n">fmt</span><span class="p">),</span> <span class="n">string</span><span class="p">)</span>
+<span class="c"># directly using Julia's method with changing the result to int first </span>
+<span class="c"># also had to add some changes to process other formats than float (for colors etc.)</span>
+<span class="k">def</span> <span class="nf">unpack_struct</span><span class="p">(</span><span class="n">string</span><span class="p">,</span> <span class="n">fmt</span><span class="p">,</span> <span class="n">size</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">struct</span><span class="o">.</span><span class="n">unpack</span><span class="p">(</span><span class="s">'{num}{format}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">num</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">string</span><span class="p">)</span><span class="o">/</span><span class="n">size</span><span class="p">),</span> <span class="n">format</span><span class="o">=</span><span class="n">fmt</span><span class="p">),</span> <span class="n">string</span><span class="p">)</span>
 
 <span class="n">drawings</span> <span class="o">=</span> <span class="n">plist</span><span class="p">[</span><span class="s">'$objects'</span><span class="p">][</span><span class="mi">8</span><span class="p">]</span>
 <span class="n">points</span> <span class="o">=</span> <span class="n">unpack_struct</span><span class="p">(</span><span class="n">drawings</span><span class="p">[</span><span class="s">'curvespoints'</span><span class="p">],</span> <span class="s">'f'</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
 
-<span class="c1"># let's see a scatterplot of the points
-</span><span class="n">xs</span> <span class="o">=</span> <span class="n">points</span><span class="p">[</span><span class="mi">0</span><span class="p">::</span><span class="mi">2</span><span class="p">]</span>
+<span class="c"># let's see a scatterplot of the points</span>
+<span class="n">xs</span> <span class="o">=</span> <span class="n">points</span><span class="p">[</span><span class="mi">0</span><span class="p">::</span><span class="mi">2</span><span class="p">]</span>
 <span class="n">ys</span> <span class="o">=</span> <span class="n">points</span><span class="p">[</span><span class="mi">1</span><span class="p">::</span><span class="mi">2</span><span class="p">]</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">60</span><span class="p">,</span><span class="mi">25</span><span class="p">))</span>
@@ -143,15 +143,15 @@
 
 <p>Hmm, it doesn’t seem like it. Let’s draw a shape by manually adjusting the range and see where it ends.</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># after a few manual adjustments, this seems to be the shape
-</span><span class="n">xs2</span> <span class="o">=</span> <span class="n">xs</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">5036</span><span class="p">]</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># after a few manual adjustments, this seems to be the shape</span>
+<span class="n">xs2</span> <span class="o">=</span> <span class="n">xs</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">5036</span><span class="p">]</span>
 <span class="n">ys2</span> <span class="o">=</span> <span class="n">ys</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">5036</span><span class="p">]</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">ys2</span><span class="p">),</span> <span class="nb">min</span><span class="p">(</span><span class="n">ys2</span><span class="p">))</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">xs2</span><span class="p">,</span> <span class="n">ys2</span><span class="p">)</span>
 
-<span class="c1"># let's like at what's next to the end of the shape
-</span><span class="n">x0</span> <span class="o">=</span> <span class="n">xs</span><span class="p">[</span><span class="mi">5035</span><span class="p">:</span><span class="mi">5040</span><span class="p">]</span>
+<span class="c"># let's like at what's next to the end of the shape</span>
+<span class="n">x0</span> <span class="o">=</span> <span class="n">xs</span><span class="p">[</span><span class="mi">5035</span><span class="p">:</span><span class="mi">5040</span><span class="p">]</span>
 <span class="n">y0</span> <span class="o">=</span> <span class="n">ys</span><span class="p">[</span><span class="mi">5035</span><span class="p">:</span><span class="mi">5040</span><span class="p">]</span>
 
 <span class="k">print</span><span class="p">(</span><span class="n">x0</span><span class="p">,</span> <span class="n">y0</span><span class="p">)</span>
@@ -208,8 +208,8 @@
 <span class="n">widths</span> <span class="o">=</span> <span class="n">unpack_struct</span><span class="p">(</span><span class="n">drawings</span><span class="p">[</span><span class="s">'curveswidth'</span><span class="p">],</span> <span class="s">'f'</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
 <span class="n">colors</span> <span class="o">=</span> <span class="n">unpack_struct</span><span class="p">(</span><span class="n">drawings</span><span class="p">[</span><span class="s">'curvescolors'</span><span class="p">],</span> <span class="s">'B'</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 
-<span class="c1"># matplotlib uses fractions, so let's rerange colors
-</span><span class="n">colors_reranged</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="o">/</span> <span class="mi">255</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">colors</span><span class="p">]</span>
+<span class="c"># matplotlib uses fractions, so let's rerange colors</span>
+<span class="n">colors_reranged</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="o">/</span> <span class="mi">255</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">colors</span><span class="p">]</span>
 <span class="n">colors_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">colors_reranged</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="mi">4</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">colors</span><span class="p">),</span> <span class="mi">4</span><span class="p">)]</span>
 
 <span class="nb">type</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">num_points</span><span class="p">))</span>
